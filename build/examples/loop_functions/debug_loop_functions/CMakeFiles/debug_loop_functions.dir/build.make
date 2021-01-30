@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/giladgar/argos3-kilobot/src
+CMAKE_SOURCE_DIR = /home/giladgar/argos-insectbot/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/giladgar/argos3-kilobot/build
+CMAKE_BINARY_DIR = /home/giladgar/argos-insectbot/build
 
 # Include any dependencies generated for this target.
 include examples/loop_functions/debug_loop_functions/CMakeFiles/debug_loop_functions.dir/depend.make
@@ -58,17 +58,17 @@ include examples/loop_functions/debug_loop_functions/CMakeFiles/debug_loop_funct
 include examples/loop_functions/debug_loop_functions/CMakeFiles/debug_loop_functions.dir/flags.make
 
 examples/loop_functions/debug_loop_functions/CMakeFiles/debug_loop_functions.dir/debug_loop_functions.cpp.o: examples/loop_functions/debug_loop_functions/CMakeFiles/debug_loop_functions.dir/flags.make
-examples/loop_functions/debug_loop_functions/CMakeFiles/debug_loop_functions.dir/debug_loop_functions.cpp.o: /home/giladgar/argos3-kilobot/src/examples/loop_functions/debug_loop_functions/debug_loop_functions.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giladgar/argos3-kilobot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/loop_functions/debug_loop_functions/CMakeFiles/debug_loop_functions.dir/debug_loop_functions.cpp.o"
-	cd /home/giladgar/argos3-kilobot/build/examples/loop_functions/debug_loop_functions && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/debug_loop_functions.dir/debug_loop_functions.cpp.o -c /home/giladgar/argos3-kilobot/src/examples/loop_functions/debug_loop_functions/debug_loop_functions.cpp
+examples/loop_functions/debug_loop_functions/CMakeFiles/debug_loop_functions.dir/debug_loop_functions.cpp.o: /home/giladgar/argos-insectbot/src/examples/loop_functions/debug_loop_functions/debug_loop_functions.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giladgar/argos-insectbot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/loop_functions/debug_loop_functions/CMakeFiles/debug_loop_functions.dir/debug_loop_functions.cpp.o"
+	cd /home/giladgar/argos-insectbot/build/examples/loop_functions/debug_loop_functions && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/debug_loop_functions.dir/debug_loop_functions.cpp.o -c /home/giladgar/argos-insectbot/src/examples/loop_functions/debug_loop_functions/debug_loop_functions.cpp
 
 examples/loop_functions/debug_loop_functions/CMakeFiles/debug_loop_functions.dir/debug_loop_functions.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/debug_loop_functions.dir/debug_loop_functions.cpp.i"
-	cd /home/giladgar/argos3-kilobot/build/examples/loop_functions/debug_loop_functions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giladgar/argos3-kilobot/src/examples/loop_functions/debug_loop_functions/debug_loop_functions.cpp > CMakeFiles/debug_loop_functions.dir/debug_loop_functions.cpp.i
+	cd /home/giladgar/argos-insectbot/build/examples/loop_functions/debug_loop_functions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giladgar/argos-insectbot/src/examples/loop_functions/debug_loop_functions/debug_loop_functions.cpp > CMakeFiles/debug_loop_functions.dir/debug_loop_functions.cpp.i
 
 examples/loop_functions/debug_loop_functions/CMakeFiles/debug_loop_functions.dir/debug_loop_functions.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/debug_loop_functions.dir/debug_loop_functions.cpp.s"
-	cd /home/giladgar/argos3-kilobot/build/examples/loop_functions/debug_loop_functions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giladgar/argos3-kilobot/src/examples/loop_functions/debug_loop_functions/debug_loop_functions.cpp -o CMakeFiles/debug_loop_functions.dir/debug_loop_functions.cpp.s
+	cd /home/giladgar/argos-insectbot/build/examples/loop_functions/debug_loop_functions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giladgar/argos-insectbot/src/examples/loop_functions/debug_loop_functions/debug_loop_functions.cpp -o CMakeFiles/debug_loop_functions.dir/debug_loop_functions.cpp.s
 
 examples/loop_functions/debug_loop_functions/CMakeFiles/debug_loop_functions.dir/debug_loop_functions.cpp.o.requires:
 
@@ -83,16 +83,16 @@ examples/loop_functions/debug_loop_functions/CMakeFiles/debug_loop_functions.dir
 
 examples/loop_functions/debug_loop_functions/CMakeFiles/debug_loop_functions.dir/debug_loop_functions_automoc.cpp.o: examples/loop_functions/debug_loop_functions/CMakeFiles/debug_loop_functions.dir/flags.make
 examples/loop_functions/debug_loop_functions/CMakeFiles/debug_loop_functions.dir/debug_loop_functions_automoc.cpp.o: examples/loop_functions/debug_loop_functions/debug_loop_functions_automoc.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giladgar/argos3-kilobot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object examples/loop_functions/debug_loop_functions/CMakeFiles/debug_loop_functions.dir/debug_loop_functions_automoc.cpp.o"
-	cd /home/giladgar/argos3-kilobot/build/examples/loop_functions/debug_loop_functions && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/debug_loop_functions.dir/debug_loop_functions_automoc.cpp.o -c /home/giladgar/argos3-kilobot/build/examples/loop_functions/debug_loop_functions/debug_loop_functions_automoc.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giladgar/argos-insectbot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object examples/loop_functions/debug_loop_functions/CMakeFiles/debug_loop_functions.dir/debug_loop_functions_automoc.cpp.o"
+	cd /home/giladgar/argos-insectbot/build/examples/loop_functions/debug_loop_functions && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/debug_loop_functions.dir/debug_loop_functions_automoc.cpp.o -c /home/giladgar/argos-insectbot/build/examples/loop_functions/debug_loop_functions/debug_loop_functions_automoc.cpp
 
 examples/loop_functions/debug_loop_functions/CMakeFiles/debug_loop_functions.dir/debug_loop_functions_automoc.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/debug_loop_functions.dir/debug_loop_functions_automoc.cpp.i"
-	cd /home/giladgar/argos3-kilobot/build/examples/loop_functions/debug_loop_functions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giladgar/argos3-kilobot/build/examples/loop_functions/debug_loop_functions/debug_loop_functions_automoc.cpp > CMakeFiles/debug_loop_functions.dir/debug_loop_functions_automoc.cpp.i
+	cd /home/giladgar/argos-insectbot/build/examples/loop_functions/debug_loop_functions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giladgar/argos-insectbot/build/examples/loop_functions/debug_loop_functions/debug_loop_functions_automoc.cpp > CMakeFiles/debug_loop_functions.dir/debug_loop_functions_automoc.cpp.i
 
 examples/loop_functions/debug_loop_functions/CMakeFiles/debug_loop_functions.dir/debug_loop_functions_automoc.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/debug_loop_functions.dir/debug_loop_functions_automoc.cpp.s"
-	cd /home/giladgar/argos3-kilobot/build/examples/loop_functions/debug_loop_functions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giladgar/argos3-kilobot/build/examples/loop_functions/debug_loop_functions/debug_loop_functions_automoc.cpp -o CMakeFiles/debug_loop_functions.dir/debug_loop_functions_automoc.cpp.s
+	cd /home/giladgar/argos-insectbot/build/examples/loop_functions/debug_loop_functions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giladgar/argos-insectbot/build/examples/loop_functions/debug_loop_functions/debug_loop_functions_automoc.cpp -o CMakeFiles/debug_loop_functions.dir/debug_loop_functions_automoc.cpp.s
 
 examples/loop_functions/debug_loop_functions/CMakeFiles/debug_loop_functions.dir/debug_loop_functions_automoc.cpp.o.requires:
 
@@ -126,8 +126,8 @@ examples/loop_functions/debug_loop_functions/libdebug_loop_functions.so: /usr/li
 examples/loop_functions/debug_loop_functions/libdebug_loop_functions.so: /usr/lib/x86_64-linux-gnu/libGL.so
 examples/loop_functions/debug_loop_functions/libdebug_loop_functions.so: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.5.1
 examples/loop_functions/debug_loop_functions/libdebug_loop_functions.so: examples/loop_functions/debug_loop_functions/CMakeFiles/debug_loop_functions.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/giladgar/argos3-kilobot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared module libdebug_loop_functions.so"
-	cd /home/giladgar/argos3-kilobot/build/examples/loop_functions/debug_loop_functions && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/debug_loop_functions.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/giladgar/argos-insectbot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared module libdebug_loop_functions.so"
+	cd /home/giladgar/argos-insectbot/build/examples/loop_functions/debug_loop_functions && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/debug_loop_functions.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 examples/loop_functions/debug_loop_functions/CMakeFiles/debug_loop_functions.dir/build: examples/loop_functions/debug_loop_functions/libdebug_loop_functions.so
@@ -140,10 +140,10 @@ examples/loop_functions/debug_loop_functions/CMakeFiles/debug_loop_functions.dir
 .PHONY : examples/loop_functions/debug_loop_functions/CMakeFiles/debug_loop_functions.dir/requires
 
 examples/loop_functions/debug_loop_functions/CMakeFiles/debug_loop_functions.dir/clean:
-	cd /home/giladgar/argos3-kilobot/build/examples/loop_functions/debug_loop_functions && $(CMAKE_COMMAND) -P CMakeFiles/debug_loop_functions.dir/cmake_clean.cmake
+	cd /home/giladgar/argos-insectbot/build/examples/loop_functions/debug_loop_functions && $(CMAKE_COMMAND) -P CMakeFiles/debug_loop_functions.dir/cmake_clean.cmake
 .PHONY : examples/loop_functions/debug_loop_functions/CMakeFiles/debug_loop_functions.dir/clean
 
 examples/loop_functions/debug_loop_functions/CMakeFiles/debug_loop_functions.dir/depend:
-	cd /home/giladgar/argos3-kilobot/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giladgar/argos3-kilobot/src /home/giladgar/argos3-kilobot/src/examples/loop_functions/debug_loop_functions /home/giladgar/argos3-kilobot/build /home/giladgar/argos3-kilobot/build/examples/loop_functions/debug_loop_functions /home/giladgar/argos3-kilobot/build/examples/loop_functions/debug_loop_functions/CMakeFiles/debug_loop_functions.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/giladgar/argos-insectbot/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giladgar/argos-insectbot/src /home/giladgar/argos-insectbot/src/examples/loop_functions/debug_loop_functions /home/giladgar/argos-insectbot/build /home/giladgar/argos-insectbot/build/examples/loop_functions/debug_loop_functions /home/giladgar/argos-insectbot/build/examples/loop_functions/debug_loop_functions/CMakeFiles/debug_loop_functions.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : examples/loop_functions/debug_loop_functions/CMakeFiles/debug_loop_functions.dir/depend
 

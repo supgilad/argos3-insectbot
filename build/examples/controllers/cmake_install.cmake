@@ -1,4 +1,4 @@
-# Install script for directory: /home/giladgar/argos3-kilobot/src/examples/controllers
+# Install script for directory: /home/giladgar/argos-insectbot/src/examples/controllers
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,8 +34,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/giladgar/argos3-kilobot/build/examples/controllers/kilobot_diffusion/cmake_install.cmake")
-  include("/home/giladgar/argos3-kilobot/build/examples/controllers/kilobot_phototaxis/cmake_install.cmake")
+  include("/home/giladgar/argos-insectbot/build/examples/controllers/kilobot_diffusion/cmake_install.cmake")
+  include("/home/giladgar/argos-insectbot/build/examples/controllers/kilobot_phototaxis/cmake_install.cmake")
 
 endif()
 

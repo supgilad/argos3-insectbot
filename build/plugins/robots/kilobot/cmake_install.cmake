@@ -1,4 +1,4 @@
-# Install script for directory: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot
+# Install script for directory: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,31 +34,31 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/argos3/plugins/robots/kilobot/control_interface" TYPE FILE FILES
-    "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/control_interface/ci_kilobot_communication_actuator.h"
-    "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/control_interface/ci_kilobot_communication_sensor.h"
-    "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/control_interface/ci_kilobot_controller.h"
-    "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/control_interface/ci_kilobot_led_actuator.h"
-    "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/control_interface/ci_kilobot_light_sensor.h"
-    "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/control_interface/kilolib.h"
-    "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/control_interface/debug.h"
-    "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/control_interface/message.h"
-    "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/control_interface/message_crc.h"
+    "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/control_interface/ci_kilobot_communication_actuator.h"
+    "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/control_interface/ci_kilobot_communication_sensor.h"
+    "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/control_interface/ci_kilobot_controller.h"
+    "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/control_interface/ci_kilobot_led_actuator.h"
+    "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/control_interface/ci_kilobot_light_sensor.h"
+    "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/control_interface/kilolib.h"
+    "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/control_interface/debug.h"
+    "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/control_interface/message.h"
+    "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/control_interface/message_crc.h"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/argos3/plugins/robots/kilobot/simulator" TYPE FILE FILES
-    "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/dynamics2d_kilobot_model.h"
-    "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/pointmass3d_kilobot_model.h"
-    "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_entity.h"
-    "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_measures.h"
-    "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_led_default_actuator.h"
-    "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_light_rotzonly_sensor.h"
-    "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_communication_default_actuator.h"
-    "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_communication_default_sensor.h"
-    "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_communication_entity.h"
-    "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_communication_medium.h"
-    "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/qtopengl_kilobot.h"
+    "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/dynamics2d_kilobot_model.h"
+    "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/pointmass3d_kilobot_model.h"
+    "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_entity.h"
+    "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_measures.h"
+    "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_led_default_actuator.h"
+    "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_light_rotzonly_sensor.h"
+    "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_communication_default_actuator.h"
+    "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_communication_default_sensor.h"
+    "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_communication_entity.h"
+    "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_communication_medium.h"
+    "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/qtopengl_kilobot.h"
     )
 endif()
 
@@ -69,7 +69,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/argos3/libargos3plugin_simulator_kilobot.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/argos3" TYPE SHARED_LIBRARY FILES "/home/giladgar/argos3-kilobot/build/plugins/robots/kilobot/libargos3plugin_simulator_kilobot.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/argos3" TYPE SHARED_LIBRARY FILES "/home/giladgar/argos-insectbot/build/plugins/robots/kilobot/libargos3plugin_simulator_kilobot.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/argos3/libargos3plugin_simulator_kilobot.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/argos3/libargos3plugin_simulator_kilobot.so")
     file(RPATH_CHANGE
@@ -83,6 +83,6 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/argos3" TYPE STATIC_LIBRARY FILES "/home/giladgar/argos3-kilobot/build/plugins/robots/kilobot/libargos3plugin_simulator_kilolib.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/argos3" TYPE STATIC_LIBRARY FILES "/home/giladgar/argos-insectbot/build/plugins/robots/kilobot/libargos3plugin_simulator_kilolib.a")
 endif()
 

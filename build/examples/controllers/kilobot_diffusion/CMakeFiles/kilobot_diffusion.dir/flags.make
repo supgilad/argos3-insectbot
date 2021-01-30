@@ -6,5 +6,5 @@ CXX_FLAGS = -Wall -Os -DNDEBUG -fPIC   -Wno-unknown-pragmas -std=gnu++14
 
 CXX_DEFINES = -DARGOS_simulator_BUILD -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -Dkilobot_diffusion_EXPORTS
 
-CXX_INCLUDES = -I/home/giladgar/argos3-kilobot/build/examples/controllers/kilobot_diffusion -I/home/giladgar/argos3-kilobot/src/examples/controllers/kilobot_diffusion -I/home/giladgar/argos3-kilobot/src -I/home/giladgar/argos3-kilobot/build -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/usr/local/include -I/usr/include/lua5.3 
+CXX_INCLUDES = -I/home/giladgar/argos-insectbot/build/examples/controllers/kilobot_diffusion -I/home/giladgar/argos-insectbot/src/examples/controllers/kilobot_diffusion -I/home/giladgar/argos-insectbot/src -I/home/giladgar/argos-insectbot/build -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/usr/local/include -I/usr/include/lua5.3 
 

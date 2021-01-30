@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/giladgar/argos3-kilobot/src
+CMAKE_SOURCE_DIR = /home/giladgar/argos-insectbot/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/giladgar/argos3-kilobot/build
+CMAKE_BINARY_DIR = /home/giladgar/argos-insectbot/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -70,7 +70,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/giladgar/argos3-kilobot/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/giladgar/argos3-kilobot/build/CPackSourceConfig.cmake
+	cd /home/giladgar/argos-insectbot/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/giladgar/argos-insectbot/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -92,7 +92,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/giladgar/argos3-kilobot/build && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /home/giladgar/argos-insectbot/build && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -146,14 +146,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/giladgar/argos3-kilobot/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/giladgar/argos3-kilobot/build/CMakeFiles /home/giladgar/argos3-kilobot/build/examples/loop_functions/trajectory_loop_functions/CMakeFiles/progress.marks
-	cd /home/giladgar/argos3-kilobot/build && $(MAKE) -f CMakeFiles/Makefile2 examples/loop_functions/trajectory_loop_functions/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/giladgar/argos3-kilobot/build/CMakeFiles 0
+	cd /home/giladgar/argos-insectbot/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/giladgar/argos-insectbot/build/CMakeFiles /home/giladgar/argos-insectbot/build/examples/loop_functions/trajectory_loop_functions/CMakeFiles/progress.marks
+	cd /home/giladgar/argos-insectbot/build && $(MAKE) -f CMakeFiles/Makefile2 examples/loop_functions/trajectory_loop_functions/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/giladgar/argos-insectbot/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/giladgar/argos3-kilobot/build && $(MAKE) -f CMakeFiles/Makefile2 examples/loop_functions/trajectory_loop_functions/clean
+	cd /home/giladgar/argos-insectbot/build && $(MAKE) -f CMakeFiles/Makefile2 examples/loop_functions/trajectory_loop_functions/clean
 .PHONY : clean
 
 # The main clean target
@@ -163,22 +163,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/giladgar/argos3-kilobot/build && $(MAKE) -f CMakeFiles/Makefile2 examples/loop_functions/trajectory_loop_functions/preinstall
+	cd /home/giladgar/argos-insectbot/build && $(MAKE) -f CMakeFiles/Makefile2 examples/loop_functions/trajectory_loop_functions/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/giladgar/argos3-kilobot/build && $(MAKE) -f CMakeFiles/Makefile2 examples/loop_functions/trajectory_loop_functions/preinstall
+	cd /home/giladgar/argos-insectbot/build && $(MAKE) -f CMakeFiles/Makefile2 examples/loop_functions/trajectory_loop_functions/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/giladgar/argos3-kilobot/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/giladgar/argos-insectbot/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/rule:
-	cd /home/giladgar/argos3-kilobot/build && $(MAKE) -f CMakeFiles/Makefile2 examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/rule
+	cd /home/giladgar/argos-insectbot/build && $(MAKE) -f CMakeFiles/Makefile2 examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/rule
 .PHONY : examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/rule
 
 # Convenience name for target.
@@ -188,12 +188,12 @@ trajectory_loop_functions: examples/loop_functions/trajectory_loop_functions/CMa
 
 # fast build rule for target.
 trajectory_loop_functions/fast:
-	cd /home/giladgar/argos3-kilobot/build && $(MAKE) -f examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/build.make examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/build
+	cd /home/giladgar/argos-insectbot/build && $(MAKE) -f examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/build.make examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/build
 .PHONY : trajectory_loop_functions/fast
 
 # Convenience name for target.
 examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions_automoc.dir/rule:
-	cd /home/giladgar/argos3-kilobot/build && $(MAKE) -f CMakeFiles/Makefile2 examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions_automoc.dir/rule
+	cd /home/giladgar/argos-insectbot/build && $(MAKE) -f CMakeFiles/Makefile2 examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions_automoc.dir/rule
 .PHONY : examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions_automoc.dir/rule
 
 # Convenience name for target.
@@ -203,7 +203,7 @@ trajectory_loop_functions_automoc: examples/loop_functions/trajectory_loop_funct
 
 # fast build rule for target.
 trajectory_loop_functions_automoc/fast:
-	cd /home/giladgar/argos3-kilobot/build && $(MAKE) -f examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions_automoc.dir/build.make examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions_automoc.dir/build
+	cd /home/giladgar/argos-insectbot/build && $(MAKE) -f examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions_automoc.dir/build.make examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions_automoc.dir/build
 .PHONY : trajectory_loop_functions_automoc/fast
 
 trajectory_loop_functions.o: trajectory_loop_functions.cpp.o
@@ -212,7 +212,7 @@ trajectory_loop_functions.o: trajectory_loop_functions.cpp.o
 
 # target to build an object file
 trajectory_loop_functions.cpp.o:
-	cd /home/giladgar/argos3-kilobot/build && $(MAKE) -f examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/build.make examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/trajectory_loop_functions.cpp.o
+	cd /home/giladgar/argos-insectbot/build && $(MAKE) -f examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/build.make examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/trajectory_loop_functions.cpp.o
 .PHONY : trajectory_loop_functions.cpp.o
 
 trajectory_loop_functions.i: trajectory_loop_functions.cpp.i
@@ -221,7 +221,7 @@ trajectory_loop_functions.i: trajectory_loop_functions.cpp.i
 
 # target to preprocess a source file
 trajectory_loop_functions.cpp.i:
-	cd /home/giladgar/argos3-kilobot/build && $(MAKE) -f examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/build.make examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/trajectory_loop_functions.cpp.i
+	cd /home/giladgar/argos-insectbot/build && $(MAKE) -f examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/build.make examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/trajectory_loop_functions.cpp.i
 .PHONY : trajectory_loop_functions.cpp.i
 
 trajectory_loop_functions.s: trajectory_loop_functions.cpp.s
@@ -230,7 +230,7 @@ trajectory_loop_functions.s: trajectory_loop_functions.cpp.s
 
 # target to generate assembly for a file
 trajectory_loop_functions.cpp.s:
-	cd /home/giladgar/argos3-kilobot/build && $(MAKE) -f examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/build.make examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/trajectory_loop_functions.cpp.s
+	cd /home/giladgar/argos-insectbot/build && $(MAKE) -f examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/build.make examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/trajectory_loop_functions.cpp.s
 .PHONY : trajectory_loop_functions.cpp.s
 
 trajectory_loop_functions_automoc.o: trajectory_loop_functions_automoc.cpp.o
@@ -239,7 +239,7 @@ trajectory_loop_functions_automoc.o: trajectory_loop_functions_automoc.cpp.o
 
 # target to build an object file
 trajectory_loop_functions_automoc.cpp.o:
-	cd /home/giladgar/argos3-kilobot/build && $(MAKE) -f examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/build.make examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/trajectory_loop_functions_automoc.cpp.o
+	cd /home/giladgar/argos-insectbot/build && $(MAKE) -f examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/build.make examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/trajectory_loop_functions_automoc.cpp.o
 .PHONY : trajectory_loop_functions_automoc.cpp.o
 
 trajectory_loop_functions_automoc.i: trajectory_loop_functions_automoc.cpp.i
@@ -248,7 +248,7 @@ trajectory_loop_functions_automoc.i: trajectory_loop_functions_automoc.cpp.i
 
 # target to preprocess a source file
 trajectory_loop_functions_automoc.cpp.i:
-	cd /home/giladgar/argos3-kilobot/build && $(MAKE) -f examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/build.make examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/trajectory_loop_functions_automoc.cpp.i
+	cd /home/giladgar/argos-insectbot/build && $(MAKE) -f examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/build.make examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/trajectory_loop_functions_automoc.cpp.i
 .PHONY : trajectory_loop_functions_automoc.cpp.i
 
 trajectory_loop_functions_automoc.s: trajectory_loop_functions_automoc.cpp.s
@@ -257,7 +257,7 @@ trajectory_loop_functions_automoc.s: trajectory_loop_functions_automoc.cpp.s
 
 # target to generate assembly for a file
 trajectory_loop_functions_automoc.cpp.s:
-	cd /home/giladgar/argos3-kilobot/build && $(MAKE) -f examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/build.make examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/trajectory_loop_functions_automoc.cpp.s
+	cd /home/giladgar/argos-insectbot/build && $(MAKE) -f examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/build.make examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/trajectory_loop_functions_automoc.cpp.s
 .PHONY : trajectory_loop_functions_automoc.cpp.s
 
 trajectory_qtuser_functions.o: trajectory_qtuser_functions.cpp.o
@@ -266,7 +266,7 @@ trajectory_qtuser_functions.o: trajectory_qtuser_functions.cpp.o
 
 # target to build an object file
 trajectory_qtuser_functions.cpp.o:
-	cd /home/giladgar/argos3-kilobot/build && $(MAKE) -f examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/build.make examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/trajectory_qtuser_functions.cpp.o
+	cd /home/giladgar/argos-insectbot/build && $(MAKE) -f examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/build.make examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/trajectory_qtuser_functions.cpp.o
 .PHONY : trajectory_qtuser_functions.cpp.o
 
 trajectory_qtuser_functions.i: trajectory_qtuser_functions.cpp.i
@@ -275,7 +275,7 @@ trajectory_qtuser_functions.i: trajectory_qtuser_functions.cpp.i
 
 # target to preprocess a source file
 trajectory_qtuser_functions.cpp.i:
-	cd /home/giladgar/argos3-kilobot/build && $(MAKE) -f examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/build.make examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/trajectory_qtuser_functions.cpp.i
+	cd /home/giladgar/argos-insectbot/build && $(MAKE) -f examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/build.make examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/trajectory_qtuser_functions.cpp.i
 .PHONY : trajectory_qtuser_functions.cpp.i
 
 trajectory_qtuser_functions.s: trajectory_qtuser_functions.cpp.s
@@ -284,7 +284,7 @@ trajectory_qtuser_functions.s: trajectory_qtuser_functions.cpp.s
 
 # target to generate assembly for a file
 trajectory_qtuser_functions.cpp.s:
-	cd /home/giladgar/argos3-kilobot/build && $(MAKE) -f examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/build.make examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/trajectory_qtuser_functions.cpp.s
+	cd /home/giladgar/argos-insectbot/build && $(MAKE) -f examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/build.make examples/loop_functions/trajectory_loop_functions/CMakeFiles/trajectory_loop_functions.dir/trajectory_qtuser_functions.cpp.s
 .PHONY : trajectory_qtuser_functions.cpp.s
 
 # Help Target
@@ -323,6 +323,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/giladgar/argos3-kilobot/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/giladgar/argos-insectbot/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

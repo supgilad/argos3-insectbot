@@ -3,11 +3,11 @@
 
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/argos3plugin_simulator_kilobot_automoc.cpp.o: plugins/robots/kilobot/argos3plugin_simulator_kilobot_automoc.cpp
 
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_communication_actuator.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/control_interface/kilolib.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_communication_actuator.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/control_interface/message.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_communication_actuator.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/control_interface/message_crc.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_communication_actuator.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/control_interface/ci_kilobot_communication_actuator.cpp
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_communication_actuator.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/control_interface/ci_kilobot_communication_actuator.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_communication_actuator.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/control_interface/kilolib.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_communication_actuator.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/control_interface/message.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_communication_actuator.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/control_interface/message_crc.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_communication_actuator.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/control_interface/ci_kilobot_communication_actuator.cpp
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_communication_actuator.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/control_interface/ci_kilobot_communication_actuator.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_communication_actuator.cpp.o: /usr/include/lua5.3/lauxlib.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_communication_actuator.cpp.o: /usr/include/lua5.3/lua.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_communication_actuator.cpp.o: /usr/include/lua5.3/luaconf.h
@@ -31,11 +31,11 @@ plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_int
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_communication_actuator.cpp.o: /usr/local/include/argos3/core/utility/string_utilities.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_communication_actuator.cpp.o: /usr/local/include/argos3/core/wrappers/lua/lua_utility.h
 
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_communication_sensor.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/control_interface/kilolib.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_communication_sensor.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/control_interface/message.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_communication_sensor.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/control_interface/message_crc.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_communication_sensor.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/control_interface/ci_kilobot_communication_sensor.cpp
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_communication_sensor.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/control_interface/ci_kilobot_communication_sensor.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_communication_sensor.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/control_interface/kilolib.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_communication_sensor.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/control_interface/message.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_communication_sensor.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/control_interface/message_crc.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_communication_sensor.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/control_interface/ci_kilobot_communication_sensor.cpp
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_communication_sensor.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/control_interface/ci_kilobot_communication_sensor.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_communication_sensor.cpp.o: /usr/include/lua5.3/lauxlib.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_communication_sensor.cpp.o: /usr/include/lua5.3/lua.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_communication_sensor.cpp.o: /usr/include/lua5.3/luaconf.h
@@ -59,15 +59,15 @@ plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_int
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_communication_sensor.cpp.o: /usr/local/include/argos3/core/utility/string_utilities.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_communication_sensor.cpp.o: /usr/local/include/argos3/core/wrappers/lua/lua_utility.h
 
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_controller.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/control_interface/ci_kilobot_communication_actuator.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_controller.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/control_interface/ci_kilobot_communication_sensor.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_controller.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/control_interface/ci_kilobot_led_actuator.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_controller.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/control_interface/ci_kilobot_light_sensor.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_controller.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/control_interface/kilolib.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_controller.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/control_interface/message.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_controller.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/control_interface/message_crc.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_controller.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/control_interface/ci_kilobot_controller.cpp
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_controller.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/control_interface/ci_kilobot_controller.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_controller.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/control_interface/ci_kilobot_communication_actuator.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_controller.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/control_interface/ci_kilobot_communication_sensor.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_controller.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/control_interface/ci_kilobot_led_actuator.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_controller.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/control_interface/ci_kilobot_light_sensor.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_controller.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/control_interface/kilolib.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_controller.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/control_interface/message.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_controller.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/control_interface/message_crc.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_controller.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/control_interface/ci_kilobot_controller.cpp
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_controller.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/control_interface/ci_kilobot_controller.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_controller.cpp.o: /usr/include/lua5.3/lauxlib.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_controller.cpp.o: /usr/include/lua5.3/lua.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_controller.cpp.o: /usr/include/lua5.3/luaconf.h
@@ -100,8 +100,8 @@ plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_int
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_controller.cpp.o: /usr/local/include/argos3/core/utility/string_utilities.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_controller.cpp.o: /usr/local/include/argos3/plugins/robots/generic/control_interface/ci_differential_steering_actuator.h
 
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_led_actuator.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/control_interface/ci_kilobot_led_actuator.cpp
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_led_actuator.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/control_interface/ci_kilobot_led_actuator.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_led_actuator.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/control_interface/ci_kilobot_led_actuator.cpp
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_led_actuator.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/control_interface/ci_kilobot_led_actuator.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_led_actuator.cpp.o: /usr/include/lua5.3/lauxlib.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_led_actuator.cpp.o: /usr/include/lua5.3/lua.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_led_actuator.cpp.o: /usr/include/lua5.3/luaconf.h
@@ -119,8 +119,8 @@ plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_int
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_led_actuator.cpp.o: /usr/local/include/argos3/core/utility/datatypes/datatypes.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_led_actuator.cpp.o: /usr/local/include/argos3/core/utility/string_utilities.h
 
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_light_sensor.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/control_interface/ci_kilobot_light_sensor.cpp
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_light_sensor.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/control_interface/ci_kilobot_light_sensor.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_light_sensor.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/control_interface/ci_kilobot_light_sensor.cpp
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_light_sensor.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/control_interface/ci_kilobot_light_sensor.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_light_sensor.cpp.o: /usr/include/lua5.3/lauxlib.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_light_sensor.cpp.o: /usr/include/lua5.3/lua.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_light_sensor.cpp.o: /usr/include/lua5.3/luaconf.h
@@ -144,10 +144,10 @@ plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_int
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_light_sensor.cpp.o: /usr/local/include/argos3/core/utility/string_utilities.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_light_sensor.cpp.o: /usr/local/include/argos3/core/wrappers/lua/lua_utility.h
 
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/dynamics2d_kilobot_model.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/simulator/kilobot_entity.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/dynamics2d_kilobot_model.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/dynamics2d_kilobot_model.cpp
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/dynamics2d_kilobot_model.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/dynamics2d_kilobot_model.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/dynamics2d_kilobot_model.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_measures.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/dynamics2d_kilobot_model.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/simulator/kilobot_entity.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/dynamics2d_kilobot_model.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/dynamics2d_kilobot_model.cpp
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/dynamics2d_kilobot_model.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/dynamics2d_kilobot_model.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/dynamics2d_kilobot_model.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_measures.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/dynamics2d_kilobot_model.cpp.o: /usr/include/lua5.3/lauxlib.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/dynamics2d_kilobot_model.cpp.o: /usr/include/lua5.3/lua.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/dynamics2d_kilobot_model.cpp.o: /usr/include/lua5.3/luaconf.h
@@ -223,13 +223,13 @@ plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/d
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/dynamics2d_kilobot_model.cpp.o: /usr/local/include/argos3/plugins/simulator/physics_engines/dynamics2d/dynamics2d_single_body_object_model.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/dynamics2d_kilobot_model.cpp.o: /usr/local/include/argos3/plugins/simulator/physics_engines/dynamics2d/dynamics2d_velocity_control.h
 
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_actuator.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/control_interface/ci_kilobot_communication_actuator.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_actuator.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/control_interface/kilolib.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_actuator.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/control_interface/message.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_actuator.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/control_interface/message_crc.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_actuator.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/simulator/kilobot_communication_entity.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_actuator.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_communication_default_actuator.cpp
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_actuator.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_communication_default_actuator.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_actuator.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/control_interface/ci_kilobot_communication_actuator.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_actuator.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/control_interface/kilolib.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_actuator.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/control_interface/message.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_actuator.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/control_interface/message_crc.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_actuator.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/simulator/kilobot_communication_entity.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_actuator.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_communication_default_actuator.cpp
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_actuator.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_communication_default_actuator.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_actuator.cpp.o: /usr/include/lua5.3/lauxlib.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_actuator.cpp.o: /usr/include/lua5.3/lua.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_actuator.cpp.o: /usr/include/lua5.3/luaconf.h
@@ -283,16 +283,16 @@ plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/k
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_actuator.cpp.o: /usr/local/include/argos3/core/utility/plugins/vtable.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_actuator.cpp.o: /usr/local/include/argos3/core/utility/string_utilities.h
 
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_sensor.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/control_interface/ci_kilobot_communication_sensor.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_sensor.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/control_interface/kilolib.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_sensor.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/control_interface/message.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_sensor.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/control_interface/message_crc.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_sensor.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/simulator/kilobot_communication_entity.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_sensor.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_communication_default_sensor.cpp
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_sensor.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_communication_default_sensor.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_sensor.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_communication_entity.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_sensor.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_communication_medium.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_sensor.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_entity.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_sensor.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/control_interface/ci_kilobot_communication_sensor.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_sensor.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/control_interface/kilolib.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_sensor.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/control_interface/message.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_sensor.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/control_interface/message_crc.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_sensor.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/simulator/kilobot_communication_entity.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_sensor.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_communication_default_sensor.cpp
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_sensor.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_communication_default_sensor.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_sensor.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_communication_entity.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_sensor.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_communication_medium.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_sensor.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_entity.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_sensor.cpp.o: /usr/include/lua5.3/lauxlib.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_sensor.cpp.o: /usr/include/lua5.3/lua.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_sensor.cpp.o: /usr/include/lua5.3/luaconf.h
@@ -347,13 +347,13 @@ plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/k
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_sensor.cpp.o: /usr/local/include/argos3/core/utility/string_utilities.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_sensor.cpp.o: /usr/local/include/argos3/plugins/simulator/entities/wheeled_entity.h
 
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_entity.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/control_interface/kilolib.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_entity.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/control_interface/message.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_entity.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/control_interface/message_crc.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_entity.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/simulator/kilobot_communication_entity.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_entity.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_communication_entity.cpp
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_entity.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_communication_entity.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_entity.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_communication_medium.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_entity.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/control_interface/kilolib.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_entity.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/control_interface/message.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_entity.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/control_interface/message_crc.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_entity.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/simulator/kilobot_communication_entity.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_entity.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_communication_entity.cpp
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_entity.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_communication_entity.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_entity.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_communication_medium.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_entity.cpp.o: /usr/include/lua5.3/lauxlib.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_entity.cpp.o: /usr/include/lua5.3/lua.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_entity.cpp.o: /usr/include/lua5.3/luaconf.h
@@ -406,14 +406,14 @@ plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/k
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_entity.cpp.o: /usr/local/include/argos3/core/utility/plugins/vtable.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_entity.cpp.o: /usr/local/include/argos3/core/utility/string_utilities.h
 
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_medium.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/control_interface/kilolib.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_medium.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/control_interface/message.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_medium.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/control_interface/message_crc.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_medium.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/simulator/kilobot_communication_entity.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_medium.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/simulator/kilobot_measures.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_medium.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_communication_medium.cpp
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_medium.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_communication_medium.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_medium.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_entity.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_medium.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/control_interface/kilolib.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_medium.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/control_interface/message.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_medium.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/control_interface/message_crc.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_medium.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/simulator/kilobot_communication_entity.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_medium.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/simulator/kilobot_measures.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_medium.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_communication_medium.cpp
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_medium.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_communication_medium.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_medium.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_entity.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_medium.cpp.o: /usr/include/lua5.3/lauxlib.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_medium.cpp.o: /usr/include/lua5.3/lua.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_medium.cpp.o: /usr/include/lua5.3/luaconf.h
@@ -467,13 +467,13 @@ plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/k
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_medium.cpp.o: /usr/local/include/argos3/core/utility/string_utilities.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_medium.cpp.o: /usr/local/include/argos3/plugins/simulator/entities/wheeled_entity.h
 
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_entity.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/control_interface/kilolib.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_entity.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/control_interface/message.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_entity.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/control_interface/message_crc.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_entity.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/simulator/kilobot_communication_entity.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_entity.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_entity.cpp
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_entity.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_entity.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_entity.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_measures.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_entity.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/control_interface/kilolib.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_entity.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/control_interface/message.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_entity.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/control_interface/message_crc.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_entity.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/simulator/kilobot_communication_entity.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_entity.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_entity.cpp
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_entity.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_entity.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_entity.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_measures.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_entity.cpp.o: /usr/include/lua5.3/lauxlib.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_entity.cpp.o: /usr/include/lua5.3/lua.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_entity.cpp.o: /usr/include/lua5.3/luaconf.h
@@ -529,9 +529,9 @@ plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/k
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_entity.cpp.o: /usr/local/include/argos3/plugins/simulator/entities/light_sensor_equipped_entity.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_entity.cpp.o: /usr/local/include/argos3/plugins/simulator/entities/wheeled_entity.h
 
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_led_default_actuator.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/control_interface/ci_kilobot_led_actuator.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_led_default_actuator.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_led_default_actuator.cpp
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_led_default_actuator.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_led_default_actuator.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_led_default_actuator.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/control_interface/ci_kilobot_led_actuator.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_led_default_actuator.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_led_default_actuator.cpp
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_led_default_actuator.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_led_default_actuator.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_led_default_actuator.cpp.o: /usr/include/lua5.3/lauxlib.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_led_default_actuator.cpp.o: /usr/include/lua5.3/lua.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_led_default_actuator.cpp.o: /usr/include/lua5.3/luaconf.h
@@ -587,10 +587,10 @@ plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/k
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_led_default_actuator.cpp.o: /usr/local/include/argos3/plugins/simulator/entities/led_entity.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_led_default_actuator.cpp.o: /usr/local/include/argos3/plugins/simulator/entities/led_equipped_entity.h
 
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_light_rotzonly_sensor.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/control_interface/ci_kilobot_light_sensor.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_light_rotzonly_sensor.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_light_rotzonly_sensor.cpp
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_light_rotzonly_sensor.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_light_rotzonly_sensor.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_light_rotzonly_sensor.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_measures.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_light_rotzonly_sensor.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/control_interface/ci_kilobot_light_sensor.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_light_rotzonly_sensor.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_light_rotzonly_sensor.cpp
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_light_rotzonly_sensor.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_light_rotzonly_sensor.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_light_rotzonly_sensor.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_measures.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_light_rotzonly_sensor.cpp.o: /usr/include/lua5.3/lauxlib.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_light_rotzonly_sensor.cpp.o: /usr/include/lua5.3/lua.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_light_rotzonly_sensor.cpp.o: /usr/include/lua5.3/luaconf.h
@@ -648,10 +648,10 @@ plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/k
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_light_rotzonly_sensor.cpp.o: /usr/local/include/argos3/plugins/simulator/entities/light_entity.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_light_rotzonly_sensor.cpp.o: /usr/local/include/argos3/plugins/simulator/entities/light_sensor_equipped_entity.h
 
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/pointmass3d_kilobot_model.cpp.o: /home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/simulator/kilobot_entity.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/pointmass3d_kilobot_model.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_measures.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/pointmass3d_kilobot_model.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/pointmass3d_kilobot_model.cpp
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/pointmass3d_kilobot_model.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/pointmass3d_kilobot_model.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/pointmass3d_kilobot_model.cpp.o: /home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/simulator/kilobot_entity.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/pointmass3d_kilobot_model.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_measures.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/pointmass3d_kilobot_model.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/pointmass3d_kilobot_model.cpp
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/pointmass3d_kilobot_model.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/pointmass3d_kilobot_model.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/pointmass3d_kilobot_model.cpp.o: /usr/include/lua5.3/lauxlib.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/pointmass3d_kilobot_model.cpp.o: /usr/include/lua5.3/lua.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/pointmass3d_kilobot_model.cpp.o: /usr/include/lua5.3/luaconf.h
@@ -704,10 +704,10 @@ plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/p
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/pointmass3d_kilobot_model.cpp.o: /usr/local/include/argos3/plugins/simulator/physics_engines/pointmass3d/pointmass3d_engine.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/pointmass3d_kilobot_model.cpp.o: /usr/local/include/argos3/plugins/simulator/physics_engines/pointmass3d/pointmass3d_model.h
 
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/qtopengl_kilobot.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_entity.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/qtopengl_kilobot.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_measures.h
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/qtopengl_kilobot.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/qtopengl_kilobot.cpp
-plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/qtopengl_kilobot.cpp.o: /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/qtopengl_kilobot.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/qtopengl_kilobot.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_entity.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/qtopengl_kilobot.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_measures.h
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/qtopengl_kilobot.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/qtopengl_kilobot.cpp
+plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/qtopengl_kilobot.cpp.o: /home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/qtopengl_kilobot.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/qtopengl_kilobot.cpp.o: /usr/include/lua5.3/lauxlib.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/qtopengl_kilobot.cpp.o: /usr/include/lua5.3/lua.h
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/qtopengl_kilobot.cpp.o: /usr/include/lua5.3/luaconf.h

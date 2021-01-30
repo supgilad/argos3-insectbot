@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/giladgar/argos3-kilobot/src
+CMAKE_SOURCE_DIR = /home/giladgar/argos-insectbot/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/giladgar/argos3-kilobot/build
+CMAKE_BINARY_DIR = /home/giladgar/argos-insectbot/build
 
 # Utility rule file for kilobot_phototaxis_automoc.
 
@@ -54,8 +54,8 @@ CMAKE_BINARY_DIR = /home/giladgar/argos3-kilobot/build
 include examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis_automoc.dir/progress.make
 
 examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis_automoc:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/giladgar/argos3-kilobot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic moc for target kilobot_phototaxis"
-	cd /home/giladgar/argos3-kilobot/build/examples/controllers/kilobot_phototaxis && /usr/bin/cmake -E cmake_autogen /home/giladgar/argos3-kilobot/build/examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis_automoc.dir/ Release
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/giladgar/argos-insectbot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic moc for target kilobot_phototaxis"
+	cd /home/giladgar/argos-insectbot/build/examples/controllers/kilobot_phototaxis && /usr/bin/cmake -E cmake_autogen /home/giladgar/argos-insectbot/build/examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis_automoc.dir/ Release
 
 kilobot_phototaxis_automoc: examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis_automoc
 kilobot_phototaxis_automoc: examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis_automoc.dir/build.make
@@ -68,10 +68,10 @@ examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis_automoc.di
 .PHONY : examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis_automoc.dir/build
 
 examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis_automoc.dir/clean:
-	cd /home/giladgar/argos3-kilobot/build/examples/controllers/kilobot_phototaxis && $(CMAKE_COMMAND) -P CMakeFiles/kilobot_phototaxis_automoc.dir/cmake_clean.cmake
+	cd /home/giladgar/argos-insectbot/build/examples/controllers/kilobot_phototaxis && $(CMAKE_COMMAND) -P CMakeFiles/kilobot_phototaxis_automoc.dir/cmake_clean.cmake
 .PHONY : examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis_automoc.dir/clean
 
 examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis_automoc.dir/depend:
-	cd /home/giladgar/argos3-kilobot/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giladgar/argos3-kilobot/src /home/giladgar/argos3-kilobot/src/examples/controllers/kilobot_phototaxis /home/giladgar/argos3-kilobot/build /home/giladgar/argos3-kilobot/build/examples/controllers/kilobot_phototaxis /home/giladgar/argos3-kilobot/build/examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis_automoc.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/giladgar/argos-insectbot/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giladgar/argos-insectbot/src /home/giladgar/argos-insectbot/src/examples/controllers/kilobot_phototaxis /home/giladgar/argos-insectbot/build /home/giladgar/argos-insectbot/build/examples/controllers/kilobot_phototaxis /home/giladgar/argos-insectbot/build/examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis_automoc.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis_automoc.dir/depend
 

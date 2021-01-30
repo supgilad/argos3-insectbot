@@ -45,15 +45,11 @@ namespace argos {
       void SetBlackTireMaterial();
       /** Sets a circuit board material */
       void SetCircuitBoardMaterial();
-      /** Sets a colored LED material */
-      void SetLEDMaterial(GLfloat f_red, GLfloat f_green, GLfloat f_blue);
-
       /** Renders the wheels */
       void RenderWheel();
       /** Renders the base (apart from the wheels) */
       void RenderBase();
-      /** Renders the LED */
-      void RenderLED();
+
 
    private:
 

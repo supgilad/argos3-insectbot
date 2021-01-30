@@ -1,4 +1,4 @@
-# Install script for directory: /home/giladgar/argos3-kilobot/src/plugins/robots
+# Install script for directory: /home/giladgar/argos-insectbot/src/plugins/robots
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/giladgar/argos3-kilobot/build/plugins/robots/kilobot/cmake_install.cmake")
+  include("/home/giladgar/argos-insectbot/build/plugins/robots/kilobot/cmake_install.cmake")
 
 endif()
 

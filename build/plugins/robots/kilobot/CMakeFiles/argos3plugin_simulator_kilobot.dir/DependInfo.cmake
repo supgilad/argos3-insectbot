@@ -4,22 +4,22 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/giladgar/argos3-kilobot/build/plugins/robots/kilobot/argos3plugin_simulator_kilobot_automoc.cpp" "/home/giladgar/argos3-kilobot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/argos3plugin_simulator_kilobot_automoc.cpp.o"
-  "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/control_interface/ci_kilobot_communication_actuator.cpp" "/home/giladgar/argos3-kilobot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_communication_actuator.cpp.o"
-  "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/control_interface/ci_kilobot_communication_sensor.cpp" "/home/giladgar/argos3-kilobot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_communication_sensor.cpp.o"
-  "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/control_interface/ci_kilobot_controller.cpp" "/home/giladgar/argos3-kilobot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_controller.cpp.o"
-  "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/control_interface/ci_kilobot_led_actuator.cpp" "/home/giladgar/argos3-kilobot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_led_actuator.cpp.o"
-  "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/control_interface/ci_kilobot_light_sensor.cpp" "/home/giladgar/argos3-kilobot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_light_sensor.cpp.o"
-  "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/dynamics2d_kilobot_model.cpp" "/home/giladgar/argos3-kilobot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/dynamics2d_kilobot_model.cpp.o"
-  "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_communication_default_actuator.cpp" "/home/giladgar/argos3-kilobot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_actuator.cpp.o"
-  "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_communication_default_sensor.cpp" "/home/giladgar/argos3-kilobot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_sensor.cpp.o"
-  "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_communication_entity.cpp" "/home/giladgar/argos3-kilobot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_entity.cpp.o"
-  "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_communication_medium.cpp" "/home/giladgar/argos3-kilobot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_medium.cpp.o"
-  "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_entity.cpp" "/home/giladgar/argos3-kilobot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_entity.cpp.o"
-  "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_led_default_actuator.cpp" "/home/giladgar/argos3-kilobot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_led_default_actuator.cpp.o"
-  "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/kilobot_light_rotzonly_sensor.cpp" "/home/giladgar/argos3-kilobot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_light_rotzonly_sensor.cpp.o"
-  "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/pointmass3d_kilobot_model.cpp" "/home/giladgar/argos3-kilobot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/pointmass3d_kilobot_model.cpp.o"
-  "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/simulator/qtopengl_kilobot.cpp" "/home/giladgar/argos3-kilobot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/qtopengl_kilobot.cpp.o"
+  "/home/giladgar/argos-insectbot/build/plugins/robots/kilobot/argos3plugin_simulator_kilobot_automoc.cpp" "/home/giladgar/argos-insectbot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/argos3plugin_simulator_kilobot_automoc.cpp.o"
+  "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/control_interface/ci_kilobot_communication_actuator.cpp" "/home/giladgar/argos-insectbot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_communication_actuator.cpp.o"
+  "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/control_interface/ci_kilobot_communication_sensor.cpp" "/home/giladgar/argos-insectbot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_communication_sensor.cpp.o"
+  "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/control_interface/ci_kilobot_controller.cpp" "/home/giladgar/argos-insectbot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_controller.cpp.o"
+  "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/control_interface/ci_kilobot_led_actuator.cpp" "/home/giladgar/argos-insectbot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_led_actuator.cpp.o"
+  "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/control_interface/ci_kilobot_light_sensor.cpp" "/home/giladgar/argos-insectbot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/control_interface/ci_kilobot_light_sensor.cpp.o"
+  "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/dynamics2d_kilobot_model.cpp" "/home/giladgar/argos-insectbot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/dynamics2d_kilobot_model.cpp.o"
+  "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_communication_default_actuator.cpp" "/home/giladgar/argos-insectbot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_actuator.cpp.o"
+  "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_communication_default_sensor.cpp" "/home/giladgar/argos-insectbot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_default_sensor.cpp.o"
+  "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_communication_entity.cpp" "/home/giladgar/argos-insectbot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_entity.cpp.o"
+  "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_communication_medium.cpp" "/home/giladgar/argos-insectbot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_communication_medium.cpp.o"
+  "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_entity.cpp" "/home/giladgar/argos-insectbot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_entity.cpp.o"
+  "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_led_default_actuator.cpp" "/home/giladgar/argos-insectbot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_led_default_actuator.cpp.o"
+  "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/kilobot_light_rotzonly_sensor.cpp" "/home/giladgar/argos-insectbot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/kilobot_light_rotzonly_sensor.cpp.o"
+  "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/pointmass3d_kilobot_model.cpp" "/home/giladgar/argos-insectbot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/pointmass3d_kilobot_model.cpp.o"
+  "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/simulator/qtopengl_kilobot.cpp" "/home/giladgar/argos-insectbot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/qtopengl_kilobot.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -34,8 +34,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "plugins/robots/kilobot"
-  "/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot"
-  "/home/giladgar/argos3-kilobot/src"
+  "/home/giladgar/argos-insectbot/src/plugins/robots/kilobot"
+  "/home/giladgar/argos-insectbot/src"
   "."
   "/usr/include/x86_64-linux-gnu/qt5"
   "/usr/include/x86_64-linux-gnu/qt5/QtWidgets"

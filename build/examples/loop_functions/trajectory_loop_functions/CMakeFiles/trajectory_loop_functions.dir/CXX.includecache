@@ -6,31 +6,31 @@
 
 #IncludeRegexTransform: 
 
-/home/giladgar/argos3-kilobot/build/examples/loop_functions/trajectory_loop_functions/trajectory_loop_functions_automoc.cpp
+/home/giladgar/argos-insectbot/build/examples/loop_functions/trajectory_loop_functions/trajectory_loop_functions_automoc.cpp
 
-/home/giladgar/argos3-kilobot/src/argos3/plugins/robots/kilobot/simulator/kilobot_entity.h
+/home/giladgar/argos-insectbot/src/argos3/plugins/robots/kilobot/simulator/kilobot_entity.h
 argos3/core/simulator/entity/composable_entity.h
 -
 argos3/plugins/simulator/entities/wheeled_entity.h
 -
 
-/home/giladgar/argos3-kilobot/src/examples/loop_functions/trajectory_loop_functions/trajectory_loop_functions.cpp
+/home/giladgar/argos-insectbot/src/examples/loop_functions/trajectory_loop_functions/trajectory_loop_functions.cpp
 trajectory_loop_functions.h
-/home/giladgar/argos3-kilobot/src/examples/loop_functions/trajectory_loop_functions/trajectory_loop_functions.h
+/home/giladgar/argos-insectbot/src/examples/loop_functions/trajectory_loop_functions/trajectory_loop_functions.h
 
-/home/giladgar/argos3-kilobot/src/examples/loop_functions/trajectory_loop_functions/trajectory_loop_functions.h
+/home/giladgar/argos-insectbot/src/examples/loop_functions/trajectory_loop_functions/trajectory_loop_functions.h
 argos3/core/simulator/loop_functions.h
 -
 argos3/plugins/robots/kilobot/simulator/kilobot_entity.h
 -
 
-/home/giladgar/argos3-kilobot/src/examples/loop_functions/trajectory_loop_functions/trajectory_qtuser_functions.cpp
+/home/giladgar/argos-insectbot/src/examples/loop_functions/trajectory_loop_functions/trajectory_qtuser_functions.cpp
 trajectory_qtuser_functions.h
-/home/giladgar/argos3-kilobot/src/examples/loop_functions/trajectory_loop_functions/trajectory_qtuser_functions.h
+/home/giladgar/argos-insectbot/src/examples/loop_functions/trajectory_loop_functions/trajectory_qtuser_functions.h
 trajectory_loop_functions.h
-/home/giladgar/argos3-kilobot/src/examples/loop_functions/trajectory_loop_functions/trajectory_loop_functions.h
+/home/giladgar/argos-insectbot/src/examples/loop_functions/trajectory_loop_functions/trajectory_loop_functions.h
 
-/home/giladgar/argos3-kilobot/src/examples/loop_functions/trajectory_loop_functions/trajectory_qtuser_functions.h
+/home/giladgar/argos-insectbot/src/examples/loop_functions/trajectory_loop_functions/trajectory_qtuser_functions.h
 argos3/plugins/simulator/visualizations/qt-opengl/qtopengl_user_functions.h
 -
 argos3/plugins/robots/foot-bot/simulator/footbot_entity.h

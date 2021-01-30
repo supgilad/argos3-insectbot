@@ -53,7 +53,6 @@ namespace argos {
 
       /* Create the LED display list */
       glNewList(m_unLEDList, GL_COMPILE);
-      RenderLED();
       glEndList();
    }
 
@@ -89,9 +88,6 @@ namespace argos {
       /* Place the beacon */
       CLEDEquippedEntity& cLEDEquippedEntity = c_entity.GetLEDEquippedEntity();
       const CColor& cLEDColor = cLEDEquippedEntity.GetLED(0).GetColor();
-      SetLEDMaterial((GLfloat)cLEDColor.GetRed()/255,
-                     (GLfloat)cLEDColor.GetGreen()/255,
-                     (GLfloat)cLEDColor.GetBlue()/255);
       glCallList(m_unLEDList);
    }
 
@@ -137,19 +133,6 @@ namespace argos {
       glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION,            pfEmission);
    }
 
-   /****************************************/
-   /****************************************/
-
-   void CQTOpenGLKilobot::SetLEDMaterial(GLfloat f_red, GLfloat f_green, GLfloat f_blue) {
-      const GLfloat pfColor[]     = {f_red, f_green, f_blue, 1.0f };
-      const GLfloat pfSpecular[]  = { 0.0f,    0.0f,   0.0f, 1.0f };
-      const GLfloat pfShininess[] = { 0.0f };
-      const GLfloat pfEmission[]  = {f_red, f_green, f_blue, 1.0f };
-      glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE, pfColor);
-      glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR,            pfSpecular);
-      glMaterialfv(GL_FRONT_AND_BACK, GL_SHININESS,           pfShininess);
-      glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION,            pfEmission);
-   }
 
    /****************************************/
    /****************************************/
@@ -228,44 +211,6 @@ namespace argos {
       cVertex.Set(KILOBOT_RADIUS, 0.0f);
       for(GLuint i = 0; i <= m_unVertices; i++) {
          glVertex3f(cVertex.GetX(), cVertex.GetY(), KILOBOT_HEIGHT);
-         cVertex.Rotate(cAngle);
-      }
-      glEnd();
-   }
-
-   /****************************************/
-   /****************************************/
-
-   void CQTOpenGLKilobot::RenderLED() {
-      CVector2 cVertex(KILOBOT_LED_RADIUS, 0.0f);
-      CRadians cAngle(-CRadians::TWO_PI / m_unVertices);
-      /* Bottom part */
-      glBegin(GL_POLYGON);
-      glNormal3f(0.0f, 0.0f, -1.0f);
-      for(GLuint i = 0; i <= m_unVertices; i++) {
-         glVertex3f(cVertex.GetX(), cVertex.GetY(), KILOBOT_HEIGHT);
-         cVertex.Rotate(cAngle);
-      }
-      glEnd();
-      /* Side surface */
-      cAngle = -cAngle;
-      CVector2 cNormal(1.0f, 0.0f);
-      cVertex.Set(KILOBOT_LED_RADIUS, 0.0f);
-      glBegin(GL_QUAD_STRIP);
-      for(GLuint i = 0; i <= m_unVertices; i++) {
-         glNormal3f(cNormal.GetX(), cNormal.GetY(), 0.0f);
-         glVertex3f(cVertex.GetX(), cVertex.GetY(), KILOBOT_HEIGHT + KILOBOT_LED_HEIGHT);
-         glVertex3f(cVertex.GetX(), cVertex.GetY(), KILOBOT_HEIGHT);
-         cVertex.Rotate(cAngle);
-         cNormal.Rotate(cAngle);
-      }
-      glEnd();
-      /* Top part */
-      glBegin(GL_POLYGON);
-      glNormal3f(0.0f, 0.0f, 1.0f);
-      cVertex.Set(KILOBOT_LED_RADIUS, 0.0f);
-      for(GLuint i = 0; i <= m_unVertices; i++) {
-         glVertex3f(cVertex.GetX(), cVertex.GetY(), KILOBOT_HEIGHT + KILOBOT_LED_HEIGHT);
          cVertex.Rotate(cAngle);
       }
       glEnd();

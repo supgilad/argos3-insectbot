@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/giladgar/argos3-kilobot/src/examples/behaviors/test_debug.c
+/home/giladgar/argos-insectbot/src/examples/behaviors/test_debug.c
 kilolib.h
 -
 test_debug.h
-/home/giladgar/argos3-kilobot/src/examples/behaviors/test_debug.h
+/home/giladgar/argos-insectbot/src/examples/behaviors/test_debug.h
 debug.h
 -
 
-/home/giladgar/argos3-kilobot/src/examples/behaviors/test_debug.h
+/home/giladgar/argos-insectbot/src/examples/behaviors/test_debug.h
 
-/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/control_interface/debug.h
+/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/control_interface/debug.h
 stdio.h
 -
 stdlib.h
@@ -34,19 +34,19 @@ errno.h
 sys/mman.h
 -
 
-/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/control_interface/kilolib.h
+/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/control_interface/kilolib.h
 stdint.h
 -
 message.h
-/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/control_interface/message.h
+/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/control_interface/message.h
 message_crc.h
-/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/control_interface/message_crc.h
+/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/control_interface/message_crc.h
 
-/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/control_interface/message.h
+/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/control_interface/message.h
 stdint.h
 -
 
-/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/control_interface/message_crc.h
+/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/control_interface/message_crc.h
 message.h
-/home/giladgar/argos3-kilobot/src/plugins/robots/kilobot/control_interface/message.h
+/home/giladgar/argos-insectbot/src/plugins/robots/kilobot/control_interface/message.h
 

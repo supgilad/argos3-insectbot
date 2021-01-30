@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/giladgar/argos3-kilobot/build/examples/controllers/kilobot_diffusion/kilobot_diffusion_automoc.cpp
+/home/giladgar/argos-insectbot/build/examples/controllers/kilobot_diffusion/kilobot_diffusion_automoc.cpp
 
-/home/giladgar/argos3-kilobot/src/examples/controllers/kilobot_diffusion/kilobot_diffusion.cpp
+/home/giladgar/argos-insectbot/src/examples/controllers/kilobot_diffusion/kilobot_diffusion.cpp
 kilobot_diffusion.h
-/home/giladgar/argos3-kilobot/src/examples/controllers/kilobot_diffusion/kilobot_diffusion.h
+/home/giladgar/argos-insectbot/src/examples/controllers/kilobot_diffusion/kilobot_diffusion.h
 argos3/core/utility/configuration/argos_configuration.h
 -
 argos3/core/utility/math/vector2.h
@@ -20,7 +20,7 @@ vector
 algorithm
 -
 
-/home/giladgar/argos3-kilobot/src/examples/controllers/kilobot_diffusion/kilobot_diffusion.h
+/home/giladgar/argos-insectbot/src/examples/controllers/kilobot_diffusion/kilobot_diffusion.h
 argos3/core/control_interface/ci_controller.h
 -
 argos3/plugins/robots/generic/control_interface/ci_differential_steering_actuator.h

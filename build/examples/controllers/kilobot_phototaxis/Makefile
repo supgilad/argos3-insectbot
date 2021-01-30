@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/giladgar/argos3-kilobot/src
+CMAKE_SOURCE_DIR = /home/giladgar/argos-insectbot/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/giladgar/argos3-kilobot/build
+CMAKE_BINARY_DIR = /home/giladgar/argos-insectbot/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -70,7 +70,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/giladgar/argos3-kilobot/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/giladgar/argos3-kilobot/build/CPackSourceConfig.cmake
+	cd /home/giladgar/argos-insectbot/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/giladgar/argos-insectbot/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -92,7 +92,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/giladgar/argos3-kilobot/build && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /home/giladgar/argos-insectbot/build && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -146,14 +146,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/giladgar/argos3-kilobot/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/giladgar/argos3-kilobot/build/CMakeFiles /home/giladgar/argos3-kilobot/build/examples/controllers/kilobot_phototaxis/CMakeFiles/progress.marks
-	cd /home/giladgar/argos3-kilobot/build && $(MAKE) -f CMakeFiles/Makefile2 examples/controllers/kilobot_phototaxis/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/giladgar/argos3-kilobot/build/CMakeFiles 0
+	cd /home/giladgar/argos-insectbot/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/giladgar/argos-insectbot/build/CMakeFiles /home/giladgar/argos-insectbot/build/examples/controllers/kilobot_phototaxis/CMakeFiles/progress.marks
+	cd /home/giladgar/argos-insectbot/build && $(MAKE) -f CMakeFiles/Makefile2 examples/controllers/kilobot_phototaxis/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/giladgar/argos-insectbot/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/giladgar/argos3-kilobot/build && $(MAKE) -f CMakeFiles/Makefile2 examples/controllers/kilobot_phototaxis/clean
+	cd /home/giladgar/argos-insectbot/build && $(MAKE) -f CMakeFiles/Makefile2 examples/controllers/kilobot_phototaxis/clean
 .PHONY : clean
 
 # The main clean target
@@ -163,22 +163,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/giladgar/argos3-kilobot/build && $(MAKE) -f CMakeFiles/Makefile2 examples/controllers/kilobot_phototaxis/preinstall
+	cd /home/giladgar/argos-insectbot/build && $(MAKE) -f CMakeFiles/Makefile2 examples/controllers/kilobot_phototaxis/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/giladgar/argos3-kilobot/build && $(MAKE) -f CMakeFiles/Makefile2 examples/controllers/kilobot_phototaxis/preinstall
+	cd /home/giladgar/argos-insectbot/build && $(MAKE) -f CMakeFiles/Makefile2 examples/controllers/kilobot_phototaxis/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/giladgar/argos3-kilobot/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/giladgar/argos-insectbot/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis.dir/rule:
-	cd /home/giladgar/argos3-kilobot/build && $(MAKE) -f CMakeFiles/Makefile2 examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis.dir/rule
+	cd /home/giladgar/argos-insectbot/build && $(MAKE) -f CMakeFiles/Makefile2 examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis.dir/rule
 .PHONY : examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis.dir/rule
 
 # Convenience name for target.
@@ -188,12 +188,12 @@ kilobot_phototaxis: examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_p
 
 # fast build rule for target.
 kilobot_phototaxis/fast:
-	cd /home/giladgar/argos3-kilobot/build && $(MAKE) -f examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis.dir/build.make examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis.dir/build
+	cd /home/giladgar/argos-insectbot/build && $(MAKE) -f examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis.dir/build.make examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis.dir/build
 .PHONY : kilobot_phototaxis/fast
 
 # Convenience name for target.
 examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis_automoc.dir/rule:
-	cd /home/giladgar/argos3-kilobot/build && $(MAKE) -f CMakeFiles/Makefile2 examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis_automoc.dir/rule
+	cd /home/giladgar/argos-insectbot/build && $(MAKE) -f CMakeFiles/Makefile2 examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis_automoc.dir/rule
 .PHONY : examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis_automoc.dir/rule
 
 # Convenience name for target.
@@ -203,7 +203,7 @@ kilobot_phototaxis_automoc: examples/controllers/kilobot_phototaxis/CMakeFiles/k
 
 # fast build rule for target.
 kilobot_phototaxis_automoc/fast:
-	cd /home/giladgar/argos3-kilobot/build && $(MAKE) -f examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis_automoc.dir/build.make examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis_automoc.dir/build
+	cd /home/giladgar/argos-insectbot/build && $(MAKE) -f examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis_automoc.dir/build.make examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis_automoc.dir/build
 .PHONY : kilobot_phototaxis_automoc/fast
 
 kilobot_phototaxis.o: kilobot_phototaxis.cpp.o
@@ -212,7 +212,7 @@ kilobot_phototaxis.o: kilobot_phototaxis.cpp.o
 
 # target to build an object file
 kilobot_phototaxis.cpp.o:
-	cd /home/giladgar/argos3-kilobot/build && $(MAKE) -f examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis.dir/build.make examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis.dir/kilobot_phototaxis.cpp.o
+	cd /home/giladgar/argos-insectbot/build && $(MAKE) -f examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis.dir/build.make examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis.dir/kilobot_phototaxis.cpp.o
 .PHONY : kilobot_phototaxis.cpp.o
 
 kilobot_phototaxis.i: kilobot_phototaxis.cpp.i
@@ -221,7 +221,7 @@ kilobot_phototaxis.i: kilobot_phototaxis.cpp.i
 
 # target to preprocess a source file
 kilobot_phototaxis.cpp.i:
-	cd /home/giladgar/argos3-kilobot/build && $(MAKE) -f examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis.dir/build.make examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis.dir/kilobot_phototaxis.cpp.i
+	cd /home/giladgar/argos-insectbot/build && $(MAKE) -f examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis.dir/build.make examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis.dir/kilobot_phototaxis.cpp.i
 .PHONY : kilobot_phototaxis.cpp.i
 
 kilobot_phototaxis.s: kilobot_phototaxis.cpp.s
@@ -230,7 +230,7 @@ kilobot_phototaxis.s: kilobot_phototaxis.cpp.s
 
 # target to generate assembly for a file
 kilobot_phototaxis.cpp.s:
-	cd /home/giladgar/argos3-kilobot/build && $(MAKE) -f examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis.dir/build.make examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis.dir/kilobot_phototaxis.cpp.s
+	cd /home/giladgar/argos-insectbot/build && $(MAKE) -f examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis.dir/build.make examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis.dir/kilobot_phototaxis.cpp.s
 .PHONY : kilobot_phototaxis.cpp.s
 
 kilobot_phototaxis_automoc.o: kilobot_phototaxis_automoc.cpp.o
@@ -239,7 +239,7 @@ kilobot_phototaxis_automoc.o: kilobot_phototaxis_automoc.cpp.o
 
 # target to build an object file
 kilobot_phototaxis_automoc.cpp.o:
-	cd /home/giladgar/argos3-kilobot/build && $(MAKE) -f examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis.dir/build.make examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis.dir/kilobot_phototaxis_automoc.cpp.o
+	cd /home/giladgar/argos-insectbot/build && $(MAKE) -f examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis.dir/build.make examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis.dir/kilobot_phototaxis_automoc.cpp.o
 .PHONY : kilobot_phototaxis_automoc.cpp.o
 
 kilobot_phototaxis_automoc.i: kilobot_phototaxis_automoc.cpp.i
@@ -248,7 +248,7 @@ kilobot_phototaxis_automoc.i: kilobot_phototaxis_automoc.cpp.i
 
 # target to preprocess a source file
 kilobot_phototaxis_automoc.cpp.i:
-	cd /home/giladgar/argos3-kilobot/build && $(MAKE) -f examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis.dir/build.make examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis.dir/kilobot_phototaxis_automoc.cpp.i
+	cd /home/giladgar/argos-insectbot/build && $(MAKE) -f examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis.dir/build.make examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis.dir/kilobot_phototaxis_automoc.cpp.i
 .PHONY : kilobot_phototaxis_automoc.cpp.i
 
 kilobot_phototaxis_automoc.s: kilobot_phototaxis_automoc.cpp.s
@@ -257,7 +257,7 @@ kilobot_phototaxis_automoc.s: kilobot_phototaxis_automoc.cpp.s
 
 # target to generate assembly for a file
 kilobot_phototaxis_automoc.cpp.s:
-	cd /home/giladgar/argos3-kilobot/build && $(MAKE) -f examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis.dir/build.make examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis.dir/kilobot_phototaxis_automoc.cpp.s
+	cd /home/giladgar/argos-insectbot/build && $(MAKE) -f examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis.dir/build.make examples/controllers/kilobot_phototaxis/CMakeFiles/kilobot_phototaxis.dir/kilobot_phototaxis_automoc.cpp.s
 .PHONY : kilobot_phototaxis_automoc.cpp.s
 
 # Help Target
@@ -293,6 +293,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/giladgar/argos3-kilobot/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/giladgar/argos-insectbot/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

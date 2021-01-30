@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/giladgar/argos3-kilobot/src
+CMAKE_SOURCE_DIR = /home/giladgar/argos-insectbot/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/giladgar/argos3-kilobot/build
+CMAKE_BINARY_DIR = /home/giladgar/argos-insectbot/build
 
 # Utility rule file for argos3plugin_simulator_kilobot_automoc.
 
@@ -54,8 +54,8 @@ CMAKE_BINARY_DIR = /home/giladgar/argos3-kilobot/build
 include plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot_automoc.dir/progress.make
 
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot_automoc:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/giladgar/argos3-kilobot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic moc for target argos3plugin_simulator_kilobot"
-	cd /home/giladgar/argos3-kilobot/build/plugins/robots/kilobot && /usr/bin/cmake -E cmake_autogen /home/giladgar/argos3-kilobot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot_automoc.dir/ Release
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/giladgar/argos-insectbot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic moc for target argos3plugin_simulator_kilobot"
+	cd /home/giladgar/argos-insectbot/build/plugins/robots/kilobot && /usr/bin/cmake -E cmake_autogen /home/giladgar/argos-insectbot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot_automoc.dir/ Release
 
 argos3plugin_simulator_kilobot_automoc: plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot_automoc
 argos3plugin_simulator_kilobot_automoc: plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot_automoc.dir/build.make
@@ -68,10 +68,10 @@ plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot_automoc.dir/bui
 .PHONY : plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot_automoc.dir/build
 
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot_automoc.dir/clean:
-	cd /home/giladgar/argos3-kilobot/build/plugins/robots/kilobot && $(CMAKE_COMMAND) -P CMakeFiles/argos3plugin_simulator_kilobot_automoc.dir/cmake_clean.cmake
+	cd /home/giladgar/argos-insectbot/build/plugins/robots/kilobot && $(CMAKE_COMMAND) -P CMakeFiles/argos3plugin_simulator_kilobot_automoc.dir/cmake_clean.cmake
 .PHONY : plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot_automoc.dir/clean
 
 plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot_automoc.dir/depend:
-	cd /home/giladgar/argos3-kilobot/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giladgar/argos3-kilobot/src /home/giladgar/argos3-kilobot/src/plugins/robots/kilobot /home/giladgar/argos3-kilobot/build /home/giladgar/argos3-kilobot/build/plugins/robots/kilobot /home/giladgar/argos3-kilobot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot_automoc.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/giladgar/argos-insectbot/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giladgar/argos-insectbot/src /home/giladgar/argos-insectbot/src/plugins/robots/kilobot /home/giladgar/argos-insectbot/build /home/giladgar/argos-insectbot/build/plugins/robots/kilobot /home/giladgar/argos-insectbot/build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot_automoc.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot_automoc.dir/depend
 

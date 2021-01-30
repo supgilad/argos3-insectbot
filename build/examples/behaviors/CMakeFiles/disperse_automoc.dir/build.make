@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/giladgar/argos3-kilobot/src
+CMAKE_SOURCE_DIR = /home/giladgar/argos-insectbot/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/giladgar/argos3-kilobot/build
+CMAKE_BINARY_DIR = /home/giladgar/argos-insectbot/build
 
 # Utility rule file for disperse_automoc.
 
@@ -54,8 +54,8 @@ CMAKE_BINARY_DIR = /home/giladgar/argos3-kilobot/build
 include examples/behaviors/CMakeFiles/disperse_automoc.dir/progress.make
 
 examples/behaviors/CMakeFiles/disperse_automoc:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/giladgar/argos3-kilobot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic moc for target disperse"
-	cd /home/giladgar/argos3-kilobot/build/examples/behaviors && /usr/bin/cmake -E cmake_autogen /home/giladgar/argos3-kilobot/build/examples/behaviors/CMakeFiles/disperse_automoc.dir/ Release
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/giladgar/argos-insectbot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic moc for target disperse"
+	cd /home/giladgar/argos-insectbot/build/examples/behaviors && /usr/bin/cmake -E cmake_autogen /home/giladgar/argos-insectbot/build/examples/behaviors/CMakeFiles/disperse_automoc.dir/ Release
 
 disperse_automoc: examples/behaviors/CMakeFiles/disperse_automoc
 disperse_automoc: examples/behaviors/CMakeFiles/disperse_automoc.dir/build.make
@@ -68,10 +68,10 @@ examples/behaviors/CMakeFiles/disperse_automoc.dir/build: disperse_automoc
 .PHONY : examples/behaviors/CMakeFiles/disperse_automoc.dir/build
 
 examples/behaviors/CMakeFiles/disperse_automoc.dir/clean:
-	cd /home/giladgar/argos3-kilobot/build/examples/behaviors && $(CMAKE_COMMAND) -P CMakeFiles/disperse_automoc.dir/cmake_clean.cmake
+	cd /home/giladgar/argos-insectbot/build/examples/behaviors && $(CMAKE_COMMAND) -P CMakeFiles/disperse_automoc.dir/cmake_clean.cmake
 .PHONY : examples/behaviors/CMakeFiles/disperse_automoc.dir/clean
 
 examples/behaviors/CMakeFiles/disperse_automoc.dir/depend:
-	cd /home/giladgar/argos3-kilobot/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giladgar/argos3-kilobot/src /home/giladgar/argos3-kilobot/src/examples/behaviors /home/giladgar/argos3-kilobot/build /home/giladgar/argos3-kilobot/build/examples/behaviors /home/giladgar/argos3-kilobot/build/examples/behaviors/CMakeFiles/disperse_automoc.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/giladgar/argos-insectbot/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giladgar/argos-insectbot/src /home/giladgar/argos-insectbot/src/examples/behaviors /home/giladgar/argos-insectbot/build /home/giladgar/argos-insectbot/build/examples/behaviors /home/giladgar/argos-insectbot/build/examples/behaviors/CMakeFiles/disperse_automoc.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : examples/behaviors/CMakeFiles/disperse_automoc.dir/depend
 

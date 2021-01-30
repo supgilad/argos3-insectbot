@@ -6,5 +6,5 @@
 
 #IncludeRegexTransform: 
 
-/home/giladgar/argos3-kilobot/build/plugins/robots/kilobot/argos3plugin_simulator_kilolib_automoc.cpp
+/home/giladgar/argos-insectbot/build/plugins/robots/kilobot/argos3plugin_simulator_kilolib_automoc.cpp
 

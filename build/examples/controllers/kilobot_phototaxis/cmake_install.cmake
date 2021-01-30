@@ -1,4 +1,4 @@
-# Install script for directory: /home/giladgar/argos3-kilobot/src/examples/controllers/kilobot_phototaxis
+# Install script for directory: /home/giladgar/argos-insectbot/src/examples/controllers/kilobot_phototaxis
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

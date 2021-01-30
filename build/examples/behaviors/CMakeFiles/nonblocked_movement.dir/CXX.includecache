@@ -6,5 +6,5 @@
 
 #IncludeRegexTransform: 
 
-/home/giladgar/argos3-kilobot/build/examples/behaviors/nonblocked_movement_automoc.cpp
+/home/giladgar/argos-insectbot/build/examples/behaviors/nonblocked_movement_automoc.cpp
 

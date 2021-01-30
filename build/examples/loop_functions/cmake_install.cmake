@@ -1,4 +1,4 @@
-# Install script for directory: /home/giladgar/argos3-kilobot/src/examples/loop_functions
+# Install script for directory: /home/giladgar/argos-insectbot/src/examples/loop_functions
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,8 +34,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/giladgar/argos3-kilobot/build/examples/loop_functions/debug_loop_functions/cmake_install.cmake")
-  include("/home/giladgar/argos3-kilobot/build/examples/loop_functions/trajectory_loop_functions/cmake_install.cmake")
+  include("/home/giladgar/argos-insectbot/build/examples/loop_functions/debug_loop_functions/cmake_install.cmake")
+  include("/home/giladgar/argos-insectbot/build/examples/loop_functions/trajectory_loop_functions/cmake_install.cmake")
 
 endif()
 
