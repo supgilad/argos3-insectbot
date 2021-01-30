@@ -1,0 +1,1 @@
+/usr/bin/c++   -Wall -Os -DNDEBUG   CMakeFiles/move_to_light.dir/move_to_light.c.o CMakeFiles/move_to_light.dir/move_to_light_automoc.cpp.o  -o move_to_light  -L/usr/local/lib/argos3 -rdynamic ../../plugins/robots/kilobot/libargos3plugin_simulator_kilolib.a -lrt -Wl,-rpath,/usr/local/lib/argos3 

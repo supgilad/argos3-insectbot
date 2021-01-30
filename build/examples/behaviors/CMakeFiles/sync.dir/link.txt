@@ -1,0 +1,1 @@
+/usr/bin/c++   -Wall -Os -DNDEBUG   CMakeFiles/sync.dir/sync.c.o CMakeFiles/sync.dir/sync_automoc.cpp.o  -o sync  -L/usr/local/lib/argos3 -rdynamic ../../plugins/robots/kilobot/libargos3plugin_simulator_kilolib.a -lrt -Wl,-rpath,/usr/local/lib/argos3 

@@ -1,0 +1,1 @@
+/usr/bin/c++   -Wall -Os -DNDEBUG   CMakeFiles/simple_movement.dir/simple_movement.c.o CMakeFiles/simple_movement.dir/simple_movement_automoc.cpp.o  -o simple_movement  -L/usr/local/lib/argos3 -rdynamic ../../plugins/robots/kilobot/libargos3plugin_simulator_kilolib.a -lrt -Wl,-rpath,/usr/local/lib/argos3 
