@@ -26,194 +26,120 @@ namespace argos {
    /****************************************/
 
    CQTOpenGLKilobot::CQTOpenGLKilobot() :
-      m_unVertices(40) {
+      m_unVertices(24) {
       /* Reserve the needed display lists */
-      m_unLists = glGenLists(4);
+      m_unLists = glGenLists(1);
 
       /* Assign indices for better referencing (later) */
-      m_unBasicWheelList            = m_unLists;
-      m_unWheelList                 = m_unLists + 1;
-      m_unBaseList                  = m_unLists + 2;
-      m_unLEDList                   = m_unLists + 3;
+      // m_unBasicWheelList            = m_unLists;
+      // m_unWheelList                 = m_unLists + 1;
+      m_unBaseList                  = m_unLists + 0;
+      // m_unLEDList                   = m_unLists + 3;
 
-      // /* Create the materialless wheel display list */
-      // glNewList(m_unBasicWheelList, GL_COMPILE);
-      // MakeWheel();
-      // glEndList();
-
-      /* Create the wheel display list */
-      glNewList(m_unWheelList, GL_COMPILE);
-      RenderWheel();
-      glEndList();
 
       /* Create the base module display list */
       glNewList(m_unBaseList, GL_COMPILE);
       RenderBase();
       glEndList();
 
-      /* Create the LED display list */
-      glNewList(m_unLEDList, GL_COMPILE);
-      glEndList();
    }
 
    /****************************************/
    /****************************************/
 
    CQTOpenGLKilobot::~CQTOpenGLKilobot() {
-      glDeleteLists(m_unLists, 4);
+      glDeleteLists(m_unLists, 1);
    }
 
    /****************************************/
    /****************************************/
 
    void CQTOpenGLKilobot::Draw(CKilobotEntity& c_entity) {
-      /* Place the pins */
       glPushMatrix();
-      glTranslatef(KILOBOT_FRONT_PIN_DISTANCE, 0.0, 0.0f);
-      glCallList(m_unWheelList);
-      glPopMatrix();
-      glPushMatrix();
-      glTranslatef(0.0f, KILOBOT_HALF_INTERPIN_DISTANCE, 0.0f);
-      glCallList(m_unWheelList);
-      glPopMatrix();
-      glPushMatrix();
-      glTranslatef(0.0f, -KILOBOT_HALF_INTERPIN_DISTANCE, 0.0f);
-      glCallList(m_unWheelList);
-      glPopMatrix();
-      /* Place the base */
-      glPushMatrix();
-      glTranslatef(KILOBOT_ECCENTRICITY, 0.0f, 0.0f);
+      // glTranslatef(KILOBOT_ECCENTRICITY, 0.0f, 0.0f);
       glCallList(m_unBaseList);
       glPopMatrix();
-      /* Place the beacon */
-      CLEDEquippedEntity& cLEDEquippedEntity = c_entity.GetLEDEquippedEntity();
-      const CColor& cLEDColor = cLEDEquippedEntity.GetLED(0).GetColor();
-      glCallList(m_unLEDList);
    }
 
    /****************************************/
    /****************************************/
 
-   void CQTOpenGLKilobot::SetWhitePlasticMaterial() {
-      const GLfloat pfColor[]     = {   1.0f, 1.0f, 1.0f, 1.0f };
-      const GLfloat pfSpecular[]  = {   0.9f, 0.9f, 0.9f, 1.0f };
-      const GLfloat pfShininess[] = { 100.0f                   };
-      const GLfloat pfEmission[]  = {   0.0f, 0.0f, 0.0f, 1.0f };
-      glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE, pfColor);
-      glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR,            pfSpecular);
-      glMaterialfv(GL_FRONT_AND_BACK, GL_SHININESS,           pfShininess);
-      glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION,            pfEmission);
-   }
+   // void CQTOpenGLKilobot::SetWhitePlasticMaterial() {
+   //    const GLfloat pfColor[]     = {   1.0f, 1.0f, 1.0f, 1.0f };
+   //    const GLfloat pfSpecular[]  = {   0.9f, 0.9f, 0.9f, 1.0f };
+   //    const GLfloat pfShininess[] = { 100.0f                   };
+   //    const GLfloat pfEmission[]  = {   0.0f, 0.0f, 0.0f, 1.0f };
+   //    glMaterialfv(GL_SIDE_AND_BACK, GL_AMBIENT_AND_DIFFUSE, pfColor);
+   //    glMaterialfv(GL_SIDE_AND_BACK, GL_SPECULAR,            pfSpecular);
+   //    glMaterialfv(GL_SIDE_AND_BACK, GL_SHININESS,           pfShininess);
+   //    glMaterialfv(GL_SIDE_AND_BACK, GL_EMISSION,            pfEmission);
+   // }
 
    /****************************************/
    /****************************************/
 
-   void CQTOpenGLKilobot::SetBlackTireMaterial() {
-      const GLfloat pfColor[]     = { 0.0f, 0.0f, 0.0f, 1.0f };
-      const GLfloat pfSpecular[]  = { 0.0f, 0.0f, 0.0f, 1.0f };
-      const GLfloat pfShininess[] = { 0.0f                   };
-      const GLfloat pfEmission[]  = { 0.0f, 0.0f, 0.0f, 1.0f };
-      glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE, pfColor);
-      glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR,            pfSpecular);
-      glMaterialfv(GL_FRONT_AND_BACK, GL_SHININESS,           pfShininess);
-      glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION,            pfEmission);
-   }
-
-   /****************************************/
-   /****************************************/
-
-   void CQTOpenGLKilobot::SetCircuitBoardMaterial() {
-      const GLfloat pfColor[]     = { 0.0f, 0.0f, 1.0f, 1.0f };
-      const GLfloat pfSpecular[]  = { 0.5f, 0.5f, 1.0f, 1.0f };
-      const GLfloat pfShininess[] = { 10.0f                  };
-      const GLfloat pfEmission[]  = { 0.0f, 0.0f, 0.0f, 1.0f };
-      glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE, pfColor);
-      glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR,            pfSpecular);
-      glMaterialfv(GL_FRONT_AND_BACK, GL_SHININESS,           pfShininess);
-      glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION,            pfEmission);
-   }
-
-
-   /****************************************/
-   /****************************************/
-
-   void CQTOpenGLKilobot::RenderWheel() {
-      /* Set material */
-      SetWhitePlasticMaterial();
-      CVector2 cVertex(KILOBOT_PIN_RADIUS, 0.0f);
-      CRadians cAngle(-CRadians::TWO_PI / m_unVertices);
-      /* Bottom side */
-      glBegin(GL_POLYGON);
-      glNormal3f(0.0f, 0.0f, -1.0f);
-      for(GLuint i = 0; i <= m_unVertices; i++) {
-         glVertex3f(cVertex.GetX(), cVertex.GetY(), 0.0f );
-         cVertex.Rotate(cAngle);
-      }
-      glEnd();
-      /* Side surface */
-      cAngle = -cAngle;
-      CVector2 cNormal(1.0f, 0.0f);
-      cVertex.Set(KILOBOT_PIN_RADIUS, 0.0f);
-      glBegin(GL_QUAD_STRIP);
-      for(GLuint i = 0; i <= m_unVertices; i++) {
-         glNormal3f(cNormal.GetX(), cNormal.GetY(), 0.0f);
-         glVertex3f(cVertex.GetX(), cVertex.GetY(), KILOBOT_PIN_HEIGHT);
-         glVertex3f(cVertex.GetX(), cVertex.GetY(), 0.0f);
-         cVertex.Rotate(cAngle);
-         cNormal.Rotate(cAngle);
-      }
-      glEnd();
-      /* Top part */
-      glBegin(GL_POLYGON);
-      glNormal3f(0.0f, 0.0f, 1.0f);
-      cVertex.Set(KILOBOT_PIN_RADIUS, 0.0f);
-      for(GLuint i = 0; i <= m_unVertices; i++) {
-         glVertex3f(cVertex.GetX(), cVertex.GetY(),  KILOBOT_PIN_HEIGHT);
-         cVertex.Rotate(cAngle);
-      }
-      glEnd();
-   }
-
+   // void CQTOpenGLKilobot::SetCircuitBoardMaterial() {
+   //    const GLfloat pfColor[]     = { 0.0f, 0.0f, 1.0f, 1.0f };
+   //    const GLfloat pfSpecular[]  = { 0.5f, 0.5f, 1.0f, 1.0f };
+   //    const GLfloat pfShininess[] = { 10.0f                  };
+   //    const GLfloat pfEmission[]  = { 0.0f, 0.0f, 0.0f, 1.0f };
+   //    glMaterialfv(GL_SIDE_AND_BACK, GL_AMBIENT_AND_DIFFUSE, pfColor);
+   //    glMaterialfv(GL_SIDE_AND_BACK, GL_SPECULAR,            pfSpecular);
+   //    glMaterialfv(GL_SIDE_AND_BACK, GL_SHININESS,           pfShininess);
+   //    glMaterialfv(GL_SIDE_AND_BACK, GL_EMISSION,            pfEmission);
+   // }
 
    /****************************************/
    /****************************************/
 
    void CQTOpenGLKilobot::RenderBase() {
+   glEnable(GL_COLOR_MATERIAL);
       /* Set material */
-      SetCircuitBoardMaterial();
-      /* Circuit board */
-      CVector2 cVertex(KILOBOT_RADIUS, 0.0f);
-      CRadians cAngle(-CRadians::TWO_PI / m_unVertices);
-      /* Bottom part */
-      glBegin(GL_POLYGON);
-      glNormal3f(0.0f, 0.0f, -1.0f);
-      for(GLuint i = 0; i <= m_unVertices; i++) {
-         glVertex3f(cVertex.GetX(), cVertex.GetY(), KILOBOT_PIN_HEIGHT);
-         cVertex.Rotate(cAngle);
-      }
-      glEnd();
-      /* Side surface */
-      cAngle = -cAngle;
-      CVector2 cNormal(1.0f, 0.0f);
-      cVertex.Set(KILOBOT_RADIUS, 0.0f);
-      glBegin(GL_QUAD_STRIP);
-      for(GLuint i = 0; i <= m_unVertices; i++) {
-         glNormal3f(cNormal.GetX(), cNormal.GetY(), 0.0f);
-         glVertex3f(cVertex.GetX(), cVertex.GetY(), KILOBOT_HEIGHT);
-         glVertex3f(cVertex.GetX(), cVertex.GetY(), KILOBOT_PIN_HEIGHT);
-         cVertex.Rotate(cAngle);
-         cNormal.Rotate(cAngle);
-      }
-      glEnd();
-      /* Top part */
-      glBegin(GL_POLYGON);
-      glNormal3f(0.0f, 0.0f, 1.0f);
-      cVertex.Set(KILOBOT_RADIUS, 0.0f);
-      for(GLuint i = 0; i <= m_unVertices; i++) {
-         glVertex3f(cVertex.GetX(), cVertex.GetY(), KILOBOT_HEIGHT);
-         cVertex.Rotate(cAngle);
-      }
-      glEnd();
+      // SetCircuitBoardMaterial();
+   glTranslatef(0.0f, 0.0f, 0.005f);  // Move right and into the screen
+   const float top = 0.04f;
+   const float side = 0.02f;
+   const float front = 0.05f;
+   glBegin(GL_QUADS);                // Begin drawing the color cube with 6 quads
+      // side face (y = 0.05f)
+      // Define vertices in counter-clockwise (CCW) order with normal pointing out
+      glColor3f(1.0f, 0.5f, 0.0f);
+      glVertex3f( front, side, -0.05f);
+      glVertex3f(-0.05f, side, -0.05f);
+      glVertex3f(-0.05f, side,  top);
+      glVertex3f( front, side,  top);
+ 
+      // Bottom face (y = -0.05f)
+      glVertex3f( front, -0.05f,  top);
+      glVertex3f(-0.05f, -0.05f,  top);
+      glVertex3f(-0.05f, -0.05f, -0.05f);
+      glVertex3f( front, -0.05f, -0.05f);
+ 
+      // Side face  (z = top)
+      glVertex3f( front,  side, top);
+      glVertex3f(-0.05f,  side, top);
+      glVertex3f(-0.05f, -0.05f, top);
+      glVertex3f( front, -0.05f, top);
+ 
+      // Back face (z = -0.05f)
+      glVertex3f( front, -0.05f, -0.05f);
+      glVertex3f(-0.05f, -0.05f, -0.05f);
+      glVertex3f(-0.05f,  side, -0.05f);
+      glVertex3f( front,  side, -0.05f);
+ 
+      // Left face (x = -0.05f)
+      glVertex3f(-0.05f,  side,  top);
+      glVertex3f(-0.05f,  side, -0.05f);
+      glVertex3f(-0.05f, -0.05f, -0.05f);
+      glVertex3f(-0.05f, -0.05f,  top);
+ 
+      // Right face (x = 0.05f)
+      glVertex3f(front,  side, -0.05f);
+      glVertex3f(front,  side,  top);
+      glVertex3f(front, -0.05f,  top);
+      glVertex3f(front, -0.05f, -0.05f);
+   glEnd();  // End of drawing color-cube
+ 
    }
 
 

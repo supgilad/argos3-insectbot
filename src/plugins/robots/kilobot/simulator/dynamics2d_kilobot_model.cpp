@@ -48,10 +48,7 @@ namespace argos {
       cpBody* ptBody =
          cpSpaceAddBody(GetDynamics2DEngine().GetPhysicsSpace(),
                         cpBodyNew(KILOBOT_MASS,
-                                  cpMomentForCircle(KILOBOT_MASS,
-                                                    0.0f,
-                                                    KILOBOT_RADIUS + KILOBOT_RADIUS,
-                                                    cpv(KILOBOT_ECCENTRICITY,0))));
+                                  cpMomentForBox(KILOBOT_MASS,KILOBOT_BASE_WIDTH,KILOBOT_BASE_HEIGHT)));
       const CVector3& cPosition = GetEmbodiedEntity().GetOriginAnchor().Position;
       ptBody->p = cpv(cPosition.GetX(), cPosition.GetY());
       CRadians cXAngle, cYAngle, cZAngle;
@@ -60,9 +57,7 @@ namespace argos {
       /* Create the actual body shape */
       cpShape* ptShape =
          cpSpaceAddShape(GetDynamics2DEngine().GetPhysicsSpace(),
-                         cpCircleShapeNew(ptBody,
-                                          KILOBOT_RADIUS,
-                                          cpv(KILOBOT_ECCENTRICITY,0)));
+                         cpBoxShapeNew(ptBody,KILOBOT_BASE_WIDTH,KILOBOT_BASE_HEIGHT));
       ptShape->e = 0.0;       // No elasticity
       ptShape->u = fFriction; // Friction
       /* Constrain the body to follow the diff steering control */
