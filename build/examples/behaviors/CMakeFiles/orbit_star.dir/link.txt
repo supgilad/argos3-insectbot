@@ -1,1 +1,0 @@
-/usr/bin/c++   -Wall -Os -DNDEBUG   CMakeFiles/orbit_star.dir/orbit_star.c.o CMakeFiles/orbit_star.dir/orbit_star_automoc.cpp.o  -o orbit_star  -L/usr/local/lib/argos3 -rdynamic ../../plugins/robots/kilobot/libargos3plugin_simulator_kilolib.a -lrt -Wl,-rpath,/usr/local/lib/argos3 

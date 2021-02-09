@@ -1,1 +1,0 @@
-/usr/bin/c++   -Wall -Os -DNDEBUG   CMakeFiles/test_listener.dir/test_listener.c.o CMakeFiles/test_listener.dir/test_listener_automoc.cpp.o  -o test_listener  -L/usr/local/lib/argos3 -rdynamic ../../plugins/robots/kilobot/libargos3plugin_simulator_kilolib.a -lrt -Wl,-rpath,/usr/local/lib/argos3 

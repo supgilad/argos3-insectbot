@@ -1,1 +1,0 @@
-/usr/bin/c++   -Wall -Os -DNDEBUG   CMakeFiles/blinky.dir/blinky.c.o CMakeFiles/blinky.dir/blinky_automoc.cpp.o  -o blinky  -L/usr/local/lib/argos3 -rdynamic ../../plugins/robots/kilobot/libargos3plugin_simulator_kilolib.a -lrt -Wl,-rpath,/usr/local/lib/argos3 

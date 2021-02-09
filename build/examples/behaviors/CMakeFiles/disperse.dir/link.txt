@@ -1,1 +1,0 @@
-/usr/bin/c++   -Wall -Os -DNDEBUG   CMakeFiles/disperse.dir/disperse.c.o CMakeFiles/disperse.dir/disperse_automoc.cpp.o  -o disperse  -L/usr/local/lib/argos3 -rdynamic ../../plugins/robots/kilobot/libargos3plugin_simulator_kilolib.a -lrt -Wl,-rpath,/usr/local/lib/argos3 
