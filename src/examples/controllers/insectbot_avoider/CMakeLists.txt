@@ -1,0 +1,5 @@
+add_library(insectbot_avoider SHARED insectbot_avoider.h insectbot_avoider.cpp)
+target_link_libraries(insectbot_avoider
+  argos3core_simulator
+  argos3plugin_simulator_kilobot
+  argos3plugin_simulator_genericrobot)

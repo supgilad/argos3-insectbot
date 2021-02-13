@@ -97,48 +97,50 @@ namespace argos {
       /* Set material */
       // SetCircuitBoardMaterial();
    glTranslatef(0.0f, 0.0f, 0.005f);  // Move right and into the screen
-   const float top = 0.04f;
-   const float side = 0.02f;
-   const float front = 0.05f;
+   const float top = 0.02f;
+   const float side = 0.01f;
+   const float front = 0.02f;
+   const float lside = -0.02f;
    glBegin(GL_QUADS);                // Begin drawing the color cube with 6 quads
       // side face (y = 0.05f)
       // Define vertices in counter-clockwise (CCW) order with normal pointing out
-      glColor3f(1.0f, 0.5f, 0.0f);
-      glVertex3f( front, side, -0.05f);
-      glVertex3f(-0.05f, side, -0.05f);
-      glVertex3f(-0.05f, side,  top);
+      glColor3f(0.0f, 0.01f, 0.0f);
+      glVertex3f( front, side, lside);
+      glVertex3f(lside, side, lside);
+      glVertex3f(lside, side,  top);
       glVertex3f( front, side,  top);
  
-      // Bottom face (y = -0.05f)
-      glVertex3f( front, -0.05f,  top);
-      glVertex3f(-0.05f, -0.05f,  top);
-      glVertex3f(-0.05f, -0.05f, -0.05f);
-      glVertex3f( front, -0.05f, -0.05f);
+      // Bottom face (y = lside)
+      glVertex3f( front, lside,  top);
+      glVertex3f(lside, lside,  top);
+      glVertex3f(lside, lside, lside);
+      glVertex3f( front, lside, lside);
  
       // Side face  (z = top)
       glVertex3f( front,  side, top);
-      glVertex3f(-0.05f,  side, top);
-      glVertex3f(-0.05f, -0.05f, top);
-      glVertex3f( front, -0.05f, top);
+      glVertex3f(lside,  side, top);
+      glVertex3f(lside, lside, top);
+      glVertex3f( front, lside, top);
  
-      // Back face (z = -0.05f)
-      glVertex3f( front, -0.05f, -0.05f);
-      glVertex3f(-0.05f, -0.05f, -0.05f);
-      glVertex3f(-0.05f,  side, -0.05f);
-      glVertex3f( front,  side, -0.05f);
+      // Back face (z = lside)
+      glVertex3f( front, lside, lside);
+      glVertex3f(lside, lside, lside);
+      glVertex3f(lside,  side, lside);
+      glVertex3f( front,  side, lside);
  
-      // Left face (x = -0.05f)
-      glVertex3f(-0.05f,  side,  top);
-      glVertex3f(-0.05f,  side, -0.05f);
-      glVertex3f(-0.05f, -0.05f, -0.05f);
-      glVertex3f(-0.05f, -0.05f,  top);
+      // Left face (x = lside)
+      glVertex3f(lside,  side,  top);
+      glVertex3f(lside,  side, lside);
+      glVertex3f(lside, lside, lside);
+      glVertex3f(lside, lside,  top);
  
       // Right face (x = 0.05f)
-      glVertex3f(front,  side, -0.05f);
+      glVertex3f(front,  side, lside);
       glVertex3f(front,  side,  top);
-      glVertex3f(front, -0.05f,  top);
-      glVertex3f(front, -0.05f, -0.05f);
+      glVertex3f(front, lside,  top);
+      glVertex3f(front, lside, lside);
    glEnd();  // End of drawing color-cube
+   glColor3f(1.0f, 0.01f, 0.0f);
  
    }
 
