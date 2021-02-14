@@ -16,7 +16,10 @@
 #include <argos3/plugins/robots/kilobot/simulator/kilobot_communication_entity.h>
 
 namespace argos {
-
+   static const Real PROXIMITY_SENSOR_RING_ELEVATION       = 0.0001f;
+   static const Real PROXIMITY_SENSOR_RING_RADIUS          = 0.03f;
+   static const CRadians PROXIMITY_SENSOR_RING_START_ANGLE = CRadians((ARGOS_PI / 12.0f) * 0.5f);
+   static const Real PROXIMITY_SENSOR_RING_RANGE           = 0.1f;
    /****************************************/
    /****************************************/
 
@@ -26,6 +29,7 @@ namespace argos {
       m_pcEmbodiedEntity(NULL),
       m_pcLEDEquippedEntity(NULL),
       m_pcLightSensorEquippedEntity(NULL),
+      m_pcProximitySensorEquippedEntity(NULL),
       m_pcKilobotCommunicationEntity(NULL),
       m_pcWheeledEntity(NULL) {
    }
@@ -42,6 +46,7 @@ namespace argos {
       m_pcControllableEntity(NULL),
       m_pcEmbodiedEntity(NULL),
       m_pcLEDEquippedEntity(NULL),
+      m_pcProximitySensorEquippedEntity(NULL),
       m_pcLightSensorEquippedEntity(NULL),
       m_pcWheeledEntity(NULL) {
       try {
@@ -81,7 +86,16 @@ namespace argos {
                                             cCommAnchor,
                                             *m_pcEmbodiedEntity);
          AddComponent(*m_pcKilobotCommunicationEntity);
-
+         m_pcProximitySensorEquippedEntity =
+            new CProximitySensorEquippedEntity(this, "proximity_0");
+         AddComponent(*m_pcProximitySensorEquippedEntity);
+         m_pcProximitySensorEquippedEntity->AddSensorRing(
+            CVector3(0.0f, 0.0f, PROXIMITY_SENSOR_RING_ELEVATION),
+            PROXIMITY_SENSOR_RING_RADIUS,
+            PROXIMITY_SENSOR_RING_START_ANGLE,
+            PROXIMITY_SENSOR_RING_RANGE,
+            24,
+            m_pcEmbodiedEntity->GetOriginAnchor());
          /* Controllable entity.  It must be the last one, for
             actuators/sensors to link to composing entities
             correctly */
@@ -142,6 +156,16 @@ namespace argos {
                                             cCommAnchor,
                                             *m_pcEmbodiedEntity);
          AddComponent(*m_pcKilobotCommunicationEntity);
+         m_pcProximitySensorEquippedEntity =
+            new CProximitySensorEquippedEntity(this, "proximity_0");
+         AddComponent(*m_pcProximitySensorEquippedEntity);
+         m_pcProximitySensorEquippedEntity->AddSensorRing(
+            CVector3(0.0f, 0.0f, PROXIMITY_SENSOR_RING_ELEVATION),
+            PROXIMITY_SENSOR_RING_RADIUS,
+            PROXIMITY_SENSOR_RING_START_ANGLE,
+            PROXIMITY_SENSOR_RING_RANGE,
+            24,
+            m_pcEmbodiedEntity->GetOriginAnchor());
          /* Controllable entity. It must be the last one, for
             actuators/sensors to link to composing entities
             correctly */

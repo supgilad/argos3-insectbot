@@ -25,7 +25,7 @@
 #include <argos3/core/control_interface/ci_controller.h>
 /* Definition of the differential steering actuator */
 #include <argos3/plugins/robots/generic/control_interface/ci_differential_steering_actuator.h>
-
+#include <argos3/plugins/robots/generic/control_interface/ci_proximity_sensor.h>
 /* Random number generator */
 #include <argos3/core/utility/math/rng.h>
 /* Logging functions */
@@ -105,6 +105,8 @@ private:
 
    /* Pointer to the differential steering actuator */
    CCI_DifferentialSteeringActuator* m_pcMotors;
+   CCI_ProximitySensor* m_sensor;
+
 
    /* behavioural state (moving/turning) */
    TStateNames m_tCurrentState;
@@ -123,6 +125,8 @@ private:
 
    /* variables for the random number generation */
    CRandom::CRNG*  m_pcRNG;
+
+   // std::vector<Real>& proximity_reads;
 };
 
 #endif

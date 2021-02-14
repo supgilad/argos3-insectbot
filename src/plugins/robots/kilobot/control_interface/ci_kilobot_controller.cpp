@@ -23,6 +23,9 @@ CCI_KilobotController::CCI_KilobotController() :
 void CCI_KilobotController::Init(TConfigurationNode& t_tree) {
    try {
       /* Initialize devices */
+       try {
+         m_proxSensor = GetSensor<CCI_FootBotProximitySensor>("footbot_proximity");
+      } catch(CARGoSException&) {}
       try {
          m_pcMotors = GetActuator<CCI_DifferentialSteeringActuator>("differential_steering");
       } catch(CARGoSException&) {}

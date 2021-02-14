@@ -6,7 +6,7 @@
 
 #include "pointmass3d_kilobot_model.h"
 #include "kilobot_measures.h"
-#include <argos3/core/utility/math/cylinder.h>
+#include <argos3/core/utility/math/box.h>
 
 namespace argos {
 
@@ -78,11 +78,9 @@ namespace argos {
 
    bool CPointMass3DKilobotModel::CheckIntersectionWithRay(Real& f_t_on_ray,
                                                            const CRay3& c_ray) const {
-      CCylinder m_cShape(KILOBOT_RADIUS,
-                         KILOBOT_HEIGHT,
-                         m_cPosition,
-                         CVector3::Z);
-      bool bIntersects = m_cShape.Intersects(f_t_on_ray, c_ray);
+      CBox m_box(CVector3(KILOBOT_BASE_WIDTH,KILOBOT_BASE_WIDTH,KILOBOT_BODY_HEIGHT),
+                         m_cPosition);
+      bool bIntersects = m_box.Intersects(f_t_on_ray, c_ray);
       return bIntersects;
    }
 

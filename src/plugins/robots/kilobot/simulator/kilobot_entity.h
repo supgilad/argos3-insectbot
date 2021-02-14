@@ -19,6 +19,7 @@ namespace argos {
 
 #include <argos3/core/simulator/entity/composable_entity.h>
 #include <argos3/plugins/simulator/entities/wheeled_entity.h>
+#include <argos3/plugins/simulator/entities/proximity_sensor_equipped_entity.h>
 
 namespace argos {
 
@@ -64,6 +65,10 @@ namespace argos {
          return *m_pcKilobotCommunicationEntity;
       }
 
+      inline CProximitySensorEquippedEntity& GetProximitySensorEquippedEntity() {
+         return *m_pcProximitySensorEquippedEntity;
+      }
+
       inline CWheeledEntity& GetWheeledEntity() {
          return *m_pcWheeledEntity;
       }
@@ -80,6 +85,7 @@ namespace argos {
       CLightSensorEquippedEntity*  m_pcLightSensorEquippedEntity;
       CKilobotCommunicationEntity* m_pcKilobotCommunicationEntity;
       CWheeledEntity*              m_pcWheeledEntity;
+      CProximitySensorEquippedEntity* m_pcProximitySensorEquippedEntity;
    };
 
 }
