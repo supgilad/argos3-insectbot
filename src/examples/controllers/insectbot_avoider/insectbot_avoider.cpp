@@ -99,6 +99,7 @@ void CInsectbotAvoider::ControlStep() {
    // }
    // avarageDistFromObject /= tProxReads.size();
    double frontDistFromObject = std::min(tProxReads[0],tProxReads[23]);
+      double frontEdgesDistFromObject = std::min(tProxReads[1],tProxReads[22]);
    double leftDistFromObject = std::min(tProxReads[5],tProxReads[6]);
    double rightDistFromObject = std::min(tProxReads[18],tProxReads[17]);
    // /* If the angle of the vector is small enough and the closest obstacle
@@ -106,7 +107,7 @@ void CInsectbotAvoider::ControlStep() {
    //  */
    // CRadians cAngle = cAccumulator.Angle();
    // if(m_cGoStraightAngleRange.WithinMinBoundIncludedMaxBoundIncluded(cAngle) &&
-
+double dist = 2.0f;
 
 
    switch(m_tCurrentState) {
@@ -121,19 +122,19 @@ void CInsectbotAvoider::ControlStep() {
    case KILOBOT_STATE_MOVING:
       // std::cout<< "sensor 1 "<< reads[0]<<"\n";
          // std::cout<< "front dist : "<< frontDistFromObject<<"\n";
-
-       if(  (frontDistFromObject>0 && frontDistFromObject < 1.2f)) {
+      
+       if(  (frontDistFromObject>0 && frontDistFromObject < dist)||(frontEdgesDistFromObject >0 && frontEdgesDistFromObject<dist)) {
             m_fMotorL = PIN_TURN;
             m_fMotorR = PIN_STOP;
          m_unCountTurningSteps = m_pcRNG->Uniform(CRange<UInt32>(m_unMaxTurningSteps-40,m_unMaxTurningSteps));
          m_tCurrentState = KILOBOT_STATE_TURNING;
       }
-      else if(  (leftDistFromObject>0 && leftDistFromObject < 1.2f)) {
+      else if(  (leftDistFromObject>0 && leftDistFromObject < dist)) {
             m_fMotorL = PIN_TURN;
             m_fMotorR = PIN_STOP;
             m_unCountTurningSteps = m_pcRNG->Uniform(CRange<UInt32>(m_unMaxTurningSteps-40,m_unMaxTurningSteps));
             m_tCurrentState = KILOBOT_STATE_TURNING;
-      } else if (  (rightDistFromObject>0 && rightDistFromObject < 1.2f)){
+      } else if (  (rightDistFromObject>0 && rightDistFromObject < dist)){
             m_fMotorL = PIN_STOP;
             m_fMotorR = PIN_TURN;
             m_unCountTurningSteps = m_pcRNG->Uniform(CRange<UInt32>(m_unMaxTurningSteps-40,m_unMaxTurningSteps));
