@@ -22,7 +22,7 @@
         <differential_steering implementation="default" />
       </actuators>
       <sensors>
-          <proximity implementation="default" />
+          <proximity implementation="default" show_rays="true" />
       </sensors>
       <params max_motion_steps="100" />
     </insectbot_avoider_controller>

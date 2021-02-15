@@ -10,7 +10,7 @@
 /****************************************/
 /****************************************/
 
-#define PIN_FORWARD 2.0f;
+#define PIN_FORWARD 1.5f;
 #define PIN_TURN    1.87f;
 #define PIN_STOP    0.0f;
 
@@ -112,7 +112,7 @@ double dist = 2.0f;
 
    switch(m_tCurrentState) {
    case KILOBOT_STATE_TURNING:
-      if( --m_unCountTurningSteps == 0 ) {
+      if( !(frontDistFromObject>0 && frontDistFromObject < dist)&&!(frontEdgesDistFromObject >0 && frontEdgesDistFromObject<dist)&& --m_unCountTurningSteps == 0 ) {
          m_fMotorL = m_fMotorR = PIN_FORWARD;
          m_unCountMotionSteps = m_unMaxMotionSteps;
          m_tCurrentState = KILOBOT_STATE_MOVING;
