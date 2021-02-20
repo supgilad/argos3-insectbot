@@ -60,7 +60,6 @@ void CInsectbotAvoider::Init(TConfigurationNode &t_node)
    // Get sensor/actuator handles
    m_pcMotors = GetActuator<CCI_DifferentialSteeringActuator>("differential_steering");
    m_sensor = GetSensor<CCI_ProximitySensor>("proximity");
-
    // Parse the configuration file
    GetNodeAttributeOrDefault(t_node, "max_motion_steps", m_unMaxMotionSteps, m_unMaxMotionSteps);
    if (m_unMaxMotionSteps == 0)
