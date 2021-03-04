@@ -19,8 +19,9 @@
     <insectbot_avoider_controller id="fdc"
                                   library="build/examples/controllers/insectbot_avoider/libinsectbot_avoider">
       <actuators>
+        <quadrotor_position implementation="default" />  
         <differential_steering implementation="default" />
-      </actuators>
+    </actuators>
       <sensors>
           <proximity implementation="default" show_rays="true" />
       </sensors>
@@ -101,6 +102,7 @@
   <!-- ******************* -->
   <physics_engines>
     <dynamics2d id="dyn2d" />
+    <pointmass3d id="pm3d" iterations="10" /> <!--Not Necessary-->
   </physics_engines>
 
   <!-- ********* -->
@@ -115,8 +117,8 @@
   <visualization>
     <qt-opengl>
       <camera>
-        <placement idx="0" position="0,0,0.7" look_at="0,0,0" lens_focal_length="20" />
-        <placement idx="1" position="0.25,0.25,0.5" look_at="0,0,0" lens_focal_length="20" />
+        <placement up="0,0,0.1" idx="0" position="0,0.0001,0.8" look_at="0,0,0" lens_focal_length="20" />
+        <placement up="0,0,0.7" idx="1" position="0.25,0.25,0.5" look_at="0,0,0" lens_focal_length="20" />
       </camera>
     </qt-opengl>
   </visualization>

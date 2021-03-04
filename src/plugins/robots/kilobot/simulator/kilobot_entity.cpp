@@ -102,7 +102,6 @@ namespace argos
              24,
              m_pcEmbodiedEntity->GetOriginAnchor());
          m_pcQuadrotorEntity = new CQuadRotorEntity(this, "quadrotor_0");
-         m_pcQuadrotorEntity->SetControlMethod(CQuadRotorEntity::POSITION_CONTROL);
          AddComponent(*m_pcQuadrotorEntity);
          /* Controllable entity.  It must be the last one, for
             actuators/sensors to link to composing entities
@@ -178,7 +177,6 @@ namespace argos
              24,
              m_pcEmbodiedEntity->GetOriginAnchor());
          m_pcQuadrotorEntity = new CQuadRotorEntity(this, "quadrotor_0");
-         m_pcQuadrotorEntity->SetControlMethod(CQuadRotorEntity::POSITION_CONTROL);
          AddComponent(*m_pcQuadrotorEntity);
          /* Controllable entity. It must be the last one, for
             actuators/sensors to link to composing entities

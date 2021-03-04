@@ -4,6 +4,7 @@
 #include <argos3/core/utility/configuration/argos_configuration.h>
 /* 2D vector definition */
 #include <argos3/core/utility/math/vector2.h>
+#include <argos3/core/utility/math/vector3.h>
 #include <vector>
 #include <algorithm>
 
@@ -25,7 +26,8 @@ CInsectbotAvoider::CInsectbotAvoider() : m_pcMotors(NULL),
                                          m_unMaxTurningSteps(90), // = pi/(omega delta_t) = pi/(v*delta_t/l) = (pi*l)/(v*delta_t)
                                          m_unCountTurningSteps(130),
                                          m_fMotorL(0.0f),
-                                         m_fMotorR(0.0f)
+                                         m_fMotorR(0.0f),
+                                         m_positionSetter(NULL)
 {
    m_pcRNG = CRandom::CreateRNG("argos");
 }
@@ -60,6 +62,8 @@ void CInsectbotAvoider::Init(TConfigurationNode &t_node)
    // Get sensor/actuator handles
    m_pcMotors = GetActuator<CCI_DifferentialSteeringActuator>("differential_steering");
    m_sensor = GetSensor<CCI_ProximitySensor>("proximity");
+   m_positionSetter = GetActuator<CQuadRotorPositionDefaultActuator>("quadrotor_position");
+
    // Parse the configuration file
    GetNodeAttributeOrDefault(t_node, "max_motion_steps", m_unMaxMotionSteps, m_unMaxMotionSteps);
    if (m_unMaxMotionSteps == 0)
@@ -92,6 +96,8 @@ static bool isReadingInRange(double reading, double min, double max)
 
 void CInsectbotAvoider::ControlStep()
 {
+   CVector3 vect{0, 0, 0};
+
    // compute the robot motion: move forward for a fixed amount of
    // time, and rotate cw/ccw for a random amount of time
    // max rotation: 180 degrees as determined by m_unMaxTurningSteps
@@ -129,7 +135,7 @@ void CInsectbotAvoider::ControlStep()
    // }
    if (m_tCurrentState == KILOBOT_STATE_MOVING)
    {
-      UInt32 shouldContinue = m_pcRNG->Uniform(CRange<UInt32>(0, 100));
+      UInt32 shouldContinue = m_pcRNG->Uniform(CRange<UInt32>(0, 200));
       if (!shouldContinue)
       {
          m_fMotorL = m_fMotorR = PIN_STOP;
@@ -137,25 +143,29 @@ void CInsectbotAvoider::ControlStep()
          return;
       }
 
-      if (isReadingInRange(frontDistFromObject,0,dist) || isReadingInRange(frontEdgesDistFromObject,0,dist))
+      if (isReadingInRange(frontDistFromObject, 0, dist) || isReadingInRange(frontEdgesDistFromObject, 0, dist))
       {
          m_fMotorL = PIN_TURN;
-         m_fMotorR = PIN_STOP;         // m_unCountTurningSteps = m_pcRNG->Uniform(CRange<UInt32>(m_unMaxTurningSteps - 40, m_unMaxTurningSteps));
+         m_fMotorR = PIN_STOP; // m_unCountTurningSteps = m_pcRNG->Uniform(CRange<UInt32>(m_unMaxTurningSteps - 40, m_unMaxTurningSteps));
       }
-      else if (isReadingInRange(leftDistFromObject,0,dist))
+      else if (isReadingInRange(leftDistFromObject, 0, dist))
       {
          m_fMotorL = PIN_TURN;
          m_fMotorR = PIN_STOP;
       }
-      else if (isReadingInRange(rightDistFromObject,0,dist))
+      else if (isReadingInRange(rightDistFromObject, 0, dist))
       {
          m_fMotorL = PIN_STOP;
          m_fMotorR = PIN_TURN;
       }
    }
    else if (m_tCurrentState == KILOBOT_STATE_STOP)
-   {
-      UInt32 shouldStayStopped = m_pcRNG->Uniform(CRange<UInt32>(0, 50));
+   { 
+      m_positionSetter->Reset();
+      m_positionSetter->SetAbsolutePosition(CVector3(0.0f, 0.0f, 0.1f)); // should move the robot but not working
+      // m_positionSetter->Update();
+      // return;
+      UInt32 shouldStayStopped = m_pcRNG->Uniform(CRange<UInt32>(0, 100));
       if (!shouldStayStopped)
       {
          m_fMotorL = m_fMotorR = PIN_FORWARD;
