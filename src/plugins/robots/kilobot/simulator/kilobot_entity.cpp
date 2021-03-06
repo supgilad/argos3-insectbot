@@ -19,7 +19,7 @@
 namespace argos
 {
    static const Real PROXIMITY_SENSOR_RING_ELEVATION = 0.0001f;
-   static const Real PROXIMITY_SENSOR_RING_RADIUS = 0.04f;
+   static const Real PROXIMITY_SENSOR_RING_RADIUS = 0.01f;
    static const CRadians PROXIMITY_SENSOR_RING_START_ANGLE = CRadians((ARGOS_PI / 12.0f) * 0.5f);
    static const Real PROXIMITY_SENSOR_RING_RANGE = 0.1f;
    /****************************************/
@@ -95,7 +95,7 @@ namespace argos
              new CProximitySensorEquippedEntity(this, "proximity_0");
          AddComponent(*m_pcProximitySensorEquippedEntity);
          m_pcProximitySensorEquippedEntity->AddSensorRing(
-             CVector3(0.03f, 0.0f, PROXIMITY_SENSOR_RING_ELEVATION),
+             CVector3(INSECTBOT_LENGTH/2, 0.0f, PROXIMITY_SENSOR_RING_ELEVATION),
              PROXIMITY_SENSOR_RING_RADIUS,
              PROXIMITY_SENSOR_RING_START_ANGLE,
              PROXIMITY_SENSOR_RING_RANGE,
@@ -170,7 +170,7 @@ namespace argos
              new CProximitySensorEquippedEntity(this, "proximity_0");
          AddComponent(*m_pcProximitySensorEquippedEntity);
          m_pcProximitySensorEquippedEntity->AddSensorRing(
-             CVector3(0.03f, 0.0f, PROXIMITY_SENSOR_RING_ELEVATION),
+             CVector3(INSECTBOT_LENGTH/2, 0.0f, PROXIMITY_SENSOR_RING_ELEVATION),
              PROXIMITY_SENSOR_RING_RADIUS,
              PROXIMITY_SENSOR_RING_START_ANGLE,
              PROXIMITY_SENSOR_RING_RANGE,

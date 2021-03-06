@@ -70,7 +70,7 @@ namespace argos {
    glTranslatef(0.0f, 0.0f, 0.005f);  // Move right and into the screen
    const float height = 0.01f;
    const float side = 0.01f;
-   const float length = 0.06f;
+   const float length = 0.05f;
    const float lside = -0.01f;
    glBegin(GL_QUADS);                // Begin drawing a cube with 6 quads
       // side face (y = 0.05f)

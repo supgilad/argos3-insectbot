@@ -28,6 +28,8 @@ namespace argos {
    static const Real KILOBOT_HEIGHT                 = 0.06;
    static const Real KILOBOT_ELEVATION                 = KILOBOT_PIN_HEIGHT;
    static const Real KILOBOT_MASS                   = 0.01;
+   static const Real INSECTBOT_LENGTH                   = 0.05;
+
 
    /* RGB LED */
    static const Real KILOBOT_PIN_WHEEL_RADIUS       = 0.001;

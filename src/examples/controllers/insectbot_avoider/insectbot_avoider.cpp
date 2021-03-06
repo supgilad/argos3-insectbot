@@ -11,11 +11,11 @@
 /****************************************/
 /****************************************/
 
-#define PIN_FORWARD 2.0f;
-#define PIN_TURN 1.87f;
-#define PIN_STOP 0.0f;
-#define STOP_PROB 10;
-#define MOVE_PROB 5;
+#define PIN_FORWARD 3.5f
+#define PIN_TURN 0.85f
+#define PIN_STOP 0.0f
+#define STOP_PROB 300
+#define MOVE_PROB 100
 
 CInsectbotAvoider::CInsectbotAvoider() : m_pcMotors(NULL),
                                          m_sensor(NULL),
@@ -89,20 +89,49 @@ void CInsectbotAvoider::Reset()
 /****************************************/
 /****************************************/
 
-static bool isReadingInRange(double reading, double min, double max)
+static bool isReadingInRange(double reading, double min = 0.0f, double max = 1.0f)
 {
    return (reading > min && reading < max);
 }
 
 void CInsectbotAvoider::ControlStep()
 {
-   CVector3 vect{0, 0, 0};
+   // CVector3 vect{0, 0, 0};
 
    // compute the robot motion: move forward for a fixed amount of
    // time, and rotate cw/ccw for a random amount of time
    // max rotation: 180 degrees as determined by m_unMaxTurningSteps
-   m_tPreviousState = m_tCurrentState;
-   const std::vector<double> &tProxReads = m_sensor->GetReadings();
+
+   // CVector2 cAccumulator;
+   // for (size_t i = 0; i < tProxReads.size(); ++i)
+   // {
+   //    cAccumulator += CVector2(tProxReads[i].Value, tProxReads[i].Angle);
+   // }
+   // cAccumulator /= tProxReads.size();
+   // /* If the angle of the vector is small enough and the closest obstacle
+   //  * is far enough, continue going straight, otherwise curve a little
+   //  */
+   // CRadians cAngle = cAccumulator.Angle();
+   // if (m_cGoStraightAngleRange.WithinMinBoundIncludedMaxBoundIncluded(cAngle) &&
+   //     cAccumulator.Length() < 0.1f)
+   // {
+   //    /* Go straight */
+   //    m_pcMotors->SetLinearVelocity(PIN_FORWARD, PIN_FORWARD);
+   // }
+   // else
+   // {
+   //    /* Turn, depending on the sign of the angle */
+   //    if (cAngle.GetValue() > 0.0f)
+   //    {
+   //       m_pcMotors->SetLinearVelocity(PIN_FORWARD, 0.0f);
+   //    }
+   //    else
+   //    {
+   //       m_pcMotors->SetLinearVelocity(0.0f, PIN_FORWARD);
+   //    }
+   // }
+   // return;
+
    // /* Sum them together */
    // double avarageDistFromObject;
    // for(size_t i = 0; i < tProxReads.size(); ++i) {
@@ -113,59 +142,55 @@ void CInsectbotAvoider::ControlStep()
    // avarageDistFromObject += tProxReads[i];
    // }
    // avarageDistFromObject /= tProxReads.size();
-   double frontDistFromObject = std::min(tProxReads[0], tProxReads[23]);
-   double frontEdgesDistFromObject = std::min(tProxReads[1], tProxReads[22]);
-   double leftDistFromObject = std::min(tProxReads[5], tProxReads[6]);
-   double rightDistFromObject = std::min(tProxReads[18], tProxReads[17]);
+   // double frontDistFromObject = std::min(tProxReads[0], tProxReads[23]);
+   // double frontEdgesDistFromObject = std::min(tProxReads[1], tProxReads[22]);
+   // double frontMoreEdgesDistFromObject = std::min(tProxReads[2], tProxReads[21]);
+   // double leftDistFromObject = std::min(tProxReads[5], tProxReads[6]);
+   // double rightDistFromObject = std::min(tProxReads[18], tProxReads[17]);
    // /* If the angle of the vector is small enough and the closest obstacle
    //  * is far enough, continue going straight, otherwise curve a little
    //  */
    // CRadians cAngle = cAccumulator.Angle();
    // if(m_cGoStraightAngleRange.WithinMinBoundIncludedMaxBoundIncluded(cAngle) &&
-   double dist = 3.0f;
-
-   // if (m_tCurrentState == KILOBOT_STATE_TURNING)
-   // {
-   // if (!(frontDistFromObject > 0 && frontDistFromObject < dist) && !(frontEdgesDistFromObject > 0 && frontEdgesDistFromObject < dist) && --m_unCountTurningSteps == 0)
-   // {
-   // m_fMotorL = m_fMotorR = PIN_FORWARD;
-   // m_unCountMotionSteps = m_unMaxMotionSteps;
-   // m_tCurrentState = KILOBOT_STATE_MOVING;
-   // }
-   // }
+   const std::vector<double> &tProxReads = m_sensor->GetReadings();
    if (m_tCurrentState == KILOBOT_STATE_MOVING)
    {
-      UInt32 shouldContinue = m_pcRNG->Uniform(CRange<UInt32>(0, 200));
+      const double sometingOnRight = isReadingInRange(std::min(tProxReads[2], tProxReads[1])) ||
+                                     isReadingInRange(std::min(tProxReads[3], tProxReads[4])) ||
+                                     isReadingInRange(std::min(tProxReads[0], tProxReads[1]));
+      const double sometingOnLeft = isReadingInRange(std::min(tProxReads[22], tProxReads[23])) ||
+                                    isReadingInRange(std::min(tProxReads[20], tProxReads[19])) ||
+                                    isReadingInRange(std::min(tProxReads[21], tProxReads[22]));
+
+      UInt32 shouldContinue = m_pcRNG->Uniform(CRange<UInt32>(0, STOP_PROB));
       if (!shouldContinue)
       {
          m_fMotorL = m_fMotorR = PIN_STOP;
          m_tCurrentState = KILOBOT_STATE_STOP;
-         return;
       }
-
-      if (isReadingInRange(frontDistFromObject, 0, dist) || isReadingInRange(frontEdgesDistFromObject, 0, dist))
+      else if (sometingOnRight && sometingOnLeft)
       {
-         m_fMotorL = PIN_TURN;
-         m_fMotorR = PIN_STOP; // m_unCountTurningSteps = m_pcRNG->Uniform(CRange<UInt32>(m_unMaxTurningSteps - 40, m_unMaxTurningSteps));
-      }
-      else if (isReadingInRange(leftDistFromObject, 0, dist))
-      {
-         m_fMotorL = PIN_TURN;
-         m_fMotorR = PIN_STOP;
-      }
-      else if (isReadingInRange(rightDistFromObject, 0, dist))
+         m_fMotorL = PIN_STOP;
+         m_fMotorR = PIN_TURN;
+      } 
+      else if (sometingOnLeft)
       {
          m_fMotorL = PIN_STOP;
          m_fMotorR = PIN_TURN;
       }
+      else if (sometingOnRight)
+      {
+         m_fMotorL = PIN_TURN;
+         m_fMotorR = PIN_STOP;
+      }
+      else
+      {
+         m_fMotorL = m_fMotorR = PIN_FORWARD;
+      }
    }
    else if (m_tCurrentState == KILOBOT_STATE_STOP)
-   { 
-      m_positionSetter->Reset();
-      m_positionSetter->SetAbsolutePosition(CVector3(0.0f, 0.0f, 0.1f)); // should move the robot but not working
-      // m_positionSetter->Update();
-      // return;
-      UInt32 shouldStayStopped = m_pcRNG->Uniform(CRange<UInt32>(0, 100));
+   {
+      UInt32 shouldStayStopped = m_pcRNG->Uniform(CRange<UInt32>(0, MOVE_PROB));
       if (!shouldStayStopped)
       {
          m_fMotorL = m_fMotorR = PIN_FORWARD;
