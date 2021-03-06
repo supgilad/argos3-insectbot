@@ -19,7 +19,7 @@
 namespace argos
 {
    static const Real PROXIMITY_SENSOR_RING_ELEVATION = 0.0001f;
-   static const Real PROXIMITY_SENSOR_RING_RADIUS = 0.03f;
+   static const Real PROXIMITY_SENSOR_RING_RADIUS = 0.04f;
    static const CRadians PROXIMITY_SENSOR_RING_START_ANGLE = CRadians((ARGOS_PI / 12.0f) * 0.5f);
    static const Real PROXIMITY_SENSOR_RING_RANGE = 0.1f;
    /****************************************/
@@ -69,8 +69,8 @@ namespace argos
          /* Wheeled entity and wheel positions (left, right) */
          m_pcWheeledEntity = new CWheeledEntity(this, "wheels_0", 2);
          AddComponent(*m_pcWheeledEntity);
-         m_pcWheeledEntity->SetWheel(0, CVector3(0.0f, KILOBOT_HALF_INTERPIN_DISTANCE, 0.0f), KILOBOT_PIN_WHEEL_RADIUS);
-         m_pcWheeledEntity->SetWheel(1, CVector3(0.0f, -KILOBOT_HALF_INTERPIN_DISTANCE, 0.0f), KILOBOT_PIN_WHEEL_RADIUS);
+         m_pcWheeledEntity->SetWheel(0, CVector3(0.3f, KILOBOT_HALF_INTERPIN_DISTANCE, 0.0f), KILOBOT_PIN_WHEEL_RADIUS);
+         m_pcWheeledEntity->SetWheel(1, CVector3(0.3f, -KILOBOT_HALF_INTERPIN_DISTANCE, 0.0f), KILOBOT_PIN_WHEEL_RADIUS);
          /* LED equipped entity */
          m_pcLEDEquippedEntity = new CLEDEquippedEntity(this, "leds_0");
          AddComponent(*m_pcLEDEquippedEntity);
@@ -95,7 +95,7 @@ namespace argos
              new CProximitySensorEquippedEntity(this, "proximity_0");
          AddComponent(*m_pcProximitySensorEquippedEntity);
          m_pcProximitySensorEquippedEntity->AddSensorRing(
-             CVector3(0.0f, 0.0f, PROXIMITY_SENSOR_RING_ELEVATION),
+             CVector3(0.03f, 0.0f, PROXIMITY_SENSOR_RING_ELEVATION),
              PROXIMITY_SENSOR_RING_RADIUS,
              PROXIMITY_SENSOR_RING_START_ANGLE,
              PROXIMITY_SENSOR_RING_RANGE,
@@ -142,8 +142,8 @@ namespace argos
          /* Wheeled entity and wheel positions (left, right) */
          m_pcWheeledEntity = new CWheeledEntity(this, "wheels_0", 2);
          AddComponent(*m_pcWheeledEntity);
-         m_pcWheeledEntity->SetWheel(0, CVector3(0.0f, KILOBOT_HALF_INTERPIN_DISTANCE, 0.0f), KILOBOT_PIN_WHEEL_RADIUS);
-         m_pcWheeledEntity->SetWheel(1, CVector3(0.0f, -KILOBOT_HALF_INTERPIN_DISTANCE, 0.0f), KILOBOT_PIN_WHEEL_RADIUS);
+         m_pcWheeledEntity->SetWheel(0, CVector3(0.3f, KILOBOT_HALF_INTERPIN_DISTANCE, 0.0f), KILOBOT_PIN_WHEEL_RADIUS);
+         m_pcWheeledEntity->SetWheel(1, CVector3(0.3f, -KILOBOT_HALF_INTERPIN_DISTANCE, 0.0f), KILOBOT_PIN_WHEEL_RADIUS);
          /* LED equipped entity */
          m_pcLEDEquippedEntity = new CLEDEquippedEntity(this, "leds_0");
          AddComponent(*m_pcLEDEquippedEntity);
@@ -170,7 +170,7 @@ namespace argos
              new CProximitySensorEquippedEntity(this, "proximity_0");
          AddComponent(*m_pcProximitySensorEquippedEntity);
          m_pcProximitySensorEquippedEntity->AddSensorRing(
-             CVector3(0.0f, 0.0f, PROXIMITY_SENSOR_RING_ELEVATION),
+             CVector3(0.03f, 0.0f, PROXIMITY_SENSOR_RING_ELEVATION),
              PROXIMITY_SENSOR_RING_RADIUS,
              PROXIMITY_SENSOR_RING_START_ANGLE,
              PROXIMITY_SENSOR_RING_RANGE,
@@ -232,22 +232,7 @@ namespace argos
                    "kilobot",
                    "Carlo Pinciroli [ilpincy@gmail.com] - Vito Trianni [vito.trianni@istc.cnr.it",
                    "1.0",
-                   "The Kilobot robot, developed at Harvard University.",
-                   "The Kilobot is a low-cost robot designed to make testing collective algorithms\n"
-                   "on hundreds or thousands (\"kilos\") of robots accessible to robotics\n"
-                   "researchers.\n"
-                   "For more information, refer to the dedicated web page\n"
-                   "(http://www.eecs.harvard.edu/ssr/projects/progSA/kilobot.html).\n\n"
-                   "REQUIRED XML CONFIGURATION\n\n"
-                   "  <arena ...>\n"
-                   "    ...\n"
-                   "    <kilobot id=\"fb0\">\n"
-                   "      <body position=\"0.4,2.3,0.25\" orientation=\"45,0,0\" />\n"
-                   "      <controller config=\"mycntrl\" />\n"
-                   "    </kilobot>\n"
-                   "    ...\n"
-                   "  </arena>\n\n"
-                   "The 'id' attribute is necessary and must be unique among the entities. If two\n"
+                   "Insectbot"," The 'id' attribute is necessary and must be unique among the entities. If two\n"
                    "entities share the same id, initialization aborts.\n"
                    "The 'body/position' attribute specifies the position of the bottom point of the\n"
                    "Kilobot in the arena. When the robot is untranslated and unrotated, the\n"
@@ -263,18 +248,16 @@ namespace argos
                    "that order. Angles are expressed in degrees. When the robot is unrotated, it\n"
                    "is oriented along the X axis.\n"
                    "The 'controller/config' attribute is used to assign a controller to the\n"
-                   "Kilobot. The value of the attribute must be set to the id of a previously\n"
+                   "Insectbot. The value of the attribute must be set to the id of a previously\n"
                    "defined controller. Controllers are defined in the <controllers> XML subtree.\n\n"
                    "OPTIONAL XML CONFIGURATION\n\n"
-                   "You can set the emission range of the communication system. By default, a\n"
-                   "message sent by a Kilobot can be received up to 10cm. By using the\n"
-                   "'communication_range' attribute, you can change it to, i.e., 15cm as follows:\n\n"
+                   "You can set the stop_prob and continue_prob and proximity_range. as follows:\n\n"
                    "  <arena ...>\n"
                    "    ...\n"
-                   "    <kilobot id=\"fb0\" communication_range=\"0.15\">\n"
+                   "    <insectbot id=\"fb0\" proximity_range=\"0.15\" stop_prob=0.1 continue_prob=0.1>\n"
                    "      <body position=\"0.4,2.3,0.25\" orientation=\"45,0,0\" />\n"
                    "      <controller config=\"mycntrl\" />\n"
-                   "    </kilobot>\n"
+                   "    </insectbot>\n"
                    "    ...\n"
                    "  </arena>\n\n",
                    "Under development");

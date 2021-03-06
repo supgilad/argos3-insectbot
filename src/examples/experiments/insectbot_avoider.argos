@@ -8,7 +8,7 @@
     <system threads="0" />
     <experiment length="0"
                 ticks_per_second="40"
-                random_seed="124" />
+                random_seed="144" />
   </framework>
 
   <!-- *************** -->
@@ -19,7 +19,7 @@
     <insectbot_avoider_controller id="fdc"
                                   library="build/examples/controllers/insectbot_avoider/libinsectbot_avoider">
       <actuators>
-        <quadrotor_position implementation="default" />  
+        <quadrotor_position implementation="default" />  <!--Not working at the moment..-->
         <differential_steering implementation="default" />
     </actuators>
       <sensors>
@@ -76,40 +76,12 @@
     <distribute>
       <position method="uniform" min="-0.3,-0.5,0" max="0.3,0.5,0" />
       <orientation method="gaussian" mean="0,0,0" std_dev="360,0,0" />
-      <entity quantity="13" max_trials="100">
-            <!-- <foot-bot id="fb_0">
-              <body position="0,0,0" orientation="0,0,0" />
-            <controller config="fdc"/>
-            </foot-bot> -->
+      <entity quantity="15" max_trials="100">
             <kilobot id="kb">
             <controller config="fdc" />
             </kilobot>
       </entity>
     </distribute>
-
-    <!--
-        We distribute 3 boxes uniformly in position and rotation around Z.
-    -->
-    <!-- <distribute>
-      <position method="uniform" min="-0.5,-0.5,0" max="0.5,0.5,0" />
-      <orientation method="uniform" min="0,0,0" max="360,0,0" />
-      <entity quantity="3" max_trials="100">
-        <box id="b" size="0.06,0.06,0.05" movable="false" />
-      </entity>
-    </distribute> -->
-
-    <!--
-        We distribute cylinders uniformly in position and with
-        constant rotation (rotating a cylinder around Z does not
-        matter)
-    -->
-    <!-- <distribute>
-      <position method="uniform" min="-0.4,-0.5,0" max="0.5,0.5,0" />
-      <orientation method="constant" values="0,0,0" />
-      <entity quantity="2" max_trials="100">
-        <cylinder id="c" height="0.05" radius="0.02" movable="false" />
-      </entity>
-    </distribute> -->
 
   </arena>
 
@@ -118,7 +90,7 @@
   <!-- ******************* -->
   <physics_engines>
     <dynamics2d id="dyn2d" />
-    <pointmass3d id="pm3d" iterations="10" /> <!--Not Necessary-->
+    <pointmass3d id="pm3d" iterations="10" /> <!--3d might be Not Necessary-->
   </physics_engines>
 
   <!-- ********* -->
