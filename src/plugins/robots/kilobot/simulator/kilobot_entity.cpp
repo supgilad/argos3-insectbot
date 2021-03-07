@@ -95,7 +95,7 @@ namespace argos
              new CProximitySensorEquippedEntity(this, "proximity_0");
          AddComponent(*m_pcProximitySensorEquippedEntity);
          m_pcProximitySensorEquippedEntity->AddSensorRing(
-             CVector3(INSECTBOT_LENGTH/3*2, 0.0f, PROXIMITY_SENSOR_RING_ELEVATION),
+             CVector3(INSECTBOT_LENGTH/4, 0.0f, PROXIMITY_SENSOR_RING_ELEVATION),
              PROXIMITY_SENSOR_RING_RADIUS,
              PROXIMITY_SENSOR_RING_START_ANGLE,
              PROXIMITY_SENSOR_RING_RANGE,
@@ -170,7 +170,7 @@ namespace argos
              new CProximitySensorEquippedEntity(this, "proximity_0");
          AddComponent(*m_pcProximitySensorEquippedEntity);
          m_pcProximitySensorEquippedEntity->AddSensorRing(
-             CVector3(INSECTBOT_LENGTH/3*2, 0.0f, PROXIMITY_SENSOR_RING_ELEVATION),
+             CVector3(INSECTBOT_LENGTH/4, 0.0f, PROXIMITY_SENSOR_RING_ELEVATION),
              PROXIMITY_SENSOR_RING_RADIUS,
              PROXIMITY_SENSOR_RING_START_ANGLE,
              PROXIMITY_SENSOR_RING_RANGE,

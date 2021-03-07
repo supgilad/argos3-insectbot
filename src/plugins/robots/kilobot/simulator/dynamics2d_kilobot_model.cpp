@@ -57,7 +57,7 @@ namespace argos {
       /* Create the actual body shape */
       cpShape* ptShape =
          cpSpaceAddShape(GetDynamics2DEngine().GetPhysicsSpace(),
-                         cpBoxShapeNew(ptBody,INSECTBOT_LENGTH+0.05,INSECTBOT_WIDTH));
+                         cpBoxShapeNew(ptBody,INSECTBOT_LENGTH,INSECTBOT_WIDTH));
       ptShape->e = 0.0;       // No elasticity
       ptShape->u = fFriction; // Friction
       /* Constrain the body to follow the diff steering control */

@@ -67,7 +67,7 @@ namespace argos {
    void CQTOpenGLKilobot::RenderBase() {
    glEnable(GL_COLOR_MATERIAL);
 
-   glTranslatef(0.0f, 0.0f, 0.001f);
+   glTranslatef(-0.02f, 0.0f, 0.001f);
    const float height = 0.01f;
    const float side = 0.01f;
    const float length = 0.04f;
