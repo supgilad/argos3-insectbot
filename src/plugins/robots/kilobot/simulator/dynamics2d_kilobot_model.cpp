@@ -16,7 +16,7 @@ namespace argos {
 
    static const Real KILOBOT_MAX_FORCE  = 0.001f;
    static const Real KILOBOT_MAX_TORQUE = 0.001f;
-   static const Real KILOBOT_FRICTION   = 2.5f;
+   static const Real KILOBOT_FRICTION   = 1.5f;
 
    enum KILOBOT_WHEELS {
       KILOBOT_LEFT_WHEEL = 0,
@@ -57,13 +57,13 @@ namespace argos {
       /* Create the actual body shape */
       cpShape* ptShape =
          cpSpaceAddShape(GetDynamics2DEngine().GetPhysicsSpace(),
-                         cpBoxShapeNew(ptBody,KILOBOT_BASE_WIDTH,KILOBOT_BASE_HEIGHT));
+                         cpBoxShapeNew(ptBody,INSECTBOT_LENGTH+0.05,INSECTBOT_WIDTH));
       ptShape->e = 0.0;       // No elasticity
       ptShape->u = fFriction; // Friction
       /* Constrain the body to follow the diff steering control */
       m_cDiffSteering.AttachTo(ptBody);
       /* Set the body so that the default methods work as expected */
-      SetBody(ptBody, KILOBOT_HEIGHT);
+      SetBody(ptBody, INSECTBOT_HEIGHT);
       /* Set the anchor updaters */
       RegisterAnchorMethod<CDynamics2DKilobotModel>(
          GetEmbodiedEntity().GetAnchor("light"),

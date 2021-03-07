@@ -22,13 +22,15 @@ namespace argos {
    static const Real KILOBOT_HALF_INTERPIN_DISTANCE = KILOBOT_INTERPIN_DISTANCE * 0.5;
    static const Real KILOBOT_FRONT_PIN_DISTANCE     = 0.025;
    static const Real KILOBOT_RADIUS                 = 0.0165;
-   static const Real KILOBOT_BASE_WIDTH             = 0.0265;
-   static const Real KILOBOT_BASE_HEIGHT            = 0.0665;
+   static const Real KILOBOT_BASE_WIDTH             = 0.01;
+   static const Real KILOBOT_BASE_HEIGHT            = 0.05;
    static const Real KILOBOT_ECCENTRICITY           = 0.0092;
    static const Real KILOBOT_HEIGHT                 = 0.06;
    static const Real KILOBOT_ELEVATION                 = KILOBOT_PIN_HEIGHT;
    static const Real KILOBOT_MASS                   = 0.01;
    static const Real INSECTBOT_LENGTH                   = 0.05;
+   static const Real INSECTBOT_WIDTH                  = 0.02;
+   static const Real INSECTBOT_HEIGHT                 = 0.02;
 
 
    /* RGB LED */

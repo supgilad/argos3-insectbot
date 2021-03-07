@@ -15,7 +15,7 @@
 #define PIN_TURN 0.85f
 #define PIN_STOP 0.0f
 #define STOP_PROB 300
-#define MOVE_PROB 100
+#define MOVE_PROB 200
 
 CInsectbotAvoider::CInsectbotAvoider() : m_pcMotors(NULL),
                                          m_sensor(NULL),

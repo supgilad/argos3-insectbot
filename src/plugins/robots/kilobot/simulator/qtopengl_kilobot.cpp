@@ -67,10 +67,10 @@ namespace argos {
    void CQTOpenGLKilobot::RenderBase() {
    glEnable(GL_COLOR_MATERIAL);
 
-   glTranslatef(0.0f, 0.0f, 0.005f);  // Move right and into the screen
+   glTranslatef(0.0f, 0.0f, 0.001f);
    const float height = 0.01f;
    const float side = 0.01f;
-   const float length = 0.05f;
+   const float length = 0.04f;
    const float lside = -0.01f;
    glBegin(GL_QUADS);                // Begin drawing a cube with 6 quads
       // side face (y = 0.05f)
