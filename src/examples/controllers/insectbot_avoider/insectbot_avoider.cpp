@@ -161,9 +161,10 @@ void CInsectbotAvoider::ControlStep()
       const double sometingOnLeft = isReadingInRange(std::min(tProxReads[22], tProxReads[23])) ||
                                     isReadingInRange(std::min(tProxReads[20], tProxReads[19])) ||
                                     isReadingInRange(std::min(tProxReads[21], tProxReads[22]));
+      // const double somethingOnFront = 
 
-      UInt32 shouldContinue = m_pcRNG->Uniform(CRange<UInt32>(0, STOP_PROB));
-      if (!shouldContinue)
+      UInt32 shouldStop = m_pcRNG->Uniform(CRange<UInt32>(0, STOP_PROB));
+      if (!shouldStop)
       {
          m_fMotorL = m_fMotorR = PIN_STOP;
          m_tCurrentState = KILOBOT_STATE_STOP;
