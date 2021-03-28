@@ -9,4 +9,4 @@ sudo make install
 # create behaviour of not hitting walls
 #
 cd ..
-argos3 -c src/examples/experiments/insectbot_avoider.argos 
+argos3 -c src/examples/experiments/insectbot_two_behaviours.argos 
