@@ -87,12 +87,6 @@ public:
     */
    virtual void Destroy() {}
 
-   /*
-    * These functions allow to track the current state of the robot
-    */
-   inline const TStateNames GetCurrentState() const {return m_tCurrentState;};
-   inline const bool StateChanged() const {return (m_tPreviousState != m_tCurrentState);};
-
    
 private:
 
