@@ -23,11 +23,13 @@
 
 /* Definition of the CCI_Controller class. */
 #include <argos3/core/control_interface/ci_controller.h>
+#include <argos3/core/simulator/loop_functions.h>
 /* Definition of the differential steering actuator */
 #include <argos3/plugins/robots/generic/control_interface/ci_differential_steering_actuator.h>
 #include <argos3/plugins/robots/generic/control_interface/ci_proximity_sensor.h>
 #include <argos3/plugins/robots/generic/simulator/quadrotor_position_default_actuator.h>
-
+#include <argos3/core/utility/math/vector3.h>
+#include <argos3/core/utility/math/quaternion.h>
 /* Random number generator */
 #include <argos3/core/utility/math/rng.h>
 /* Logging functions */
@@ -87,8 +89,10 @@ public:
     */
    virtual void Destroy() {}
 
+   void SetLoopFunctions(CLoopFunctions* lf);
    
 private:
+   void moveRobot();
 
    /*
     * The following variables are used as parameters for the
@@ -104,7 +108,7 @@ private:
 
    /* variables for the random number generation */
    CRandom::CRNG*  m_pcRNG;
-
+   CLoopFunctions* LoopFunctions;
    // std::vector<Real>& proximity_reads;
 };
 

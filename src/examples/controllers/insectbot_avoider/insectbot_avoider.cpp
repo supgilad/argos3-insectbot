@@ -11,10 +11,10 @@
 /****************************************/
 /****************************************/
 
-#define PIN_FORWARD 4.5f
+#define PIN_FORWARD 6.5f
 #define PIN_TURN 1.85f
 #define PIN_STOP 0.0f
-#define STOP_PROB 400
+#define STOP_PROB 450
 #define MOVE_PROB 200
 
 CInsectbotAvoider::CInsectbotAvoider() : m_pcMotors(NULL),
