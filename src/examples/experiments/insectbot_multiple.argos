@@ -27,7 +27,7 @@
       </sensors>
       <params max_motion_steps="100" />
     </insectbot_avoider_controller>
-  <insectbot_random_controller id="2"
+      <insectbot_random_controller id="2"
                                   library="build/examples/controllers/insectbot_random/libinsectbot_random">
       <actuators>
         <quadrotor_position implementation="default" />  <!--Not working at the moment..-->
@@ -38,15 +38,18 @@
       </sensors>
       <params max_motion_steps="100" />
     </insectbot_random_controller>
+
   </controllers>
 
   <!-- *********************** -->
   <!-- * Arena configuration * -->
   <!-- *********************** -->
-  <arena size="2, 2, 1" center="0,0,0.5">    
+  <arena size="5, 5, 1" center="0,0,0.5">
 
-  <!--Generated Circle Placeholder-->
-  <!--Generated Cilynder Placeholder-->
+
+<!--Generated Circle Placeholder-->
+<!--Generated Cilynder Placeholder-->
+
     <!--
         You can distribute entities randomly. Here, we distribute
         10 kilobots in this way:
@@ -56,14 +59,21 @@
         from a gaussian distribution, whose mean is zero degrees and
         standard deviation is 360 degrees.
     -->
+    <distribute>
+      <!--options: uniform, gaussian, constant, grid-->
+      <position method="uniform" min="-0.4,-0.4,0" max="0.4,0.4,0" />
+      <orientation method="gaussian" mean="0,0,0" std_dev="360,0,0" />
+      <entity quantity="10" max_trials="100">
             <kilobot id="kb">
             <controller config="1" />
-            <body position="0.3,0,0" orientation="0,0,0" />
             </kilobot>
-            <kilobot id="kb2">
+      </entity>
+    </distribute>
+                <kilobot id="rand">
             <controller config="2" />
             <body position="0,0.3,0" orientation="0,0,0" />
             </kilobot>
+
   </arena>
 
   <!-- ******************* -->
@@ -86,7 +96,7 @@
   <visualization>
     <qt-opengl>
       <camera>
-        <placement up="0,0,0.1" idx="0" position="0,0.0001,0.8" look_at="0,0,0" lens_focal_length="20" />
+        <placement up="0,0,0.1" idx="0" position="0,0.0001,2" look_at="0,0,0" lens_focal_length="20" />
         <placement up="0,0,0.7" idx="1" position="0.25,0.25,0.5" look_at="0,0,0" lens_focal_length="20" />
       </camera>
     </qt-opengl>
