@@ -62,10 +62,12 @@ void CInsectbotRandom::Init(TConfigurationNode &t_node)
 /****************************************/
 void CInsectbotRandom:: moveRobot(){
    std::string id = GetId();
-   // CEntity robot = LoopFunctions->GetSpace().GetEntity(id);
+   CEntity robot = LoopFunctions->GetSpace().GetEntity(id);
    CVector3 vect{1, 0, 0};
    CQuaternion pos;
+   // robot.getEmbodiedEntity().GetOriginAnchor().Position.GetX()
    // LoopFunctions->MoveEntity(robot,vect,pos);
+   //https://www.argos-sim.info/forum/viewtopic.php?f=3&t=254&p=1106&hilit=current+position#p1106
 }
 
 void CInsectbotRandom::Reset()

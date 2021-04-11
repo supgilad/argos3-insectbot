@@ -63,7 +63,6 @@ void CInsectbotAvoider::Init(TConfigurationNode &t_node)
    m_pcMotors = GetActuator<CCI_DifferentialSteeringActuator>("differential_steering");
    m_sensor = GetSensor<CCI_ProximitySensor>("proximity");
    m_positionSetter = GetActuator<CQuadRotorPositionDefaultActuator>("quadrotor_position");
-
    // Parse the configuration file
    GetNodeAttributeOrDefault(t_node, "max_motion_steps", m_unMaxMotionSteps, m_unMaxMotionSteps);
    if (m_unMaxMotionSteps == 0)
@@ -115,20 +114,22 @@ void CInsectbotAvoider::ControlStep()
 
       else if (somethingOnFront && !sometingOnLeft)
       {
-         std::cout << "dist is" << std::min(tProxReads[0], tProxReads[23]);
+         // std::cout << "dist is" << std::min(tProxReads[0], tProxReads[23]);
+         // std::cout << "dist is" << std::min(tProxReads[0], tProxReads[23]);
+         RLOG << m_pcRNG->Uniform(CRange<UInt32>(0, STOP_PROB))<<"," <<m_pcRNG->Uniform(CRange<UInt32>(0, STOP_PROB)) <<std::endl;
          m_fMotorL = PIN_TURN;
          m_fMotorR = PIN_STOP;
       }
       else if (somethingOnFront && !sometingOnRight)
       {
-         std::cout <<"dist is" << std::min(tProxReads[0], tProxReads[23]);
+         // std::cout <<"dist is" << std::min(tProxReads[0], tProxReads[23]);
 
          m_fMotorL = PIN_STOP;
          m_fMotorR = PIN_TURN;
       }
       else if (sometingOnRight && sometingOnLeft)
       {
-         std::cout <<"dist is" << std::min(tProxReads[1], tProxReads[22]);
+         // std::cout <<"dist is" << std::min(tProxReads[1], tProxReads[22]);
 
          m_fMotorL = PIN_STOP;
          m_fMotorR = PIN_TURN;
