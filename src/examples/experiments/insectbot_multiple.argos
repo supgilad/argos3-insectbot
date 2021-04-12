@@ -51,11 +51,7 @@
 <!--Generated Cilynder Placeholder-->
 
 <!--Generated robots for config 1 Placeholder-->
-
-                <!-- <kilobot id="rand">
-            <controller config="2" />
-            <body position="0,0.3,0" orientation="0,0,0" />
-            </kilobot> -->
+<!--Generated robots for config 2 Placeholder-->
 
   </arena>
 
