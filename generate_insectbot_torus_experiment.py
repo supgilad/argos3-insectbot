@@ -15,6 +15,8 @@ def get_all_points_of_circle(radius):
         for y in [i * 0.001 for i in range(-2000, 2000)]:
             if is_point_in_circle(x,y,radius):
                 yield dict(x=x,y=y)
+                yield dict(x=x,y=-y)
+                break
 
 def build_cylinder_xml(radius):
     return '<cylinder id="cylinder" height="0.05" radius="'+str(radius)+'" movable="false" ><body position="0,0,0" orientation="0,0,0" /></cylinder>'
@@ -43,8 +45,8 @@ def build_robots_xml(radius,num_robots,controller_id):
 def main():
     radius, cylinder_radius, num_robots1,num_robots2 = float(sys.argv[1]),float(sys.argv[2]),int(sys.argv[3]),int(sys.argv[4])
     all_points_of_circle = get_all_points_of_circle(radius=radius)
-    boxes_as_a_circle = (build_box(i,point['x'],point['y']) for i,point in enumerate(all_points_of_circle))
-    circle_xml = "".join(list(boxes_as_a_circle))
+    boxes_as_points_of_a_circle = (build_box(i,point['x'],point['y']) for i,point in enumerate(all_points_of_circle))
+    circle_xml = "".join(list(boxes_as_points_of_a_circle))
 
     cilynder_xml = build_cylinder_xml(radius=cylinder_radius)
     robots1_xml= build_robots_xml(radius=radius,num_robots=num_robots1,controller_id=1)
