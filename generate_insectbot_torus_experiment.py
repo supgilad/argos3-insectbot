@@ -11,11 +11,16 @@ def is_point_in_circle(x,y,radius):
     return abs(x**2 + y**2 - radius**2) <0.0001
 
 def get_all_points_of_circle(radius):
-    for x in [i * 0.001 for i in range(-2000, 2000)]:
-        for y in [i * 0.001 for i in range(-2000, 2000)]:
+    '''
+    getting all points of a circle with center at (0,0) with a given radius between [-2,2]
+    '''
+    for x in [i * 0.001 for i in range(-2000, 0)]:
+        for y in [i * 0.001 for i in range(-2000, 0)]:
             if is_point_in_circle(x,y,radius):
                 yield dict(x=x,y=y)
                 yield dict(x=x,y=-y)
+                yield dict(x=-x,y=y)
+                yield dict(x=-x,y=-y)
                 break
 
 def build_cylinder_xml(radius):
