@@ -2,13 +2,9 @@
 
 Make sure you have ARGoS >= 3.0.0-beta52 installed!
 
-Commands:
+Build Insectbot:
 ```shell
-mkdir build
-cd build
-cmake -DCMAKE_BUILD_TYPE=Release ../src
-make
-sudo make install
+./build_insectbot.sh
 ```
 
 ## Lab 0
@@ -16,59 +12,7 @@ sudo make install
 argos3 -c src/examples/experiments/kilobot_blinky.argos
 ```
 
-## Lab 1.2
-```shell
-argos3 -c src/examples/experiments/kilobot_simple_movement.argos
-```
-
-## Lab 1.3
-```shell
-argos3 -c src/examples/experiments/kilobot_nonblocked_movement.argos
-```
-
-## Lab 2.1-2.2
-```shell
-argos3 -c src/examples/experiments/kilobot_speaker_listener.argos
-```
-
-## Lab 2.3-2.4
-```shell
-argos3 -c src/examples/experiments/kilobot_speaker_listener_mod.argos
-```
-
-## Lab 3
-```shell
-argos3 -c src/examples/experiments/kilobot_disperse.argos
-```
-
-## Lab 4
-```shell
-argos3 -c src/examples/experiments/kilobot_orbit.argos
-```
-
-## Lab 5
-```shell
-argos3 -c src/examples/experiments/kilobot_move_to_light.argos
-```
-
-## Lab 6
-```shell
-argos3 -c src/examples/experiments/kilobot_gradient_simple.argos
-```
-
-## Lab 7
-```shell
-argos3 -c src/examples/experiments/kilobot_sync.argos
-```
-
-# Differences between Kilombo and ARGoS
-
-## Kilombo
-  * Architecture
-    * Single-thread, single process wrapper around kilolib.h
-      * Robots must run the same behavior
-      * Global variables cannot be used to contain state
-  * Models
+## Insectbot
     * Only model offered is the Kilobot
     * Motion is kinematics with simple overlap resolution
       * Robots cannot push other objects

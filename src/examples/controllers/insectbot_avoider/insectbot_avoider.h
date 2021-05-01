@@ -97,7 +97,7 @@ public:
 
    
 private:
-
+   virtual void log(const std::string& message);
    /*
     * The following variables are used as parameters for the
     * algorithm. You can set their value in the <parameters> section
@@ -128,8 +128,8 @@ private:
 
    /* variables for the random number generation */
    CRandom::CRNG*  m_pcRNG;
-
    // std::vector<Real>& proximity_reads;
+   std::ofstream log_file;
 };
 
 #endif

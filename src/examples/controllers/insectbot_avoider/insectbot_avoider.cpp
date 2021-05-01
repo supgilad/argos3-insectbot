@@ -7,6 +7,7 @@
 #include <argos3/core/utility/math/vector3.h>
 #include <vector>
 #include <algorithm>
+#include <fstream>
 
 /****************************************/
 /****************************************/
@@ -27,7 +28,8 @@ CInsectbotAvoider::CInsectbotAvoider() : m_pcMotors(NULL),
                                          m_unCountTurningSteps(130),
                                          m_fMotorL(0.0f),
                                          m_fMotorR(0.0f),
-                                         m_positionSetter(NULL)
+                                         m_positionSetter(NULL),
+                                         log_file()
 {
    m_pcRNG = CRandom::CreateRNG("argos");
 }
@@ -70,6 +72,9 @@ void CInsectbotAvoider::Init(TConfigurationNode &t_node)
       LOGERR << "[FATAL] Invalid value for num_moving_steps (" << m_unMaxMotionSteps << "). Should be a positive integer." << std::endl;
    }
 
+   if (!log_file.is_open()){
+      log_file.open("logging_test.log" ,std::ios_base::app);
+   }
    Reset();
 }
 
@@ -91,6 +96,12 @@ void CInsectbotAvoider::Reset()
 static bool isReadingInRange(double reading, double min = 0.0f, double max = 1.0f)
 {
    return (reading > min && reading < max);
+}
+
+void CInsectbotAvoider::log(const std::string& message)
+{
+   log_file <<"["<< GetId()<<"] " <<message<<std::endl;
+   LOG<<"["<< GetId()<<"] "<<message<<std::endl;
 }
 
 void CInsectbotAvoider::ControlStep()
@@ -116,7 +127,8 @@ void CInsectbotAvoider::ControlStep()
       {
          // std::cout << "dist is" << std::min(tProxReads[0], tProxReads[23]);
          // std::cout << "dist is" << std::min(tProxReads[0], tProxReads[23]);
-         RLOG << m_pcRNG->Uniform(CRange<UInt32>(0, STOP_PROB))<<"," <<m_pcRNG->Uniform(CRange<UInt32>(0, STOP_PROB)) <<std::endl;
+         
+         this->log("POS=1,1");
          m_fMotorL = PIN_TURN;
          m_fMotorR = PIN_STOP;
       }
