@@ -57,3 +57,4 @@ build/CMakeFiles/CMakeOutput.log
 build/plugins/robots/kilobot/libargos3plugin_simulator_kilobot.so
 build/plugins/robots/kilobot/CMakeFiles/argos3plugin_simulator_kilobot.dir/simulator/qtopengl_kilobot.cpp.o
 src/examples/experiments/generated_insectbot_torus/*
+*.log
