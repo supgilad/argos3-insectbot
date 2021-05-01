@@ -26,6 +26,7 @@
 /* Definition of the differential steering actuator */
 #include <argos3/plugins/robots/generic/control_interface/ci_differential_steering_actuator.h>
 #include <argos3/plugins/robots/generic/control_interface/ci_proximity_sensor.h>
+#include <argos3/plugins/robots/generic/control_interface/ci_positioning_sensor.h>
 #include <argos3/plugins/robots/generic/simulator/quadrotor_position_default_actuator.h>
 
 /* Random number generator */
@@ -108,7 +109,7 @@ private:
    /* Pointer to the differential steering actuator */
    CCI_DifferentialSteeringActuator* m_pcMotors;
    CCI_ProximitySensor* m_sensor;
-   CQuadRotorPositionDefaultActuator* m_positionSetter;
+   CCI_PositioningSensor* m_positionGetter;
 
 
    /* behavioural state (moving/turning) */

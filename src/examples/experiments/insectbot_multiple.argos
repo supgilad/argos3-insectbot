@@ -24,6 +24,7 @@
     </actuators>
       <sensors>
           <proximity implementation="default" show_rays="true" />
+          <positioning implementation="default" />
       </sensors>
       <params max_motion_steps="100" />
     </insectbot_avoider_controller>

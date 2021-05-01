@@ -33,7 +33,8 @@ namespace argos
                                       m_pcProximitySensorEquippedEntity(NULL),
                                       m_pcKilobotCommunicationEntity(NULL),
                                       m_pcQuadrotorEntity(NULL),
-                                      m_pcWheeledEntity(NULL)
+                                      m_pcWheeledEntity(NULL),
+                                      m_pcPositioningEntity(NULL)
    {
    }
 
@@ -51,7 +52,8 @@ namespace argos
                                                                 m_pcProximitySensorEquippedEntity(NULL),
                                                                 m_pcLightSensorEquippedEntity(NULL),
                                                                 m_pcQuadrotorEntity(NULL),
-                                                                m_pcWheeledEntity(NULL)
+                                                                m_pcWheeledEntity(NULL),
+                                                                m_pcPositioningEntity(NULL)
    {
       try
       {
@@ -101,8 +103,11 @@ namespace argos
              PROXIMITY_SENSOR_RING_RANGE,
              24,
              m_pcEmbodiedEntity->GetOriginAnchor());
+         
          m_pcQuadrotorEntity = new CQuadRotorEntity(this, "quadrotor_0");
          AddComponent(*m_pcQuadrotorEntity);
+         m_pcPositioningEntity = new CPositionalEntity(this, "positioning_0");
+         AddComponent(*m_pcPositioningEntity);
          /* Controllable entity.  It must be the last one, for
             actuators/sensors to link to composing entities
             correctly */
@@ -178,6 +183,8 @@ namespace argos
              m_pcEmbodiedEntity->GetOriginAnchor());
          m_pcQuadrotorEntity = new CQuadRotorEntity(this, "quadrotor_0");
          AddComponent(*m_pcQuadrotorEntity);
+         m_pcPositioningEntity = new CPositionalEntity(this, "positioning_0");
+         AddComponent(*m_pcPositioningEntity);
          /* Controllable entity. It must be the last one, for
             actuators/sensors to link to composing entities
             correctly */

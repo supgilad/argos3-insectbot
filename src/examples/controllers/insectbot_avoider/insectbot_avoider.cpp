@@ -28,7 +28,7 @@ CInsectbotAvoider::CInsectbotAvoider() : m_pcMotors(NULL),
                                          m_unCountTurningSteps(130),
                                          m_fMotorL(0.0f),
                                          m_fMotorR(0.0f),
-                                         m_positionSetter(NULL),
+                                         m_positionGetter(NULL),
                                          log_file()
 {
    m_pcRNG = CRandom::CreateRNG("argos");
@@ -64,7 +64,8 @@ void CInsectbotAvoider::Init(TConfigurationNode &t_node)
    // Get sensor/actuator handles
    m_pcMotors = GetActuator<CCI_DifferentialSteeringActuator>("differential_steering");
    m_sensor = GetSensor<CCI_ProximitySensor>("proximity");
-   m_positionSetter = GetActuator<CQuadRotorPositionDefaultActuator>("quadrotor_position");
+   // m_positionSetter = GetActuator<CQuadRotorPositionDefaultActuator>("quadrotor_position");
+   m_positionGetter = GetSensor<CCI_PositioningSensor>("positioning");
    // Parse the configuration file
    GetNodeAttributeOrDefault(t_node, "max_motion_steps", m_unMaxMotionSteps, m_unMaxMotionSteps);
    if (m_unMaxMotionSteps == 0)
@@ -99,9 +100,10 @@ static bool isReadingInRange(double reading, double min = 0.0f, double max = 1.0
 }
 
 void CInsectbotAvoider::log(const std::string& message)
-{
-   log_file <<"["<< GetId()<<"] " <<message<<std::endl;
-   LOG<<"["<< GetId()<<"] "<<message<<std::endl;
+{  
+   const CVector3 &pos = m_positionGetter->GetReading().Position;
+   log_file <<"[ID="<< GetId()<<"] " <<"[POS="<<pos[0]<<","<<pos[1]<<"] "<<message<<std::endl;
+   LOG<<"[ID="<< GetId()<<"] "<<"[POS="<<pos[0]<<","<<pos[1]<<"] "<<message<<std::endl;
 }
 
 void CInsectbotAvoider::ControlStep()
@@ -128,7 +130,7 @@ void CInsectbotAvoider::ControlStep()
          // std::cout << "dist is" << std::min(tProxReads[0], tProxReads[23]);
          // std::cout << "dist is" << std::min(tProxReads[0], tProxReads[23]);
          
-         this->log("POS=1,1");
+         this->log("");
          m_fMotorL = PIN_TURN;
          m_fMotorR = PIN_STOP;
       }

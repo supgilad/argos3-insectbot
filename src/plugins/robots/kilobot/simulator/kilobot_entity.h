@@ -18,6 +18,7 @@ namespace argos {
 }
 
 #include <argos3/core/simulator/entity/composable_entity.h>
+#include <argos3/core/simulator/entity/positional_entity.h>
 #include <argos3/plugins/simulator/entities/wheeled_entity.h>
 #include <argos3/plugins/simulator/entities/quadrotor_entity.h>
 #include <argos3/plugins/simulator/entities/proximity_sensor_equipped_entity.h>
@@ -92,6 +93,7 @@ namespace argos {
       CWheeledEntity*              m_pcWheeledEntity;
       CQuadRotorEntity*            m_pcQuadrotorEntity;
       CProximitySensorEquippedEntity* m_pcProximitySensorEquippedEntity;
+      CPositionalEntity* m_pcPositioningEntity;
    };
 
 }
