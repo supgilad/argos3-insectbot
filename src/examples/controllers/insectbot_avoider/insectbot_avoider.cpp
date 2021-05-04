@@ -30,7 +30,9 @@ CInsectbotAvoider::CInsectbotAvoider() : m_pcMotors(NULL),
                                          m_fMotorL(0.0f),
                                          m_fMotorR(0.0f),
                                          m_positionGetter(NULL),
-                                         log_file()
+                                         log_file(),
+                                         log_robot_interval(0),
+                                         last_logged_robot(0)
 {
    m_pcRNG = CRandom::CreateRNG("argos");
 }
@@ -63,6 +65,7 @@ void CInsectbotAvoider::Init(TConfigurationNode &t_node)
    // Parse the configuration file
    std::string log_file_name;
    GetNodeAttributeOrDefault<std::string>(t_node, "log_file",log_file_name,"experiment.log");
+   GetNodeAttributeOrDefault<UInt32>(t_node, "log_robot_interval",log_robot_interval,5);
 
    if (!log_file.is_open()){
       log_file.open(log_file_name,std::ios_base::app);
@@ -97,7 +100,7 @@ void CInsectbotAvoider::log(const std::string& message)
    char buffer [80];
    struct tm * timeinfo;
    timeinfo = localtime (&curr_time);
-   strftime (buffer,100,"%Y-%m-%d %H:%M:%S",timeinfo);
+   strftime (buffer,80,"%Y-%m-%d %H:%M:%S",timeinfo);
 
    const CVector3 &pos = m_positionGetter->GetReading().Position;
    log_file<<R"({"Date":")"<<buffer <<R"(","ID":")"<< GetId()<<R"(","x":")"<<pos[0]<<R"(","y":")"<<pos[1]<<R"(","Message":")"<<message<<R"("})"<<std::endl;
@@ -106,6 +109,12 @@ void CInsectbotAvoider::log(const std::string& message)
 
 void CInsectbotAvoider::ControlStep()
 {
+   time_t seconds;
+   seconds = time (NULL);
+   if (seconds-last_logged_robot>log_robot_interval){
+      this->log("");
+      last_logged_robot=seconds;
+   }
    
    const std::vector<double> &tProxReads = m_sensor->GetReadings();
    if (m_tCurrentState == KILOBOT_STATE_MOVING)
@@ -125,30 +134,21 @@ void CInsectbotAvoider::ControlStep()
 
       else if (somethingOnFront && !sometingOnLeft)
       {
-         // std::cout << "dist is" << std::min(tProxReads[0], tProxReads[23]);
-         // std::cout << "dist is" << std::min(tProxReads[0], tProxReads[23]);
-         
-         this->log("");
          m_fMotorL = PIN_TURN;
          m_fMotorR = PIN_STOP;
       }
       else if (somethingOnFront && !sometingOnRight)
       {
-         // std::cout <<"dist is" << std::min(tProxReads[0], tProxReads[23]);
-
          m_fMotorL = PIN_STOP;
          m_fMotorR = PIN_TURN;
       }
       else if (sometingOnRight && sometingOnLeft)
       {
-         // std::cout <<"dist is" << std::min(tProxReads[1], tProxReads[22]);
-
          m_fMotorL = PIN_STOP;
          m_fMotorR = PIN_TURN;
       }
       else if (sometingOnLeft)
       {
-         std::cout<<std::min(tProxReads[0], tProxReads[23]);
          m_fMotorL = PIN_STOP;
          m_fMotorR = PIN_TURN;
       }

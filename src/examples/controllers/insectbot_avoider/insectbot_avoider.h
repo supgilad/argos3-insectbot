@@ -127,6 +127,9 @@ private:
    Real   m_fMotorL;
    Real   m_fMotorR;
 
+   UInt32 log_robot_interval;
+   UInt32 last_logged_robot;
+
    /* variables for the random number generation */
    CRandom::CRNG*  m_pcRNG;
    // std::vector<Real>& proximity_reads;
