@@ -8,6 +8,7 @@
 #include <vector>
 #include <algorithm>
 #include <fstream>
+#include <time.h>
 
 /****************************************/
 /****************************************/
@@ -54,27 +55,18 @@ void CInsectbotAvoider::Init(TConfigurationNode &t_node)
     *
     * to have a list of all the possible sensors.
     *
-    * NOTE: ARGoS creates and initializes actuators and sensors
-    * internally, on the basis of the lists provided the configuration
-    * file at the <controllers><kilobot_diffusion><actuators> and
-    * <controllers><kilobot_diffusion><sensors> sections. If you forgot to
-    * list a device in the XML and then you request it here, an error
-    * occurs.
     */
    // Get sensor/actuator handles
    m_pcMotors = GetActuator<CCI_DifferentialSteeringActuator>("differential_steering");
    m_sensor = GetSensor<CCI_ProximitySensor>("proximity");
-   // m_positionSetter = GetActuator<CQuadRotorPositionDefaultActuator>("quadrotor_position");
    m_positionGetter = GetSensor<CCI_PositioningSensor>("positioning");
    // Parse the configuration file
-   GetNodeAttributeOrDefault(t_node, "max_motion_steps", m_unMaxMotionSteps, m_unMaxMotionSteps);
-   if (m_unMaxMotionSteps == 0)
-   {
-      LOGERR << "[FATAL] Invalid value for num_moving_steps (" << m_unMaxMotionSteps << "). Should be a positive integer." << std::endl;
-   }
+   std::string log_file_name;
+   GetNodeAttributeOrDefault<std::string>(t_node, "log_file",log_file_name,"experiment.log");
 
    if (!log_file.is_open()){
-      log_file.open("logging_test.log" ,std::ios_base::app);
+      log_file.open(log_file_name,std::ios_base::app);
+      this->log("Robot Created");
    }
    Reset();
 }
@@ -100,10 +92,16 @@ static bool isReadingInRange(double reading, double min = 0.0f, double max = 1.0
 }
 
 void CInsectbotAvoider::log(const std::string& message)
-{  
+{  time_t curr_time;
+   curr_time = time(NULL);
+   char buffer [80];
+   struct tm * timeinfo;
+   timeinfo = localtime (&curr_time);
+   strftime (buffer,100,"%Y-%m-%d %H:%M:%S",timeinfo);
+
    const CVector3 &pos = m_positionGetter->GetReading().Position;
-   log_file <<"[ID="<< GetId()<<"] " <<"[POS="<<pos[0]<<","<<pos[1]<<"] "<<message<<std::endl;
-   LOG<<"[ID="<< GetId()<<"] "<<"[POS="<<pos[0]<<","<<pos[1]<<"] "<<message<<std::endl;
+   log_file<<R"({"Date":")"<<buffer <<R"(","ID":")"<< GetId()<<R"(","x":")"<<pos[0]<<R"(","y":")"<<pos[1]<<R"(","Message":")"<<message<<R"("})"<<std::endl;
+   LOG     <<R"({"Date":")"<<buffer <<R"(","ID":")"<< GetId()<<R"(","x":")"<<pos[0]<<R"(","y":")"<<pos[1]<<R"(","Message":")"<<message<<R"("})"<<std::endl;
 }
 
 void CInsectbotAvoider::ControlStep()

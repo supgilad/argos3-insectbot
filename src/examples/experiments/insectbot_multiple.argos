@@ -26,7 +26,7 @@
           <proximity implementation="default" show_rays="true" />
           <positioning implementation="default" />
       </sensors>
-      <params max_motion_steps="100" />
+      <params log_file="experiment.log" />
     </insectbot_avoider_controller>
       <insectbot_random_controller id="2"
                                   library="build/examples/controllers/insectbot_random/libinsectbot_random">
@@ -37,7 +37,7 @@
       <sensors>
           <proximity implementation="default" show_rays="true" />
       </sensors>
-      <params max_motion_steps="100" />
+      <params log_file="experiment.log" />
     </insectbot_random_controller>
 
   </controllers>
