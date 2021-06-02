@@ -1,1 +1,1 @@
-add_subdirectory(kilobot)
+add_subdirectory(insectbot)

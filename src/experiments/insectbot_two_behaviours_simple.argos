@@ -58,14 +58,14 @@
     <box id="wall_west" size="0.05,1,0.05" movable="false">
       <body position="-0.5,0,0" orientation="0,0,0" />
     </box>
-            <kilobot id="kb">
+            <insectbot id="kb">
             <controller config="1" />
             <body position="0.3,0,0" orientation="0,0,0" />
-            </kilobot>
-            <kilobot id="kb2">
+            </insectbot>
+            <insectbot id="kb2">
             <controller config="2" />
             <body position="0,0.3,0" orientation="0,0,0" />
-            </kilobot>
+            </insectbot>
   </arena>
 
   <!-- ******************* -->

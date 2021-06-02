@@ -29,7 +29,7 @@ def build_cylinder_xml(radius):
 def build_robots_xml(radius,num_robots,controller_id):
     ''' 
         You can distribute entities randomly. Here, we distribute
-        10 kilobots in this way:
+        10 insectbots in this way:
         - the position is uniformly distributed
         on the ground, in the square whose corners are (-2,-2) and (2,2)
         - the orientations are non-zero only when rotating around Z and chosen
@@ -43,8 +43,8 @@ def build_robots_xml(radius,num_robots,controller_id):
      min="'+str(-robot_area)+','+str(-robot_area)+',0"\
      max="'+str(robot_area)+','+str(robot_area)+',0" />\
       <orientation method="gaussian" mean="0,0,0" std_dev="360,0,0" />\
-      <entity quantity="'+str(num_robots)+'" max_trials="100"><kilobot id="kb-'+str(controller_id)+'-">\
-          <controller config="'+str(controller_id)+'" /></kilobot></entity>\
+      <entity quantity="'+str(num_robots)+'" max_trials="100"><insectbot id="kb-'+str(controller_id)+'-">\
+          <controller config="'+str(controller_id)+'" /></insectbot></entity>\
     </distribute>'
 
 def main():

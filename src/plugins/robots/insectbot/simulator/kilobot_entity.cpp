@@ -217,7 +217,7 @@ namespace argos
    /****************************************/
 
    REGISTER_ENTITY(CKilobotEntity,
-                   "kilobot",
+                   "insectbot",
                    "Carlo Pinciroli [ilpincy@gmail.com] - Vito Trianni [vito.trianni@istc.cnr.it",
                    "1.0",
                    "Insectbot"," The 'id' attribute is necessary and must be unique among the entities. If two\n"

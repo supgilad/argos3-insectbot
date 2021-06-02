@@ -90,9 +90,9 @@
       <position method="uniform" min="-0.4,-0.4,0" max="0.4,0.4,0" />
       <orientation method="gaussian" mean="0,0,0" std_dev="360,0,0" />
       <entity quantity="8" max_trials="100">
-            <kilobot id="kb">
+            <insectbot id="kb">
             <controller config="1" />
-            </kilobot>
+            </insectbot>
       </entity>
     </distribute>
 
