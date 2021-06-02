@@ -14,7 +14,6 @@ namespace argos {
    class CKilobotEntity;
    class CLEDEquippedEntity;
    class CLightSensorEquippedEntity;
-   class CKilobotCommunicationEntity;
 }
 
 #include <argos3/core/simulator/entity/composable_entity.h>
@@ -63,9 +62,6 @@ namespace argos {
          return *m_pcLightSensorEquippedEntity;
       }
 
-      inline CKilobotCommunicationEntity& GetKilobotCommunicationEntity() {
-         return *m_pcKilobotCommunicationEntity;
-      }
 
       inline CProximitySensorEquippedEntity& GetProximitySensorEquippedEntity() {
          return *m_pcProximitySensorEquippedEntity;
@@ -89,7 +85,6 @@ namespace argos {
       CEmbodiedEntity*             m_pcEmbodiedEntity;
       CLEDEquippedEntity*          m_pcLEDEquippedEntity;
       CLightSensorEquippedEntity*  m_pcLightSensorEquippedEntity;
-      CKilobotCommunicationEntity* m_pcKilobotCommunicationEntity;
       CWheeledEntity*              m_pcWheeledEntity;
       CQuadRotorEntity*            m_pcQuadrotorEntity;
       CProximitySensorEquippedEntity* m_pcProximitySensorEquippedEntity;

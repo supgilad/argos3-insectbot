@@ -13,7 +13,6 @@
 #include <argos3/core/simulator/entity/embodied_entity.h>
 #include <argos3/plugins/simulator/entities/led_equipped_entity.h>
 #include <argos3/plugins/simulator/entities/light_sensor_equipped_entity.h>
-#include <argos3/plugins/robots/kilobot/simulator/kilobot_communication_entity.h>
 #include <argos3/plugins/simulator/entities/quadrotor_entity.h>
 
 namespace argos
@@ -31,7 +30,6 @@ namespace argos
                                       m_pcLEDEquippedEntity(NULL),
                                       m_pcLightSensorEquippedEntity(NULL),
                                       m_pcProximitySensorEquippedEntity(NULL),
-                                      m_pcKilobotCommunicationEntity(NULL),
                                       m_pcQuadrotorEntity(NULL),
                                       m_pcWheeledEntity(NULL),
                                       m_pcPositioningEntity(NULL)
@@ -84,15 +82,7 @@ namespace argos
                                                   CVector3(0.0f, 0.0f, 1.0f),
                                                   KILOBOT_LIGHT_SENSOR_RANGE,
                                                   cLightAnchor);
-         /* Kilobot communication entity */
-         m_pcKilobotCommunicationEntity =
-             new CKilobotCommunicationEntity(this,
-                                             "kilocomm_0",
-                                             9,
-                                             f_communication_range,
-                                             cCommAnchor,
-                                             *m_pcEmbodiedEntity);
-         AddComponent(*m_pcKilobotCommunicationEntity);
+
          m_pcProximitySensorEquippedEntity =
              new CProximitySensorEquippedEntity(this, "proximity_0");
          AddComponent(*m_pcProximitySensorEquippedEntity);
@@ -163,14 +153,6 @@ namespace argos
          /* Kilobot communication entity */
          Real fRange = 0.1f;
          GetNodeAttributeOrDefault(t_tree, "communication_range", fRange, fRange);
-         m_pcKilobotCommunicationEntity =
-             new CKilobotCommunicationEntity(this,
-                                             "kilocomm_0",
-                                             9,
-                                             fRange,
-                                             cCommAnchor,
-                                             *m_pcEmbodiedEntity);
-         AddComponent(*m_pcKilobotCommunicationEntity);
          m_pcProximitySensorEquippedEntity =
              new CProximitySensorEquippedEntity(this, "proximity_0");
          AddComponent(*m_pcProximitySensorEquippedEntity);
@@ -228,7 +210,6 @@ namespace argos
 
    void CKilobotEntity::UpdateComponents()
    {
-      UPDATE(m_pcKilobotCommunicationEntity);
       UPDATE(m_pcLEDEquippedEntity);
    }
 
