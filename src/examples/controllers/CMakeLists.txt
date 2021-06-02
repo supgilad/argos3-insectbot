@@ -1,4 +1,0 @@
-add_subdirectory(kilobot_diffusion)
-add_subdirectory(kilobot_phototaxis)
-add_subdirectory(insectbot_avoider)
-add_subdirectory(insectbot_random)

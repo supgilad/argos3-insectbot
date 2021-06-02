@@ -2,22 +2,26 @@
 
 Make sure you have ARGoS >= 3.0.0-beta52 installed!
 
-Build Insectbot:
+Make sure you have python3 installed
+
+ ## Building Insectbot Plugin:
 ```shell
 ./build_insectbot.sh
 ```
-
-## Lab 0
+## Running a Simple Example
 ```shell
-argos3 -c src/examples/experiments/kilobot_blinky.argos
+argos3 -c src/examples/experiments/insectbot_simple.argos
+```
+## Running a 2 behavior Example
+```shell
+argos3 -c src/examples/experiments/insectbot_simple.argos
 ```
 
-## Insectbot
-    * Only model offered is the Kilobot
-    * Motion is kinematics with simple overlap resolution
-      * Robots cannot push other objects
-    * Communication neglects obstructions
-    * Message drop has uniform probability
+## Running a Torus Example
+```shell
+./run_generated_insectbot_experiment.sh insectbot_multiple 0.5 0.2 10 1
+```
+
 
 ## ARGoS
   * Architecture
@@ -25,8 +29,6 @@ argos3 -c src/examples/experiments/kilobot_blinky.argos
     * Robots can run different behaviors
     * Global variables can be used to contain state
   * Models
-    * Models of Kilobot, other robots, boxes, cylinders
+    * Models of Insectbot, other robots, boxes, cylinders
       * Motion is full 2D dynamics
       * Robots can push other objects
-    * Communication considers obstruction
-    * Message drop considers local density

@@ -1,0 +1,105 @@
+<?xml version="1.0" ?>
+<argos-configuration>
+
+  <!-- ************************* -->
+  <!-- * General configuration * -->
+  <!-- ************************* -->
+  <framework>
+    <system threads="0" />
+    <experiment length="0"
+                ticks_per_second="40"/>
+                <!-- random_seed="144" /> -->
+  </framework>
+
+  <!-- *************** -->
+  <!-- * Controllers * -->
+  <!-- *************** -->
+  <controllers>
+
+    <insectbot_avoider_controller id="1"
+                                  library="build/examples/controllers/insectbot_avoider/libinsectbot_avoider">
+      <actuators>
+        <quadrotor_position implementation="default" />  <!--Not working at the moment..-->
+        <differential_steering implementation="default" />
+    </actuators>
+      <sensors>
+          <proximity implementation="default" show_rays="true" />
+      </sensors>
+      <params max_motion_steps="100" />
+    </insectbot_avoider_controller>
+      <insectbot_random_controller id="2"
+                                  library="build/examples/controllers/insectbot_random/libinsectbot_random">
+      <actuators>
+        <quadrotor_position implementation="default" />  <!--Not working at the moment..-->
+        <differential_steering implementation="default" />
+    </actuators>
+      <sensors>
+          <proximity implementation="default" show_rays="true" />
+      </sensors>
+      <params max_motion_steps="100" />
+    </insectbot_random_controller>
+
+  </controllers>
+
+  <!-- *********************** -->
+  <!-- * Arena configuration * -->
+  <!-- *********************** -->
+  <arena size="5, 5, 1" center="0,0,0.5">
+
+
+<box id="circle-box-0" size="0.03,0.2,0.03" movable="false"><body position="-0.6,-0.003,0" orientation="-179,0,0" /></box><box id="circle-box-1" size="0.03,0.2,0.03" movable="false"><body position="-0.6,-0.002,0" orientation="-179,0,0" /></box><box id="circle-box-2" size="0.03,0.2,0.03" movable="false"><body position="-0.6,-0.001,0" orientation="-179,0,0" /></box><box id="circle-box-3" size="0.03,0.2,0.03" movable="false"><body position="-0.6,0.0,0" orientation="180,0,0" /></box><box id="circle-box-4" size="0.03,0.2,0.03" movable="false"><body position="-0.6,0.001,0" orientation="179,0,0" /></box><box id="circle-box-5" size="0.03,0.2,0.03" movable="false"><body position="-0.6,0.002,0" orientation="179,0,0" /></box><box id="circle-box-6" size="0.03,0.2,0.03" movable="false"><body position="-0.6,0.003,0" orientation="179,0,0" /></box><box id="circle-box-7" size="0.03,0.2,0.03" movable="false"><body position="-0.598,-0.049,0" orientation="-175,0,0" /></box><box id="circle-box-8" size="0.03,0.2,0.03" movable="false"><body position="-0.598,0.049,0" orientation="175,0,0" /></box><box id="circle-box-9" size="0.03,0.2,0.03" movable="false"><body position="-0.597,-0.06,0" orientation="-174,0,0" /></box><box id="circle-box-10" size="0.03,0.2,0.03" movable="false"><body position="-0.597,0.06,0" orientation="174,0,0" /></box><box id="circle-box-11" size="0.03,0.2,0.03" movable="false"><body position="-0.578,-0.161,0" orientation="-164,0,0" /></box><box id="circle-box-12" size="0.03,0.2,0.03" movable="false"><body position="-0.578,0.161,0" orientation="164,0,0" /></box><box id="circle-box-13" size="0.03,0.2,0.03" movable="false"><body position="-0.5760000000000001,-0.168,0" orientation="-163,0,0" /></box><box id="circle-box-14" size="0.03,0.2,0.03" movable="false"><body position="-0.5760000000000001,0.168,0" orientation="163,0,0" /></box><box id="circle-box-15" size="0.03,0.2,0.03" movable="false"><body position="-0.559,-0.218,0" orientation="-158,0,0" /></box><box id="circle-box-16" size="0.03,0.2,0.03" movable="false"><body position="-0.559,0.218,0" orientation="158,0,0" /></box><box id="circle-box-17" size="0.03,0.2,0.03" movable="false"><body position="-0.555,-0.228,0" orientation="-157,0,0" /></box><box id="circle-box-18" size="0.03,0.2,0.03" movable="false"><body position="-0.555,0.228,0" orientation="157,0,0" /></box><box id="circle-box-19" size="0.03,0.2,0.03" movable="false"><body position="-0.528,-0.28500000000000003,0" orientation="-151,0,0" /></box><box id="circle-box-20" size="0.03,0.2,0.03" movable="false"><body position="-0.528,0.28500000000000003,0" orientation="151,0,0" /></box><box id="circle-box-21" size="0.03,0.2,0.03" movable="false"><body position="-0.505,-0.324,0" orientation="-147,0,0" /></box><box id="circle-box-22" size="0.03,0.2,0.03" movable="false"><body position="-0.505,0.324,0" orientation="147,0,0" /></box><box id="circle-box-23" size="0.03,0.2,0.03" movable="false"><body position="-0.48,-0.36,0" orientation="-143,0,0" /></box><box id="circle-box-24" size="0.03,0.2,0.03" movable="false"><body position="-0.48,0.36,0" orientation="143,0,0" /></box><box id="circle-box-25" size="0.03,0.2,0.03" movable="false"><body position="-0.449,-0.398,0" orientation="-138,0,0" /></box><box id="circle-box-26" size="0.03,0.2,0.03" movable="false"><body position="-0.449,0.398,0" orientation="138,0,0" /></box><box id="circle-box-27" size="0.03,0.2,0.03" movable="false"><body position="-0.439,-0.40900000000000003,0" orientation="-137,0,0" /></box><box id="circle-box-28" size="0.03,0.2,0.03" movable="false"><body position="-0.439,0.40900000000000003,0" orientation="137,0,0" /></box><box id="circle-box-29" size="0.03,0.2,0.03" movable="false"><body position="-0.40900000000000003,-0.439,0" orientation="-132,0,0" /></box><box id="circle-box-30" size="0.03,0.2,0.03" movable="false"><body position="-0.40900000000000003,0.439,0" orientation="132,0,0" /></box><box id="circle-box-31" size="0.03,0.2,0.03" movable="false"><body position="-0.398,-0.449,0" orientation="-131,0,0" /></box><box id="circle-box-32" size="0.03,0.2,0.03" movable="false"><body position="-0.398,0.449,0" orientation="131,0,0" /></box><box id="circle-box-33" size="0.03,0.2,0.03" movable="false"><body position="-0.36,-0.48,0" orientation="-126,0,0" /></box><box id="circle-box-34" size="0.03,0.2,0.03" movable="false"><body position="-0.36,0.48,0" orientation="126,0,0" /></box><box id="circle-box-35" size="0.03,0.2,0.03" movable="false"><body position="-0.324,-0.505,0" orientation="-122,0,0" /></box><box id="circle-box-36" size="0.03,0.2,0.03" movable="false"><body position="-0.324,0.505,0" orientation="122,0,0" /></box><box id="circle-box-37" size="0.03,0.2,0.03" movable="false"><body position="-0.28500000000000003,-0.528,0" orientation="-118,0,0" /></box><box id="circle-box-38" size="0.03,0.2,0.03" movable="false"><body position="-0.28500000000000003,0.528,0" orientation="118,0,0" /></box><box id="circle-box-39" size="0.03,0.2,0.03" movable="false"><body position="-0.228,-0.555,0" orientation="-112,0,0" /></box><box id="circle-box-40" size="0.03,0.2,0.03" movable="false"><body position="-0.228,0.555,0" orientation="112,0,0" /></box><box id="circle-box-41" size="0.03,0.2,0.03" movable="false"><body position="-0.218,-0.559,0" orientation="-111,0,0" /></box><box id="circle-box-42" size="0.03,0.2,0.03" movable="false"><body position="-0.218,0.559,0" orientation="111,0,0" /></box><box id="circle-box-43" size="0.03,0.2,0.03" movable="false"><body position="-0.168,-0.5760000000000001,0" orientation="-106,0,0" /></box><box id="circle-box-44" size="0.03,0.2,0.03" movable="false"><body position="-0.168,0.5760000000000001,0" orientation="106,0,0" /></box><box id="circle-box-45" size="0.03,0.2,0.03" movable="false"><body position="-0.161,-0.578,0" orientation="-105,0,0" /></box><box id="circle-box-46" size="0.03,0.2,0.03" movable="false"><body position="-0.161,0.578,0" orientation="105,0,0" /></box><box id="circle-box-47" size="0.03,0.2,0.03" movable="false"><body position="-0.06,-0.597,0" orientation="-95,0,0" /></box><box id="circle-box-48" size="0.03,0.2,0.03" movable="false"><body position="-0.06,0.597,0" orientation="95,0,0" /></box><box id="circle-box-49" size="0.03,0.2,0.03" movable="false"><body position="-0.049,-0.598,0" orientation="-94,0,0" /></box><box id="circle-box-50" size="0.03,0.2,0.03" movable="false"><body position="-0.049,0.598,0" orientation="94,0,0" /></box><box id="circle-box-51" size="0.03,0.2,0.03" movable="false"><body position="-0.003,-0.6,0" orientation="-90,0,0" /></box><box id="circle-box-52" size="0.03,0.2,0.03" movable="false"><body position="-0.003,0.6,0" orientation="90,0,0" /></box><box id="circle-box-53" size="0.03,0.2,0.03" movable="false"><body position="-0.002,-0.6,0" orientation="-90,0,0" /></box><box id="circle-box-54" size="0.03,0.2,0.03" movable="false"><body position="-0.002,0.6,0" orientation="90,0,0" /></box><box id="circle-box-55" size="0.03,0.2,0.03" movable="false"><body position="-0.001,-0.6,0" orientation="-90,0,0" /></box><box id="circle-box-56" size="0.03,0.2,0.03" movable="false"><body position="-0.001,0.6,0" orientation="90,0,0" /></box><box id="circle-box-57" size="0.03,0.2,0.03" movable="false"><body position="0.0,-0.6,0" orientation="-90,0,0" /></box><box id="circle-box-58" size="0.03,0.2,0.03" movable="false"><body position="0.0,0.6,0" orientation="90,0,0" /></box><box id="circle-box-59" size="0.03,0.2,0.03" movable="false"><body position="0.001,-0.6,0" orientation="-89,0,0" /></box><box id="circle-box-60" size="0.03,0.2,0.03" movable="false"><body position="0.001,0.6,0" orientation="89,0,0" /></box><box id="circle-box-61" size="0.03,0.2,0.03" movable="false"><body position="0.002,-0.6,0" orientation="-89,0,0" /></box><box id="circle-box-62" size="0.03,0.2,0.03" movable="false"><body position="0.002,0.6,0" orientation="89,0,0" /></box><box id="circle-box-63" size="0.03,0.2,0.03" movable="false"><body position="0.003,-0.6,0" orientation="-89,0,0" /></box><box id="circle-box-64" size="0.03,0.2,0.03" movable="false"><body position="0.003,0.6,0" orientation="89,0,0" /></box><box id="circle-box-65" size="0.03,0.2,0.03" movable="false"><body position="0.049,-0.598,0" orientation="-85,0,0" /></box><box id="circle-box-66" size="0.03,0.2,0.03" movable="false"><body position="0.049,0.598,0" orientation="85,0,0" /></box><box id="circle-box-67" size="0.03,0.2,0.03" movable="false"><body position="0.06,-0.597,0" orientation="-84,0,0" /></box><box id="circle-box-68" size="0.03,0.2,0.03" movable="false"><body position="0.06,0.597,0" orientation="84,0,0" /></box><box id="circle-box-69" size="0.03,0.2,0.03" movable="false"><body position="0.161,-0.578,0" orientation="-74,0,0" /></box><box id="circle-box-70" size="0.03,0.2,0.03" movable="false"><body position="0.161,0.578,0" orientation="74,0,0" /></box><box id="circle-box-71" size="0.03,0.2,0.03" movable="false"><body position="0.168,-0.5760000000000001,0" orientation="-73,0,0" /></box><box id="circle-box-72" size="0.03,0.2,0.03" movable="false"><body position="0.168,0.5760000000000001,0" orientation="73,0,0" /></box><box id="circle-box-73" size="0.03,0.2,0.03" movable="false"><body position="0.218,-0.559,0" orientation="-68,0,0" /></box><box id="circle-box-74" size="0.03,0.2,0.03" movable="false"><body position="0.218,0.559,0" orientation="68,0,0" /></box><box id="circle-box-75" size="0.03,0.2,0.03" movable="false"><body position="0.228,-0.555,0" orientation="-67,0,0" /></box><box id="circle-box-76" size="0.03,0.2,0.03" movable="false"><body position="0.228,0.555,0" orientation="67,0,0" /></box><box id="circle-box-77" size="0.03,0.2,0.03" movable="false"><body position="0.28500000000000003,-0.528,0" orientation="-61,0,0" /></box><box id="circle-box-78" size="0.03,0.2,0.03" movable="false"><body position="0.28500000000000003,0.528,0" orientation="61,0,0" /></box><box id="circle-box-79" size="0.03,0.2,0.03" movable="false"><body position="0.324,-0.505,0" orientation="-57,0,0" /></box><box id="circle-box-80" size="0.03,0.2,0.03" movable="false"><body position="0.324,0.505,0" orientation="57,0,0" /></box><box id="circle-box-81" size="0.03,0.2,0.03" movable="false"><body position="0.36,-0.48,0" orientation="-53,0,0" /></box><box id="circle-box-82" size="0.03,0.2,0.03" movable="false"><body position="0.36,0.48,0" orientation="53,0,0" /></box><box id="circle-box-83" size="0.03,0.2,0.03" movable="false"><body position="0.398,-0.449,0" orientation="-48,0,0" /></box><box id="circle-box-84" size="0.03,0.2,0.03" movable="false"><body position="0.398,0.449,0" orientation="48,0,0" /></box><box id="circle-box-85" size="0.03,0.2,0.03" movable="false"><body position="0.40900000000000003,-0.439,0" orientation="-47,0,0" /></box><box id="circle-box-86" size="0.03,0.2,0.03" movable="false"><body position="0.40900000000000003,0.439,0" orientation="47,0,0" /></box><box id="circle-box-87" size="0.03,0.2,0.03" movable="false"><body position="0.439,-0.40900000000000003,0" orientation="-42,0,0" /></box><box id="circle-box-88" size="0.03,0.2,0.03" movable="false"><body position="0.439,0.40900000000000003,0" orientation="42,0,0" /></box><box id="circle-box-89" size="0.03,0.2,0.03" movable="false"><body position="0.449,-0.398,0" orientation="-41,0,0" /></box><box id="circle-box-90" size="0.03,0.2,0.03" movable="false"><body position="0.449,0.398,0" orientation="41,0,0" /></box><box id="circle-box-91" size="0.03,0.2,0.03" movable="false"><body position="0.48,-0.36,0" orientation="-36,0,0" /></box><box id="circle-box-92" size="0.03,0.2,0.03" movable="false"><body position="0.48,0.36,0" orientation="36,0,0" /></box><box id="circle-box-93" size="0.03,0.2,0.03" movable="false"><body position="0.505,-0.324,0" orientation="-32,0,0" /></box><box id="circle-box-94" size="0.03,0.2,0.03" movable="false"><body position="0.505,0.324,0" orientation="32,0,0" /></box><box id="circle-box-95" size="0.03,0.2,0.03" movable="false"><body position="0.528,-0.28500000000000003,0" orientation="-28,0,0" /></box><box id="circle-box-96" size="0.03,0.2,0.03" movable="false"><body position="0.528,0.28500000000000003,0" orientation="28,0,0" /></box><box id="circle-box-97" size="0.03,0.2,0.03" movable="false"><body position="0.555,-0.228,0" orientation="-22,0,0" /></box><box id="circle-box-98" size="0.03,0.2,0.03" movable="false"><body position="0.555,0.228,0" orientation="22,0,0" /></box><box id="circle-box-99" size="0.03,0.2,0.03" movable="false"><body position="0.559,-0.218,0" orientation="-21,0,0" /></box><box id="circle-box-100" size="0.03,0.2,0.03" movable="false"><body position="0.559,0.218,0" orientation="21,0,0" /></box><box id="circle-box-101" size="0.03,0.2,0.03" movable="false"><body position="0.5760000000000001,-0.168,0" orientation="-16,0,0" /></box><box id="circle-box-102" size="0.03,0.2,0.03" movable="false"><body position="0.5760000000000001,0.168,0" orientation="16,0,0" /></box><box id="circle-box-103" size="0.03,0.2,0.03" movable="false"><body position="0.578,-0.161,0" orientation="-15,0,0" /></box><box id="circle-box-104" size="0.03,0.2,0.03" movable="false"><body position="0.578,0.161,0" orientation="15,0,0" /></box><box id="circle-box-105" size="0.03,0.2,0.03" movable="false"><body position="0.597,-0.06,0" orientation="-5,0,0" /></box><box id="circle-box-106" size="0.03,0.2,0.03" movable="false"><body position="0.597,0.06,0" orientation="5,0,0" /></box><box id="circle-box-107" size="0.03,0.2,0.03" movable="false"><body position="0.598,-0.049,0" orientation="-4,0,0" /></box><box id="circle-box-108" size="0.03,0.2,0.03" movable="false"><body position="0.598,0.049,0" orientation="4,0,0" /></box><box id="circle-box-109" size="0.03,0.2,0.03" movable="false"><body position="0.6,-0.003,0" orientation="0,0,0" /></box><box id="circle-box-110" size="0.03,0.2,0.03" movable="false"><body position="0.6,-0.002,0" orientation="0,0,0" /></box><box id="circle-box-111" size="0.03,0.2,0.03" movable="false"><body position="0.6,-0.001,0" orientation="0,0,0" /></box><box id="circle-box-112" size="0.03,0.2,0.03" movable="false"><body position="0.6,0.0,0" orientation="0,0,0" /></box><box id="circle-box-113" size="0.03,0.2,0.03" movable="false"><body position="0.6,0.001,0" orientation="0,0,0" /></box><box id="circle-box-114" size="0.03,0.2,0.03" movable="false"><body position="0.6,0.002,0" orientation="0,0,0" /></box><box id="circle-box-115" size="0.03,0.2,0.03" movable="false"><body position="0.6,0.003,0" orientation="0,0,0" /></box>
+<cylinder id="cylinder" height="0.05" radius="0.2" movable="false" ><body position="0,0,0" orientation="0,0,0" /></cylinder>
+
+    <!--
+        You can distribute entities randomly. Here, we distribute
+        10 kilobots in this way:
+        - the position is uniformly distributed
+        on the ground, in the square whose corners are (-2,-2) and (2,2)
+        - the orientations are non-zero only when rotating around Z and chosen
+        from a gaussian distribution, whose mean is zero degrees and
+        standard deviation is 360 degrees.
+    -->
+    <distribute>
+      <!--options: uniform, gaussian, constant, grid-->
+      <position method="uniform" min="-0.4,-0.4,0" max="0.4,0.4,0" />
+      <orientation method="gaussian" mean="0,0,0" std_dev="360,0,0" />
+      <entity quantity="10" max_trials="100">
+            <kilobot id="kb">
+            <controller config="1" />
+            </kilobot>
+      </entity>
+    </distribute>
+                <kilobot id="rand">
+            <controller config="2" />
+            <body position="0,0.3,0" orientation="0,0,0" />
+            </kilobot>
+
+  </arena>
+
+  <!-- ******************* -->
+  <!-- * Physics engines * -->
+  <!-- ******************* -->
+  <physics_engines>
+    <dynamics2d id="dyn2d" />
+    <!-- <pointmass3d id="pm3d" iterations="10" /> 3d might be Not Necessary -->
+  </physics_engines>
+
+  <!-- ********* -->
+  <!-- * Media * -->
+  <!-- ********* -->
+  <media>
+  </media>
+
+  <!-- ****************** -->
+  <!-- * Visualization * -->
+  <!-- ****************** -->
+  <visualization>
+    <qt-opengl>
+      <camera>
+        <placement up="0,0,0.1" idx="0" position="0,0.0001,2" look_at="0,0,0" lens_focal_length="20" />
+        <placement up="0,0,0.7" idx="1" position="0.25,0.25,0.5" look_at="0,0,0" lens_focal_length="20" />
+      </camera>
+    </qt-opengl>
+  </visualization>
+
+</argos-configuration>

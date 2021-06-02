@@ -1,0 +1,2 @@
+add_subdirectory(insectbot_avoider)
+add_subdirectory(insectbot_random)
