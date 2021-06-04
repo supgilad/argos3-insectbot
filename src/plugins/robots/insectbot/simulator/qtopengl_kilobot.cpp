@@ -7,7 +7,7 @@
 
 #include "qtopengl_kilobot.h"
 #include "kilobot_measures.h"
-#include "kilobot_entity.h"
+#include "insectbot_entity.h"
 #include <argos3/core/simulator/entity/embodied_entity.h>
 #include <argos3/core/utility/math/vector2.h>
 #include <argos3/core/utility/math/vector3.h>
@@ -54,7 +54,7 @@ namespace argos {
    /****************************************/
    /****************************************/
 
-   void CQTOpenGLKilobot::Draw(CKilobotEntity& c_entity) {
+   void CQTOpenGLKilobot::Draw(CInsectbotEntity& c_entity) {
       glPushMatrix();
       // glTranslatef(KILOBOT_ECCENTRICITY, 0.0f, 0.0f);
       glCallList(m_unBaseList);
@@ -122,7 +122,7 @@ namespace argos {
    class CQTOpenGLOperationDrawKilobotNormal : public CQTOpenGLOperationDrawNormal {
    public:
       void ApplyTo(CQTOpenGLWidget& c_visualization,
-                   CKilobotEntity& c_entity) {
+                   CInsectbotEntity& c_entity) {
          static CQTOpenGLKilobot m_cModel;
          c_visualization.DrawRays(c_entity.GetControllableEntity());
          c_visualization.DrawEntity(c_entity.GetEmbodiedEntity());
@@ -133,14 +133,14 @@ namespace argos {
    class CQTOpenGLOperationDrawKilobotSelected : public CQTOpenGLOperationDrawSelected {
    public:
       void ApplyTo(CQTOpenGLWidget& c_visualization,
-                   CKilobotEntity& c_entity) {
+                   CInsectbotEntity& c_entity) {
          c_visualization.DrawBoundingBox(c_entity.GetEmbodiedEntity());
       }
    };
 
-   REGISTER_QTOPENGL_ENTITY_OPERATION(CQTOpenGLOperationDrawNormal, CQTOpenGLOperationDrawKilobotNormal, CKilobotEntity);
+   REGISTER_QTOPENGL_ENTITY_OPERATION(CQTOpenGLOperationDrawNormal, CQTOpenGLOperationDrawKilobotNormal, CInsectbotEntity);
 
-   REGISTER_QTOPENGL_ENTITY_OPERATION(CQTOpenGLOperationDrawSelected, CQTOpenGLOperationDrawKilobotSelected, CKilobotEntity);
+   REGISTER_QTOPENGL_ENTITY_OPERATION(CQTOpenGLOperationDrawSelected, CQTOpenGLOperationDrawKilobotSelected, CInsectbotEntity);
 
    /****************************************/
    /****************************************/

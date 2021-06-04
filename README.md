@@ -26,7 +26,7 @@ argos3 -c src/experiments/insectbot_two_behaviours_simple.argos
 
 ## Folders
 1. controllers - holds robot behavior classes
-2. experiments - holds different insectbot simulation setups
+2. experiments - holds all insectbot simulations
 3. plugins - holds insectbot basic behaviour and simulation configurations
 4. scripts - holds various scripts for using insectbot plugin 
 

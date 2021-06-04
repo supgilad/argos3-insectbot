@@ -37,8 +37,8 @@ execute_process(
   OUTPUT_VARIABLE CPACK_PACKAGE_RELEASE)
 endif(NOT DEFINED CPACK_PACKAGE_RELEASE)
 # Other stuff
-set(CPACK_PACKAGE_DESCRIPTION "ARGoS-Kilobot (Kilobot plugin for ARGoS)
- A plugin to support the Kilobot robot (https://www.kilobotics.com/)
+set(CPACK_PACKAGE_DESCRIPTION "ARGoS-Insectbot (Insectbot plugin for ARGoS)
+ A plugin to support the Insectbot robot
  into the ARGoS multi-robot simulator (http://www.argos-sim.info/).")
 set(CPACK_PACKAGE_HOMEPAGE "http://github.com/ilpincy/argos3-kilobot/")
 set(CPACK_PACKAGE_MAINTAINER "Carlo Pinciroli <ilpincy@gmail.com>")

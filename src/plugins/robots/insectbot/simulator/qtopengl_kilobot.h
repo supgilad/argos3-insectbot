@@ -10,7 +10,7 @@
 
 namespace argos {
    class CQTOpenGLKilobot;
-   class CKilobotEntity;
+   class CInsectbotEntity;
 }
 
 #ifdef __APPLE__
@@ -29,7 +29,7 @@ namespace argos {
 
       virtual ~CQTOpenGLKilobot();
 
-      virtual void Draw(CKilobotEntity& c_entity);
+      virtual void Draw(CInsectbotEntity& c_entity);
 
    protected:
 

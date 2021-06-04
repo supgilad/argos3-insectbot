@@ -19,7 +19,7 @@ namespace argos {
    /****************************************/
 
    CPointMass3DKilobotModel::CPointMass3DKilobotModel(CPointMass3DEngine& c_engine,
-                                                      CKilobotEntity& c_kilobot) :
+                                                      CInsectbotEntity& c_kilobot) :
       CPointMass3DModel(c_engine, c_kilobot.GetEmbodiedEntity()),
       m_cWheeledEntity(c_kilobot.GetWheeledEntity()),
       m_fCurrentWheelVelocity(m_cWheeledEntity.GetWheelVelocities()) {
@@ -95,7 +95,7 @@ namespace argos {
    /****************************************/
    /****************************************/
 
-   REGISTER_STANDARD_POINTMASS3D_OPERATIONS_ON_ENTITY(CKilobotEntity, CPointMass3DKilobotModel);
+   REGISTER_STANDARD_POINTMASS3D_OPERATIONS_ON_ENTITY(CInsectbotEntity, CPointMass3DKilobotModel);
 
    /****************************************/
    /****************************************/

@@ -1,10 +1,10 @@
 /**
- * @file <argos3/plugins/robots/kilobot/simulator/kilobot_entity.cpp>
+ * @file <argos3/plugins/robots/kilobot/simulator/insectbot_entity.cpp>
  *
  * @author Carlo Pinciroli - <ilpincy@gmail.com>
  */
 
-#include "kilobot_entity.h"
+#include "insectbot_entity.h"
 #include "kilobot_measures.h"
 
 #include <argos3/core/utility/math/matrix/rotationmatrix3.h>
@@ -24,7 +24,7 @@ namespace argos
    /****************************************/
    /****************************************/
 
-   CKilobotEntity::CKilobotEntity() : CComposableEntity(NULL),
+   CInsectbotEntity::CInsectbotEntity() : CComposableEntity(NULL),
                                       m_pcControllableEntity(NULL),
                                       m_pcEmbodiedEntity(NULL),
                                       m_pcLEDEquippedEntity(NULL),
@@ -39,7 +39,7 @@ namespace argos
    /****************************************/
    /****************************************/
 
-   CKilobotEntity::CKilobotEntity(const std::string &str_id,
+   CInsectbotEntity::CInsectbotEntity(const std::string &str_id,
                                   const std::string &str_controller_id,
                                   const CVector3 &c_position,
                                   const CQuaternion &c_orientation,
@@ -116,7 +116,7 @@ namespace argos
    /****************************************/
    /****************************************/
 
-   void CKilobotEntity::Init(TConfigurationNode &t_tree)
+   void CInsectbotEntity::Init(TConfigurationNode &t_tree)
    {
       try
       {
@@ -185,7 +185,7 @@ namespace argos
    /****************************************/
    /****************************************/
 
-   void CKilobotEntity::Reset()
+   void CInsectbotEntity::Reset()
    {
       /* Reset all components */
       CComposableEntity::Reset();
@@ -196,7 +196,7 @@ namespace argos
    /****************************************/
    /****************************************/
 
-   void CKilobotEntity::Destroy()
+   void CInsectbotEntity::Destroy()
    {
       CComposableEntity::Destroy();
    }
@@ -208,7 +208,7 @@ namespace argos
    if (COMPONENT->IsEnabled()) \
       COMPONENT->Update();
 
-   void CKilobotEntity::UpdateComponents()
+   void CInsectbotEntity::UpdateComponents()
    {
       UPDATE(m_pcLEDEquippedEntity);
    }
@@ -216,19 +216,15 @@ namespace argos
    /****************************************/
    /****************************************/
 
-   REGISTER_ENTITY(CKilobotEntity,
+   REGISTER_ENTITY(CInsectbotEntity,
                    "insectbot",
-                   "Carlo Pinciroli [ilpincy@gmail.com] - Vito Trianni [vito.trianni@istc.cnr.it",
+                   "Gilad Yadgar",
                    "1.0",
                    "Insectbot"," The 'id' attribute is necessary and must be unique among the entities. If two\n"
                    "entities share the same id, initialization aborts.\n"
                    "The 'body/position' attribute specifies the position of the bottom point of the\n"
-                   "Kilobot in the arena. When the robot is untranslated and unrotated, the\n"
-                   "bottom point is in the origin and it is defined as the middle point between\n"
-                   "the two actuated pins on the XY plane and the lowest point of the robot on the\n"
-                   "Z axis, that is the point where the robot touches the floor. The attribute\n"
-                   "values are in the X,Y,Z order.\n"
-                   "The 'body/orientation' attribute specifies the orientation of the Kilobot. All\n"
+                   "Insectbot in the arena. "
+                   "The 'body/orientation' attribute specifies the orientation of the robot. All\n"
                    "rotations are performed with respect to the bottom point. The order of the\n"
                    "angles is Z,Y,X, which means that the first number corresponds to the rotation\n"
                    "around the Z axis, the second around Y and the last around X. This reflects\n"
@@ -237,23 +233,13 @@ namespace argos
                    "is oriented along the X axis.\n"
                    "The 'controller/config' attribute is used to assign a controller to the\n"
                    "Insectbot. The value of the attribute must be set to the id of a previously\n"
-                   "defined controller. Controllers are defined in the <controllers> XML subtree.\n\n"
-                   "OPTIONAL XML CONFIGURATION\n\n"
-                   "You can set the stop_prob and continue_prob and proximity_range. as follows:\n\n"
-                   "  <arena ...>\n"
-                   "    ...\n"
-                   "    <insectbot id=\"fb0\" proximity_range=\"0.15\" stop_prob=0.1 continue_prob=0.1>\n"
-                   "      <body position=\"0.4,2.3,0.25\" orientation=\"45,0,0\" />\n"
-                   "      <controller config=\"mycntrl\" />\n"
-                   "    </insectbot>\n"
-                   "    ...\n"
-                   "  </arena>\n\n",
+                   "defined controller. Controllers are defined in the <controllers> XML subtree.\n\n",
                    "Under development");
 
    /****************************************/
    /****************************************/
 
-   REGISTER_STANDARD_SPACE_OPERATIONS_ON_COMPOSABLE(CKilobotEntity);
+   REGISTER_STANDARD_SPACE_OPERATIONS_ON_COMPOSABLE(CInsectbotEntity);
 
    /****************************************/
    /****************************************/

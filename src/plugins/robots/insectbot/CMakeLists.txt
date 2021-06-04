@@ -6,7 +6,7 @@ if(ARGOS_BUILD_FOR_SIMULATOR)
   set(ARGOS3_HEADERS_PLUGINS_ROBOTS_KILOBOT_SIMULATOR
     simulator/dynamics2d_kilobot_model.h
     simulator/pointmass3d_kilobot_model.h
-    simulator/kilobot_entity.h
+    simulator/insectbot_entity.h
     simulator/kilobot_measures.h)
 endif(ARGOS_BUILD_FOR_SIMULATOR)
 
@@ -17,7 +17,7 @@ if(ARGOS_BUILD_FOR_SIMULATOR)
     ${ARGOS3_HEADERS_PLUGINS_ROBOTS_KILOBOT_SIMULATOR}
     simulator/dynamics2d_kilobot_model.cpp
     simulator/pointmass3d_kilobot_model.cpp
-    simulator/kilobot_entity.cpp)
+    simulator/insectbot_entity.cpp)
 
   # Compile the graphical visualization only if the necessary libraries have been found
   include(ARGoSCheckQTOpenGL)

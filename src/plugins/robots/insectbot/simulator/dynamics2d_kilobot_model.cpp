@@ -27,7 +27,7 @@ namespace argos {
    /****************************************/
 
    CDynamics2DKilobotModel::CDynamics2DKilobotModel(CDynamics2DEngine& c_engine,
-                                                    CKilobotEntity& c_entity) :
+                                                    CInsectbotEntity& c_entity) :
       CDynamics2DSingleBodyObjectModel(c_engine, c_entity),
       m_cKilobotEntity(c_entity),
       m_cWheeledEntity(m_cKilobotEntity.GetWheeledEntity()),
@@ -136,7 +136,7 @@ namespace argos {
    /****************************************/
    /****************************************/
 
-   REGISTER_STANDARD_DYNAMICS2D_OPERATIONS_ON_ENTITY(CKilobotEntity, CDynamics2DKilobotModel);
+   REGISTER_STANDARD_DYNAMICS2D_OPERATIONS_ON_ENTITY(CInsectbotEntity, CDynamics2DKilobotModel);
 
    /****************************************/
    /****************************************/

@@ -1,17 +1,14 @@
 /**
- * @file <argos3/plugins/robots/kilobot/simulator/kilobot_entity.h>
- *
- * @author Carlo Pinciroli - <ilpincy@gmail.com>
- * @author Vito Trianni - <vito.trianni@istc.cnr.it>
+ * @file <argos3/plugins/robots/kilobot/simulator/insectbot_entity.h>
  */
 
-#ifndef KILOBOT_ENTITY_H
-#define KILOBOT_ENTITY_H
+#ifndef INSECTBOT_ENTITY_H
+#define INSECTBOT_ENTITY_H
 
 namespace argos {
    class CControllableEntity;
    class CEmbodiedEntity;
-   class CKilobotEntity;
+   class CInsectbotEntity;
    class CLEDEquippedEntity;
    class CLightSensorEquippedEntity;
 }
@@ -24,7 +21,7 @@ namespace argos {
 
 namespace argos {
 
-   class CKilobotEntity : public CComposableEntity {
+   class CInsectbotEntity : public CComposableEntity {
 
    public:
 
@@ -32,9 +29,9 @@ namespace argos {
 
    public:
 
-      CKilobotEntity();
+      CInsectbotEntity();
 
-      CKilobotEntity(const std::string& str_id,
+      CInsectbotEntity(const std::string& str_id,
                      const std::string& str_controller_id,
                      const CVector3& c_position = CVector3(),
                      const CQuaternion& c_orientation = CQuaternion(),

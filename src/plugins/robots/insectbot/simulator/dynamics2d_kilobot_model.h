@@ -14,8 +14,7 @@ namespace argos {
 
 #include <argos3/plugins/simulator/physics_engines/dynamics2d/dynamics2d_single_body_object_model.h>
 #include <argos3/plugins/simulator/physics_engines/dynamics2d/dynamics2d_differentialsteering_control.h>
-#include <argos3/plugins/robots/kilobot/simulator/kilobot_entity.h>
-
+#include "insectbot_entity.h"
 namespace argos {
 
    class CDynamics2DKilobotModel : public CDynamics2DSingleBodyObjectModel {
@@ -23,7 +22,7 @@ namespace argos {
    public:
 
       CDynamics2DKilobotModel(CDynamics2DEngine& c_engine,
-                              CKilobotEntity& c_entity);
+                              CInsectbotEntity& c_entity);
       virtual ~CDynamics2DKilobotModel();
       
       virtual void Reset();
@@ -35,7 +34,7 @@ namespace argos {
 
    private:
 
-      CKilobotEntity& m_cKilobotEntity;
+      CInsectbotEntity& m_cKilobotEntity;
       CWheeledEntity& m_cWheeledEntity;
 
       CDynamics2DDifferentialSteeringControl m_cDiffSteering;
