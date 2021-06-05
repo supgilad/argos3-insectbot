@@ -9,8 +9,6 @@ namespace argos {
    class CControllableEntity;
    class CEmbodiedEntity;
    class CInsectbotEntity;
-   class CLEDEquippedEntity;
-   class CLightSensorEquippedEntity;
 }
 
 #include <argos3/core/simulator/entity/composable_entity.h>
@@ -36,7 +34,7 @@ namespace argos {
                      const CVector3& c_position = CVector3(),
                      const CQuaternion& c_orientation = CQuaternion(),
                      Real f_communication_range = 0.1f);
-
+      void initEntity();
       virtual void Init(TConfigurationNode& t_tree);
       virtual void Reset();
       virtual void Destroy();
@@ -50,15 +48,6 @@ namespace argos {
       inline CEmbodiedEntity& GetEmbodiedEntity() {
          return *m_pcEmbodiedEntity;
       }
-
-      inline CLEDEquippedEntity& GetLEDEquippedEntity() {
-         return *m_pcLEDEquippedEntity;
-      }
-
-      inline CLightSensorEquippedEntity& GetLightSensorEquippedEntity() {
-         return *m_pcLightSensorEquippedEntity;
-      }
-
 
       inline CProximitySensorEquippedEntity& GetProximitySensorEquippedEntity() {
          return *m_pcProximitySensorEquippedEntity;
@@ -80,8 +69,6 @@ namespace argos {
 
       CControllableEntity*         m_pcControllableEntity;
       CEmbodiedEntity*             m_pcEmbodiedEntity;
-      CLEDEquippedEntity*          m_pcLEDEquippedEntity;
-      CLightSensorEquippedEntity*  m_pcLightSensorEquippedEntity;
       CWheeledEntity*              m_pcWheeledEntity;
       CQuadRotorEntity*            m_pcQuadrotorEntity;
       CProximitySensorEquippedEntity* m_pcProximitySensorEquippedEntity;
