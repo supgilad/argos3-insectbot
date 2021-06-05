@@ -49,7 +49,6 @@
   <!-- ******************* -->
   <physics_engines>
     <dynamics2d id="dyn2d" />
-    <!-- <pointmass3d id="pm3d" iterations="10" /> 3d might be Not Necessary -->
   </physics_engines>
 
   <!-- ********* -->

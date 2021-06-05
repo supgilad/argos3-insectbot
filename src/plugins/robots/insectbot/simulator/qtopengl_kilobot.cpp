@@ -29,12 +29,7 @@ namespace argos {
       m_unVertices(24) {
       /* Reserve the needed display lists */
       m_unLists = glGenLists(1);
-
-      /* Assign indices for better referencing (later) */
-      // m_unBasicWheelList            = m_unLists;
-      // m_unWheelList                 = m_unLists + 1;
       m_unBaseList                  = m_unLists + 0;
-      // m_unLEDList                   = m_unLists + 3;
 
 
       /* Create the base module display list */
@@ -56,7 +51,6 @@ namespace argos {
 
    void CQTOpenGLKilobot::Draw(CInsectbotEntity& c_entity) {
       glPushMatrix();
-      // glTranslatef(KILOBOT_ECCENTRICITY, 0.0f, 0.0f);
       glCallList(m_unBaseList);
       glPopMatrix();
    }
@@ -67,11 +61,11 @@ namespace argos {
    void CQTOpenGLKilobot::RenderBase() {
    glEnable(GL_COLOR_MATERIAL);
 
-   glTranslatef(-0.02f, 0.0f, 0.001f);
-   const float height = 0.01f;
-   const float side = 0.01f;
-   const float length = 0.04f;
-   const float lside = -0.01f;
+   glTranslatef(-KILOBOT_BASE_HEIGHT*(0.8)/2, 0.0f, 0.001f);
+   const float height = KILOBOT_BASE_WIDTH;
+   const float side = KILOBOT_BASE_WIDTH;
+   const float length = KILOBOT_BASE_HEIGHT*(0.8);
+   const float lside = -KILOBOT_BASE_WIDTH;
    glBegin(GL_QUADS);                // Begin drawing a cube with 6 quads
       // side face (y = 0.05f)
       // Define vertices in counter-clockwise (CCW) order with normal pointing out
@@ -110,7 +104,7 @@ namespace argos {
       glVertex3f(length,  side,  height);
       glVertex3f(length, lside,  height);
       glVertex3f(length, lside, lside);
-   glEnd();  // End of drawing color-cube
+   glEnd();
    glColor3f(1.0f, 0.01f, 0.0f);
  
    }
