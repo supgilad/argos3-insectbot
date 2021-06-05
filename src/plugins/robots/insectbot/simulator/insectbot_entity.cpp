@@ -106,41 +106,6 @@ namespace argos
           * Init parent
           */
          CComposableEntity::Init(t_tree);
-         /*
-          * Create and init components
-          */
-         /* Embodied entity. Better to put this first, because many other entities need this one */
-         
-         // m_pcEmbodiedEntity = new CEmbodiedEntity(this);
-         // AddComponent(*m_pcEmbodiedEntity);
-         // m_pcEmbodiedEntity->Init(GetNode(t_tree, "body"));
-         // /* Wheeled entity and wheel positions (left, right) */
-         // m_pcWheeledEntity = new CWheeledEntity(this, "wheels_0", 2);
-         // AddComponent(*m_pcWheeledEntity);
-         // m_pcWheeledEntity->SetWheel(0, CVector3(0.3f, KILOBOT_HALF_INTERPIN_DISTANCE, 0.0f), KILOBOT_PIN_WHEEL_RADIUS);
-         // m_pcWheeledEntity->SetWheel(1, CVector3(0.3f, -KILOBOT_HALF_INTERPIN_DISTANCE, 0.0f), KILOBOT_PIN_WHEEL_RADIUS);
-         // m_pcProximitySensorEquippedEntity =
-         //     new CProximitySensorEquippedEntity(this, "proximity_0");
-         // AddComponent(*m_pcProximitySensorEquippedEntity);
-         // m_pcProximitySensorEquippedEntity->AddSensorRing(
-         //     CVector3(INSECTBOT_LENGTH/4, 0.0f, PROXIMITY_SENSOR_RING_ELEVATION),
-         //     PROXIMITY_SENSOR_RING_RADIUS,
-         //     PROXIMITY_SENSOR_RING_START_ANGLE,
-         //     PROXIMITY_SENSOR_RING_RANGE,
-         //     24,
-         //     m_pcEmbodiedEntity->GetOriginAnchor());
-         // m_pcQuadrotorEntity = new CQuadRotorEntity(this, "quadrotor_0");
-         // AddComponent(*m_pcQuadrotorEntity);
-         // m_pcPositioningEntity = new CPositionalEntity(this, "positioning_0");
-         // AddComponent(*m_pcPositioningEntity);
-         // /* Controllable entity. It must be the last one, for
-         //    actuators/sensors to link to composing entities
-         //    correctly */
-         // m_pcControllableEntity = new CControllableEntity(this);
-         // AddComponent(*m_pcControllableEntity);
-         // m_pcControllableEntity->Init(GetNode(t_tree, "controller"));
-         // /* Update components */
-         // UpdateComponents();
          m_pcEmbodiedEntity = new CEmbodiedEntity(this);
          AddComponent(*m_pcEmbodiedEntity);
          m_pcEmbodiedEntity->Init(GetNode(t_tree, "body"));
