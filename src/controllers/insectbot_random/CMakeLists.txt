@@ -1,5 +1,5 @@
 add_library(insectbot_random SHARED insectbot_random.h insectbot_random.cpp)
 target_link_libraries(insectbot_random
   argos3core_simulator
-  argos3plugin_simulator_kilobot
+  argos3plugin_simulator_insectbot
   argos3plugin_simulator_genericrobot)

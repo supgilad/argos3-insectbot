@@ -33,12 +33,12 @@ endif(ARGOS_BUILD_FOR_SIMULATOR)
 #
 # Create kilobot plugin
 #
-add_library(argos3plugin_${ARGOS_BUILD_FOR}_kilobot SHARED ${ARGOS3_SOURCES_PLUGINS_ROBOTS_KILOBOT})
-target_link_libraries(argos3plugin_${ARGOS_BUILD_FOR}_kilobot
+add_library(argos3plugin_${ARGOS_BUILD_FOR}_insectbot SHARED ${ARGOS3_SOURCES_PLUGINS_ROBOTS_KILOBOT})
+target_link_libraries(argos3plugin_${ARGOS_BUILD_FOR}_insectbot
   argos3plugin_${ARGOS_BUILD_FOR}_genericrobot
   argos3plugin_${ARGOS_BUILD_FOR}_dynamics2d)
 if(ARGOS_COMPILE_QTOPENGL)
-  target_link_libraries(argos3plugin_${ARGOS_BUILD_FOR}_kilobot argos3plugin_${ARGOS_BUILD_FOR}_qtopengl)
+  target_link_libraries(argos3plugin_${ARGOS_BUILD_FOR}_insectbot argos3plugin_${ARGOS_BUILD_FOR}_qtopengl)
 endif(ARGOS_COMPILE_QTOPENGL)
 
 
@@ -51,7 +51,7 @@ if(ARGOS_BUILD_FOR_SIMULATOR)
   install(FILES ${ARGOS3_HEADERS_PLUGINS_ROBOTS_KILOBOT_SIMULATOR}      DESTINATION include/argos3/plugins/robots/kilobot/simulator)
 endif(ARGOS_BUILD_FOR_SIMULATOR)
 
-install(TARGETS argos3plugin_${ARGOS_BUILD_FOR}_kilobot
+install(TARGETS argos3plugin_${ARGOS_BUILD_FOR}_insectbot
   RUNTIME DESTINATION bin
   LIBRARY DESTINATION lib/argos3
   ARCHIVE DESTINATION lib/argos3)
