@@ -23,7 +23,6 @@
 
 /* Definition of the CCI_Controller class. */
 #include <argos3/core/control_interface/ci_controller.h>
-#include <argos3/core/simulator/loop_functions.h>
 /* Definition of the differential steering actuator */
 #include <argos3/plugins/robots/generic/control_interface/ci_differential_steering_actuator.h>
 #include <argos3/plugins/robots/generic/control_interface/ci_proximity_sensor.h>
@@ -70,15 +69,6 @@ public:
     */
    virtual void ControlStep();
 
-   /*
-    * This function resets the controller to its state right after the
-    * Init().
-    * It is called when you press the reset button in the GUI.
-    * In this example controller there is no need for resetting anything,
-    * so the function could have been omitted. It's here just for
-    * completeness.
-    */
-   virtual void Reset();
 
    /*
     * Called to cleanup what done by Init() when the experiment finishes.
@@ -87,12 +77,8 @@ public:
     * completeness.
     */
    virtual void Destroy() {}
-
-   void SetLoopFunctions(CLoopFunctions* lf);
    
 private:
-   void moveRobot();
-
    /*
     * The following variables are used as parameters for the
     * algorithm. You can set their value in the <parameters> section
@@ -106,8 +92,6 @@ private:
 
    /* variables for the random number generation */
    CRandom::CRNG*  m_pcRNG;
-   CLoopFunctions* LoopFunctions;
-   // std::vector<Real>& proximity_reads;
 };
 
 #endif
