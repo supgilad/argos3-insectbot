@@ -13,23 +13,20 @@
 /****************************************/
 /****************************************/
 
-#define PIN_FORWARD 6.5f
-#define PIN_TURN 1.85f
 #define PIN_STOP 0.0f
-#define STOP_PROB 450
-#define MOVE_PROB 200
+
 
 CInsectbotAvoider::CInsectbotAvoider() : m_pcMotors(NULL),
                                          m_sensor(NULL),
                                          m_tCurrentState(KILOBOT_STATE_STOP),
-                                         m_tPreviousState(KILOBOT_STATE_STOP),
-                                         m_unMaxMotionSteps(1510),
-                                         m_unCountMotionSteps(0),
-                                         m_unMaxTurningSteps(90), // = pi/(omega delta_t) = pi/(v*delta_t/l) = (pi*l)/(v*delta_t)
-                                         m_unCountTurningSteps(130),
                                          m_fMotorL(0.0f),
                                          m_fMotorR(0.0f),
                                          m_positionGetter(NULL),
+                                         m_maxSensorRange(0.0f),
+                                         m_driveSpeed(0.0f),
+                                         m_turnSpeed(0.0f),
+                                         m_stopProb(0),
+                                         m_moveProb(0),
                                          log_file(),
                                          log_robot_interval(0),
                                          last_logged_robot(0)
@@ -66,6 +63,11 @@ void CInsectbotAvoider::Init(TConfigurationNode &t_node)
    std::string log_file_name;
    GetNodeAttributeOrDefault<std::string>(t_node, "log_file",log_file_name,"experiment.log");
    GetNodeAttributeOrDefault<UInt32>(t_node, "log_robot_interval",log_robot_interval,5);
+   GetNodeAttributeOrDefault<Real>(t_node, "drive_speed",m_driveSpeed,8.6f);
+   GetNodeAttributeOrDefault<Real>(t_node, "turn_speed",m_turnSpeed,1.85f);
+   GetNodeAttributeOrDefault<UInt32>(t_node, "stop_uniform_range",m_stopProb,450);
+   GetNodeAttributeOrDefault<UInt32>(t_node, "re_move_uniform_range",m_moveProb,200);
+   GetNodeAttributeOrDefault<Real>(t_node, "max_range",m_maxSensorRange,1.0f);
 
    if (!log_file.is_open()){
       log_file.open(log_file_name,std::ios_base::app);
@@ -80,18 +82,16 @@ void CInsectbotAvoider::Init(TConfigurationNode &t_node)
 void CInsectbotAvoider::Reset()
 {
    // reset/intialise the robot state
-   m_unCountMotionSteps = m_pcRNG->Uniform(CRange<UInt32>(1, m_unMaxMotionSteps + 1));
    m_tCurrentState = KILOBOT_STATE_MOVING;
-   m_tPreviousState = KILOBOT_STATE_MOVING;
-   m_fMotorL = m_fMotorR = PIN_FORWARD;
+   m_fMotorL = m_fMotorR = m_driveSpeed;
 }
 
 /****************************************/
 /****************************************/
 
-static bool isReadingInRange(double reading, double min = 0.0f, double max = 1.0f)
+bool CInsectbotAvoider::isReadingInRange(double reading)
 {
-   return (reading > min && reading < max);
+   return (reading > 0.0f && reading < m_maxSensorRange);
 }
 
 void CInsectbotAvoider::log(const std::string& message)
@@ -125,7 +125,7 @@ void CInsectbotAvoider::ControlStep()
                                     isReadingInRange(std::min(tProxReads[20], tProxReads[19]));
       const double somethingOnFront = isReadingInRange(std::min(tProxReads[0], tProxReads[23]));
 
-      UInt32 shouldNotStop = m_pcRNG->Uniform(CRange<UInt32>(0, STOP_PROB));
+      UInt32 shouldNotStop = m_pcRNG->Uniform(CRange<UInt32>(0, m_stopProb));
       if (!shouldNotStop)
       {
          m_fMotorL = m_fMotorR = PIN_STOP;
@@ -134,40 +134,40 @@ void CInsectbotAvoider::ControlStep()
 
       else if (somethingOnFront && !sometingOnLeft)
       {
-         m_fMotorL = PIN_TURN;
+         m_fMotorL = m_turnSpeed;
          m_fMotorR = PIN_STOP;
       }
       else if (somethingOnFront && !sometingOnRight)
       {
          m_fMotorL = PIN_STOP;
-         m_fMotorR = PIN_TURN;
+         m_fMotorR = m_turnSpeed;
       }
       else if (sometingOnRight && sometingOnLeft)
       {
          m_fMotorL = PIN_STOP;
-         m_fMotorR = PIN_TURN;
+         m_fMotorR = m_turnSpeed;
       }
       else if (sometingOnLeft)
       {
          m_fMotorL = PIN_STOP;
-         m_fMotorR = PIN_TURN;
+         m_fMotorR = m_turnSpeed;
       }
       else if (sometingOnRight)
       {
-         m_fMotorL = PIN_TURN;
+         m_fMotorL = m_turnSpeed;
          m_fMotorR = PIN_STOP;
       }
       else
       {
-         m_fMotorL = m_fMotorR = PIN_FORWARD;
+         m_fMotorL = m_fMotorR = m_driveSpeed;
       }
    }
    else if (m_tCurrentState == KILOBOT_STATE_STOP)
    {
-      UInt32 shouldStayStopped = m_pcRNG->Uniform(CRange<UInt32>(0, MOVE_PROB));
+      UInt32 shouldStayStopped = m_pcRNG->Uniform(CRange<UInt32>(0, m_moveProb));
       if (!shouldStayStopped)
       {
-         m_fMotorL = m_fMotorR = PIN_FORWARD;
+         m_fMotorL = m_fMotorR = m_driveSpeed;
          m_tCurrentState = KILOBOT_STATE_MOVING;
       }
       else

@@ -1,18 +1,3 @@
-/*
- * AUTHOR: Vito Trianni <vito.trianni@istc.cnr.it>
- *
- * An example diffusion controller for the kilobot.
- *
- * This controller makes the robots move randomly and diffuse in the
- * environment.  Each robot performs a random walk: it moves straight
- * until a timeout expires, and then turns for a random amount of
- * time.
- *
- * The controller uses the two motors to move the robot around.
- *
- * This controller is meant to be used with the XML files:
- *    experiments/kilobot_diffusion.argos
- */
 
 #ifndef INSECTBOT_RANDOM_H
 #define INSECTBOT_RANDOM_H
@@ -79,14 +64,7 @@ public:
    virtual void Destroy() {}
    
 private:
-   /*
-    * The following variables are used as parameters for the
-    * algorithm. You can set their value in the <parameters> section
-    * of the XML configuration file, under the
-    * <controllers><kilobot_diffusion_controller> section.
-    */
 
-   /* Pointer to the differential steering actuator */
    CCI_DifferentialSteeringActuator* m_pcMotors;
    CCI_ProximitySensor* m_sensor;
 
