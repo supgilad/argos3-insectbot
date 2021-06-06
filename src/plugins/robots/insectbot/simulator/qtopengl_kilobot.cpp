@@ -68,7 +68,6 @@ namespace argos {
    const float lside = -KILOBOT_BASE_WIDTH;
    glBegin(GL_QUADS);                // Begin drawing a cube with 6 quads
       // side face (y = 0.05f)
-      // Define vertices in counter-clockwise (CCW) order with normal pointing out
       glColor3f(0.0f, 0.01f, 0.0f);
       glVertex3f( length, side, lside);
       glVertex3f(lside, side, lside);
@@ -99,7 +98,7 @@ namespace argos {
       glVertex3f(lside, lside, lside);
       glVertex3f(lside, lside,  height);
  
-      // Right face (x = 0.05f)
+      // Right face (x = length)
       glVertex3f(length,  side, lside);
       glVertex3f(length,  side,  height);
       glVertex3f(length, lside,  height);

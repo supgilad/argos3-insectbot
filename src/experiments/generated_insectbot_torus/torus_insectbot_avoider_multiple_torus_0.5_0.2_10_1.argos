@@ -19,7 +19,6 @@
     <insectbot_avoider_controller id="1"
                                   library="build/controllers/insectbot_avoider/libinsectbot_avoider">
       <actuators>
-        <quadrotor_position implementation="default" />  <!--Not working at the moment..-->
         <differential_steering implementation="default" />
     </actuators>
       <sensors>

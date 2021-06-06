@@ -13,7 +13,6 @@
 
 CInsectbotRandom::CInsectbotRandom() : m_pcMotors(NULL),
                                        m_sensor(NULL),
-                                       m_positionSetter(NULL),
                                        LoopFunctions(NULL)
 
 {
@@ -53,7 +52,6 @@ void CInsectbotRandom::Init(TConfigurationNode &t_node)
    // Get sensor/actuator handles
    m_pcMotors = GetActuator<CCI_DifferentialSteeringActuator>("differential_steering");
    m_sensor = GetSensor<CCI_ProximitySensor>("proximity");
-   m_positionSetter = GetActuator<CQuadRotorPositionDefaultActuator>("quadrotor_position");   
 
    Reset();
 }

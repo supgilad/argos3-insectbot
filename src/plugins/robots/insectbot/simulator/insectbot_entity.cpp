@@ -11,7 +11,6 @@
 #include <argos3/core/simulator/space/space.h>
 #include <argos3/core/simulator/entity/controllable_entity.h>
 #include <argos3/core/simulator/entity/embodied_entity.h>
-#include <argos3/plugins/simulator/entities/quadrotor_entity.h>
 
 namespace argos
 {
@@ -26,7 +25,6 @@ namespace argos
                                       m_pcControllableEntity(NULL),
                                       m_pcEmbodiedEntity(NULL),
                                       m_pcProximitySensorEquippedEntity(NULL),
-                                      m_pcQuadrotorEntity(NULL),
                                       m_pcWheeledEntity(NULL),
                                       m_pcPositioningEntity(NULL)
    {
@@ -43,7 +41,6 @@ namespace argos
                                                                 m_pcControllableEntity(NULL),
                                                                 m_pcEmbodiedEntity(NULL),
                                                                 m_pcProximitySensorEquippedEntity(NULL),
-                                                                m_pcQuadrotorEntity(NULL),
                                                                 m_pcWheeledEntity(NULL),
                                                                 m_pcPositioningEntity(NULL)
    {
@@ -82,9 +79,6 @@ namespace argos
              PROXIMITY_SENSOR_RING_RANGE,
              24,
              m_pcEmbodiedEntity->GetOriginAnchor());
-         
-         m_pcQuadrotorEntity = new CQuadRotorEntity(this, "quadrotor_0");
-         AddComponent(*m_pcQuadrotorEntity);
          m_pcPositioningEntity = new CPositionalEntity(this, "positioning_0");
          AddComponent(*m_pcPositioningEntity);
          /* Controllable entity.  It must be the last one, for
