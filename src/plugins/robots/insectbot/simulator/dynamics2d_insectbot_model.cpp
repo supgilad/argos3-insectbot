@@ -1,6 +1,6 @@
 
 
-#include "dynamics2d_kilobot_model.h"
+#include "dynamics2d_insectbot_model.h"
 #include "insectbot_measures.h"
 #include <argos3/plugins/simulator/physics_engines/dynamics2d/dynamics2d_engine.h>
 
@@ -9,31 +9,31 @@ namespace argos {
    /****************************************/
    /****************************************/
 
-   static const Real KILOBOT_MAX_FORCE  = 0.001f;
-   static const Real KILOBOT_MAX_TORQUE = 0.001f;
-   static const Real KILOBOT_FRICTION   = 1.5f;
+   static const Real INSECTBOT_MAX_FORCE  = 0.001f;
+   static const Real INSECTBOT_MAX_TORQUE = 0.001f;
+   static const Real INSECTBOT_FRICTION   = 1.5f;
 
-   enum KILOBOT_WHEELS {
-      KILOBOT_LEFT_WHEEL = 0,
-      KILOBOT_RIGHT_WHEEL = 1
+   enum INSECTBOT_WHEELS {
+      INSECTBOT_LEFT_WHEEL = 0,
+      INSECTBOT_RIGHT_WHEEL = 1
    };
 
    /****************************************/
    /****************************************/
 
-   CDynamics2DKilobotModel::CDynamics2DKilobotModel(CDynamics2DEngine& c_engine,
+   CDynamics2DInsectbotModel::CDynamics2DInsectbotModel(CDynamics2DEngine& c_engine,
                                                     CInsectbotEntity& c_entity) :
       CDynamics2DSingleBodyObjectModel(c_engine, c_entity),
-      m_cKilobotEntity(c_entity),
-      m_cWheeledEntity(m_cKilobotEntity.GetWheeledEntity()),
+      m_cInsectbotEntity(c_entity),
+      m_cWheeledEntity(m_cInsectbotEntity.GetWheeledEntity()),
       m_cDiffSteering(c_engine,
-                      KILOBOT_MAX_FORCE,
-                      KILOBOT_MAX_TORQUE,
+                      INSECTBOT_MAX_FORCE,
+                      INSECTBOT_MAX_TORQUE,
                       INSECTBOT_INTERPIN_DISTANCE,
                       c_entity.GetConfigurationNode()),
       m_fCurrentWheelVelocity(m_cWheeledEntity.GetWheelVelocities()) {
       /* Parse the XML file to check if friction was specified */
-      cpFloat fFriction = KILOBOT_FRICTION;
+      cpFloat fFriction = INSECTBOT_FRICTION;
       if(c_entity.GetConfigurationNode() &&
          NodeExists(*c_entity.GetConfigurationNode(), "dynamics2d")) {
          TConfigurationNode& tDyn2D = GetNode(*c_entity.GetConfigurationNode(), "dynamics2d");
@@ -64,7 +64,7 @@ namespace argos {
    /****************************************/
    /****************************************/
 
-   CDynamics2DKilobotModel::~CDynamics2DKilobotModel() {
+   CDynamics2DInsectbotModel::~CDynamics2DInsectbotModel() {
       m_cDiffSteering.Detach();
    }
 
@@ -72,7 +72,7 @@ namespace argos {
    /****************************************/
    /****************************************/
 
-   void CDynamics2DKilobotModel::Reset() {
+   void CDynamics2DInsectbotModel::Reset() {
       CDynamics2DSingleBodyObjectModel::Reset();
       m_cDiffSteering.Reset();
    }
@@ -80,12 +80,12 @@ namespace argos {
    /****************************************/
    /****************************************/
 
-   void CDynamics2DKilobotModel::UpdateFromEntityStatus() {
+   void CDynamics2DInsectbotModel::UpdateFromEntityStatus() {
       /* Do we want to move? */
-      if((m_fCurrentWheelVelocity[KILOBOT_LEFT_WHEEL] != 0.0f) ||
-         (m_fCurrentWheelVelocity[KILOBOT_RIGHT_WHEEL] != 0.0f)) {
-         m_cDiffSteering.SetWheelVelocity(m_fCurrentWheelVelocity[KILOBOT_LEFT_WHEEL],
-                                          m_fCurrentWheelVelocity[KILOBOT_RIGHT_WHEEL]);
+      if((m_fCurrentWheelVelocity[INSECTBOT_LEFT_WHEEL] != 0.0f) ||
+         (m_fCurrentWheelVelocity[INSECTBOT_RIGHT_WHEEL] != 0.0f)) {
+         m_cDiffSteering.SetWheelVelocity(m_fCurrentWheelVelocity[INSECTBOT_LEFT_WHEEL],
+                                          m_fCurrentWheelVelocity[INSECTBOT_RIGHT_WHEEL]);
       }
       else {
          /* No, we don't want to move - zero all speeds */
@@ -97,7 +97,7 @@ namespace argos {
    /****************************************/
    /****************************************/
 
-   REGISTER_STANDARD_DYNAMICS2D_OPERATIONS_ON_ENTITY(CInsectbotEntity, CDynamics2DKilobotModel);
+   REGISTER_STANDARD_DYNAMICS2D_OPERATIONS_ON_ENTITY(CInsectbotEntity, CDynamics2DInsectbotModel);
 
    /****************************************/
    /****************************************/

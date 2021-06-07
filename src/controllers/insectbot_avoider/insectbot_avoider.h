@@ -27,7 +27,7 @@
 using namespace argos;
 
 
-enum TStateNames {KILOBOT_STATE_STOP, KILOBOT_STATE_TURNING, KILOBOT_STATE_MOVING};
+enum TStateNames {INSECTBOT_STATE_STOP, INSECTBOT_STATE_TURNING, INSECTBOT_STATE_MOVING};
 
 
 /*
@@ -46,7 +46,6 @@ public:
    /*
     * This function initializes the controller.
     * The 't_node' variable points to the <parameters> section in the XML
-    * file in the <controllers><kilobot_diffusion_controller> section.
     */
    virtual void Init(TConfigurationNode& t_node);
 
@@ -83,12 +82,7 @@ public:
 private:
    virtual bool isReadingInRange(double reading);
    virtual void log(const std::string& message);
-   /*
-    * The following variables are used as parameters for the
-    * algorithm. You can set their value in the <parameters> section
-    * of the XML configuration file, under the
-    * <controllers><kilobot_diffusion_controller> section.
-    */
+
 
    /* Pointer to the differential steering actuator */
    CCI_DifferentialSteeringActuator* m_pcMotors;

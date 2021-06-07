@@ -18,7 +18,7 @@
 
 CInsectbotAvoider::CInsectbotAvoider() : m_pcMotors(NULL),
                                          m_sensor(NULL),
-                                         m_tCurrentState(KILOBOT_STATE_STOP),
+                                         m_tCurrentState(INSECTBOT_STATE_STOP),
                                          m_fMotorL(0.0f),
                                          m_fMotorR(0.0f),
                                          m_positionGetter(NULL),
@@ -82,7 +82,7 @@ void CInsectbotAvoider::Init(TConfigurationNode &t_node)
 void CInsectbotAvoider::Reset()
 {
    // reset/intialise the robot state
-   m_tCurrentState = KILOBOT_STATE_MOVING;
+   m_tCurrentState = INSECTBOT_STATE_MOVING;
    m_fMotorL = m_fMotorR = m_driveSpeed;
 }
 
@@ -103,7 +103,9 @@ void CInsectbotAvoider::log(const std::string& message)
    strftime (buffer,80,"%Y-%m-%d %H:%M:%S",timeinfo);
 
    const CVector3 &pos = m_positionGetter->GetReading().Position;
+   //writes to the logfile
    log_file<<R"({"Date":")"<<buffer <<R"(","ID":")"<< GetId()<<R"(","x":")"<<pos[0]<<R"(","y":")"<<pos[1]<<R"(","Message":")"<<message<<R"("})"<<std::endl;
+   //write to the screen
    LOG     <<R"({"Date":")"<<buffer <<R"(","ID":")"<< GetId()<<R"(","x":")"<<pos[0]<<R"(","y":")"<<pos[1]<<R"(","Message":")"<<message<<R"("})"<<std::endl;
 }
 
@@ -117,7 +119,7 @@ void CInsectbotAvoider::ControlStep()
    }
    
    const std::vector<double> &tProxReads = m_sensor->GetReadings();
-   if (m_tCurrentState == KILOBOT_STATE_MOVING)
+   if (m_tCurrentState == INSECTBOT_STATE_MOVING)
    {
       const double sometingOnRight = isReadingInRange(std::min(tProxReads[2], tProxReads[1])) ||
                                      isReadingInRange(std::min(tProxReads[3], tProxReads[4]));
@@ -129,7 +131,7 @@ void CInsectbotAvoider::ControlStep()
       if (!shouldNotStop)
       {
          m_fMotorL = m_fMotorR = PIN_STOP;
-         m_tCurrentState = KILOBOT_STATE_STOP;
+         m_tCurrentState = INSECTBOT_STATE_STOP;
       }
 
       else if (somethingOnFront && !sometingOnLeft)
@@ -162,13 +164,13 @@ void CInsectbotAvoider::ControlStep()
          m_fMotorL = m_fMotorR = m_driveSpeed;
       }
    }
-   else if (m_tCurrentState == KILOBOT_STATE_STOP)
+   else if (m_tCurrentState == INSECTBOT_STATE_STOP)
    {
       UInt32 shouldStayStopped = m_pcRNG->Uniform(CRange<UInt32>(0, m_moveProb));
       if (!shouldStayStopped)
       {
          m_fMotorL = m_fMotorR = m_driveSpeed;
-         m_tCurrentState = KILOBOT_STATE_MOVING;
+         m_tCurrentState = INSECTBOT_STATE_MOVING;
       }
       else
       {

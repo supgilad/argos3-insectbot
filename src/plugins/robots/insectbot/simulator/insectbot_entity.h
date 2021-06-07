@@ -1,6 +1,4 @@
-/**
- * @file <argos3/plugins/robots/kilobot/simulator/insectbot_entity.h>
- */
+
 
 #ifndef INSECTBOT_ENTITY_H
 #define INSECTBOT_ENTITY_H
@@ -57,7 +55,7 @@ namespace argos {
       }
 
       virtual std::string GetTypeDescription() const {
-         return "kilobot";
+         return "insectbot";
       }
 
    private:

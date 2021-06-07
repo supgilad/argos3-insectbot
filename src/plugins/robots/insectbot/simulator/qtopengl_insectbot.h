@@ -1,9 +1,9 @@
 
-#ifndef QTOPENGL_KILOBOT_H
-#define QTOPENGL_KILOBOT_H
+#ifndef QTOPENGL_INSECTBOT_H
+#define QTOPENGL_INSECTBOT_H
 
 namespace argos {
-   class CQTOpenGLKilobot;
+   class CQTOpenGLInsectbot;
    class CInsectbotEntity;
 }
 
@@ -15,13 +15,13 @@ namespace argos {
 
 namespace argos {
 
-   class CQTOpenGLKilobot {
+   class CQTOpenGLInsectbot {
 
    public:
 
-      CQTOpenGLKilobot();
+      CQTOpenGLInsectbot();
 
-      virtual ~CQTOpenGLKilobot();
+      virtual ~CQTOpenGLInsectbot();
 
       virtual void Draw(CInsectbotEntity& c_entity);
 
@@ -53,11 +53,11 @@ namespace argos {
       /** List corresponding to the materialless wheel */
       GLuint m_unBasicWheelList;
 
-      /** kilobot wheel */
+      /** insectbot wheel */
       GLuint m_unWheelList;
-      /** kilobot base module */
+      /** insectbot base module */
       GLuint m_unBaseList;
-      /** kilobot LED */
+      /** insectbot LED */
       GLuint m_unLEDList;
 
       /** Number of vertices to display the round parts

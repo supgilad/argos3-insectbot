@@ -1,7 +1,7 @@
 
 
-#ifndef DYNAMICS2D_KILOBOT_MODEL_H
-#define DYNAMICS2D_KILOBOT_MODEL_H
+#ifndef DYNAMICS2D_INSECTBOT_MODEL_H
+#define DYNAMICS2D_INSECTBOT_MODEL_H
 
 namespace argos {
    class CDynamics2DDifferentialSteeringControl;
@@ -12,13 +12,13 @@ namespace argos {
 #include "insectbot_entity.h"
 namespace argos {
 
-   class CDynamics2DKilobotModel : public CDynamics2DSingleBodyObjectModel {
+   class CDynamics2DInsectbotModel : public CDynamics2DSingleBodyObjectModel {
 
    public:
 
-      CDynamics2DKilobotModel(CDynamics2DEngine& c_engine,
+      CDynamics2DInsectbotModel(CDynamics2DEngine& c_engine,
                               CInsectbotEntity& c_entity);
-      virtual ~CDynamics2DKilobotModel();
+      virtual ~CDynamics2DInsectbotModel();
       
       virtual void Reset();
 
@@ -26,7 +26,7 @@ namespace argos {
 
    private:
 
-      CInsectbotEntity& m_cKilobotEntity;
+      CInsectbotEntity& m_cInsectbotEntity;
       CWheeledEntity& m_cWheeledEntity;
 
       CDynamics2DDifferentialSteeringControl m_cDiffSteering;

@@ -41,11 +41,6 @@ public:
    /* Class destructor. */
    virtual ~CInsectbotRandom() {}
 
-   /*
-    * This function initializes the controller.
-    * The 't_node' variable points to the <parameters> section in the XML
-    * file in the <controllers><kilobot_diffusion_controller> section.
-    */
    virtual void Init(TConfigurationNode& t_node);
 
    /*

@@ -1,5 +1,5 @@
 
-#include "qtopengl_kilobot.h"
+#include "qtopengl_insectbot.h"
 #include "insectbot_measures.h"
 #include "insectbot_entity.h"
 #include <argos3/core/simulator/entity/embodied_entity.h>
@@ -19,7 +19,7 @@ namespace argos {
    /****************************************/
    /****************************************/
 
-   CQTOpenGLKilobot::CQTOpenGLKilobot() :
+   CQTOpenGLInsectbot::CQTOpenGLInsectbot() :
       m_unVertices(24) {
       /* Reserve the needed display lists */
       m_unLists = glGenLists(1);
@@ -36,14 +36,14 @@ namespace argos {
    /****************************************/
    /****************************************/
 
-   CQTOpenGLKilobot::~CQTOpenGLKilobot() {
+   CQTOpenGLInsectbot::~CQTOpenGLInsectbot() {
       glDeleteLists(m_unLists, 1);
    }
 
    /****************************************/
    /****************************************/
 
-   void CQTOpenGLKilobot::Draw(CInsectbotEntity& c_entity) {
+   void CQTOpenGLInsectbot::Draw(CInsectbotEntity& c_entity) {
       glPushMatrix();
       glCallList(m_unBaseList);
       glPopMatrix();
@@ -52,7 +52,7 @@ namespace argos {
    /****************************************/
    /****************************************/
 
-   void CQTOpenGLKilobot::RenderBase() {
+   void CQTOpenGLInsectbot::RenderBase() {
    glEnable(GL_COLOR_MATERIAL);
 
    glTranslatef(-INSECTBOT_BASE_HEIGHT*(0.8)/2, 0.0f, 0.001f);
@@ -106,18 +106,18 @@ namespace argos {
    /****************************************/
    /****************************************/
 
-   class CQTOpenGLOperationDrawKilobotNormal : public CQTOpenGLOperationDrawNormal {
+   class CQTOpenGLOperationDrawInsectbotNormal : public CQTOpenGLOperationDrawNormal {
    public:
       void ApplyTo(CQTOpenGLWidget& c_visualization,
                    CInsectbotEntity& c_entity) {
-         static CQTOpenGLKilobot m_cModel;
+         static CQTOpenGLInsectbot m_cModel;
          c_visualization.DrawRays(c_entity.GetControllableEntity());
          c_visualization.DrawEntity(c_entity.GetEmbodiedEntity());
          m_cModel.Draw(c_entity);
       }
    };
 
-   class CQTOpenGLOperationDrawKilobotSelected : public CQTOpenGLOperationDrawSelected {
+   class CQTOpenGLOperationDrawInsectbotSelected : public CQTOpenGLOperationDrawSelected {
    public:
       void ApplyTo(CQTOpenGLWidget& c_visualization,
                    CInsectbotEntity& c_entity) {
@@ -125,9 +125,9 @@ namespace argos {
       }
    };
 
-   REGISTER_QTOPENGL_ENTITY_OPERATION(CQTOpenGLOperationDrawNormal, CQTOpenGLOperationDrawKilobotNormal, CInsectbotEntity);
+   REGISTER_QTOPENGL_ENTITY_OPERATION(CQTOpenGLOperationDrawNormal, CQTOpenGLOperationDrawInsectbotNormal, CInsectbotEntity);
 
-   REGISTER_QTOPENGL_ENTITY_OPERATION(CQTOpenGLOperationDrawSelected, CQTOpenGLOperationDrawKilobotSelected, CInsectbotEntity);
+   REGISTER_QTOPENGL_ENTITY_OPERATION(CQTOpenGLOperationDrawSelected, CQTOpenGLOperationDrawInsectbotSelected, CInsectbotEntity);
 
    /****************************************/
    /****************************************/
