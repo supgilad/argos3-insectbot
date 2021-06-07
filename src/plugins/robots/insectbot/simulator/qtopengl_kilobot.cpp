@@ -61,11 +61,11 @@ namespace argos {
    void CQTOpenGLKilobot::RenderBase() {
    glEnable(GL_COLOR_MATERIAL);
 
-   glTranslatef(-KILOBOT_BASE_HEIGHT*(0.8)/2, 0.0f, 0.001f);
-   const float height = KILOBOT_BASE_WIDTH;
-   const float side = KILOBOT_BASE_WIDTH;
-   const float length = KILOBOT_BASE_HEIGHT*(0.8);
-   const float lside = -KILOBOT_BASE_WIDTH;
+   glTranslatef(-INSECTBOT_BASE_HEIGHT*(0.8)/2, 0.0f, 0.001f);
+   const float height = INSECTBOT_BASE_WIDTH;
+   const float side = INSECTBOT_BASE_WIDTH;
+   const float length = INSECTBOT_BASE_HEIGHT*(0.8);
+   const float lside = -INSECTBOT_BASE_WIDTH;
    glBegin(GL_QUADS);                // Begin drawing a cube with 6 quads
       // side face (y = 0.05f)
       glColor3f(0.0f, 0.01f, 0.0f);

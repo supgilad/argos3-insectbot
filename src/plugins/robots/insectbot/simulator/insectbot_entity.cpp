@@ -18,6 +18,7 @@ namespace argos
    static const Real PROXIMITY_SENSOR_RING_RADIUS = 0.009f;
    static const CRadians PROXIMITY_SENSOR_RING_START_ANGLE = CRadians((ARGOS_PI / 12.0f) * 0.5f);
    static const Real PROXIMITY_SENSOR_RING_RANGE = 0.08f;
+   static const Real PROXIMITY_SENSOR_NUM_SENSORS = 24;
    /****************************************/
    /****************************************/
 
@@ -66,8 +67,8 @@ namespace argos
          /* Wheeled entity and wheel positions (left, right) */
          m_pcWheeledEntity = new CWheeledEntity(this, "wheels_0", 2);
          AddComponent(*m_pcWheeledEntity);
-         m_pcWheeledEntity->SetWheel(0, CVector3(0.3f, KILOBOT_HALF_INTERPIN_DISTANCE, 0.0f), KILOBOT_PIN_WHEEL_RADIUS);
-         m_pcWheeledEntity->SetWheel(1, CVector3(0.3f, -KILOBOT_HALF_INTERPIN_DISTANCE, 0.0f), KILOBOT_PIN_WHEEL_RADIUS);
+         m_pcWheeledEntity->SetWheel(0, CVector3(0.3f, INSECTBOT_HALF_INTERPIN_DISTANCE, 0.0f), KILOBOT_PIN_WHEEL_RADIUS);
+         m_pcWheeledEntity->SetWheel(1, CVector3(0.3f, -INSECTBOT_HALF_INTERPIN_DISTANCE, 0.0f), KILOBOT_PIN_WHEEL_RADIUS);
 
          m_pcProximitySensorEquippedEntity =
              new CProximitySensorEquippedEntity(this, "proximity_0");
@@ -77,7 +78,7 @@ namespace argos
              PROXIMITY_SENSOR_RING_RADIUS,
              PROXIMITY_SENSOR_RING_START_ANGLE,
              PROXIMITY_SENSOR_RING_RANGE,
-             24,
+             PROXIMITY_SENSOR_NUM_SENSORS,
              m_pcEmbodiedEntity->GetOriginAnchor());
          m_pcPositioningEntity = new CPositionalEntity(this, "positioning_0");
          AddComponent(*m_pcPositioningEntity);

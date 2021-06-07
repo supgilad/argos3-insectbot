@@ -34,7 +34,7 @@ namespace argos {
       m_cDiffSteering(c_engine,
                       KILOBOT_MAX_FORCE,
                       KILOBOT_MAX_TORQUE,
-                      KILOBOT_INTERPIN_DISTANCE,
+                      INSECTBOT_INTERPIN_DISTANCE,
                       c_entity.GetConfigurationNode()),
       m_fCurrentWheelVelocity(m_cWheeledEntity.GetWheelVelocities()) {
       /* Parse the XML file to check if friction was specified */
@@ -47,8 +47,8 @@ namespace argos {
       /* Create the actual body with initial position and orientation */
       cpBody* ptBody =
          cpSpaceAddBody(GetDynamics2DEngine().GetPhysicsSpace(),
-                        cpBodyNew(KILOBOT_MASS,
-                                  cpMomentForBox(KILOBOT_MASS,KILOBOT_BASE_WIDTH,KILOBOT_BASE_HEIGHT)));
+                        cpBodyNew(INSECTBOT_MASS,
+                                  cpMomentForBox(INSECTBOT_MASS,INSECTBOT_BASE_WIDTH,INSECTBOT_BASE_HEIGHT)));
       const CVector3& cPosition = GetEmbodiedEntity().GetOriginAnchor().Position;
       ptBody->p = cpv(cPosition.GetX(), cPosition.GetY());
       CRadians cXAngle, cYAngle, cZAngle;
