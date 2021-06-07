@@ -9,9 +9,7 @@ namespace argos {
    /****************************************/
    /****************************************/
 
-   static const Real INSECTBOT_MAX_FORCE  = 0.001f;
-   static const Real INSECTBOT_MAX_TORQUE = 0.001f;
-   static const Real INSECTBOT_FRICTION   = 1.5f;
+
 
    enum INSECTBOT_WHEELS {
       INSECTBOT_LEFT_WHEEL = 0,

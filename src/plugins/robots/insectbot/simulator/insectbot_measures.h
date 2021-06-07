@@ -21,6 +21,9 @@ namespace argos {
    static const CRadians PROXIMITY_SENSOR_RING_START_ANGLE = CRadians((ARGOS_PI / 12.0f) * 0.5f);
    static const Real PROXIMITY_SENSOR_RING_RANGE = 0.08f;
    static const Real PROXIMITY_SENSOR_NUM_SENSORS = 24;
+   static const Real INSECTBOT_MAX_FORCE  = 0.001f;
+   static const Real INSECTBOT_MAX_TORQUE = 0.001f;
+   static const Real INSECTBOT_FRICTION   = 1.5f;
 }
 
 #endif
