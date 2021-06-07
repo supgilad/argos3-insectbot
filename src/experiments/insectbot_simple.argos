@@ -27,7 +27,7 @@
       <params log_file="experiment.log"
               log_robot_interval="5"
               drive_speed="8.6"
-              turn_speed="1.9"
+              turn_speed="2.9"
               stop_uniform_range="450"
               re_move_uniform_range="200" />
     </insectbot_avoider_controller>
