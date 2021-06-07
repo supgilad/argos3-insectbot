@@ -40,7 +40,7 @@ endif(NOT DEFINED CPACK_PACKAGE_RELEASE)
 set(CPACK_PACKAGE_DESCRIPTION "ARGoS-Insectbot (Insectbot plugin for ARGoS)
  A plugin to support the Insectbot robot
  into the ARGoS multi-robot simulator (http://www.argos-sim.info/).")
-set(CPACK_PACKAGE_HOMEPAGE "http://github.com/ilpincy/argos3-kilobot/")
+set(CPACK_PACKAGE_HOMEPAGE "http://github.com/ilpincy/argos3")
 set(CPACK_PACKAGE_MAINTAINER "Carlo Pinciroli <ilpincy@gmail.com>")
 set(CPACK_PACKAGE_NAME "argos3plugins_${ARGOS_BUILD_FOR}_kilobot")
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Kilobot support for ARGoS")

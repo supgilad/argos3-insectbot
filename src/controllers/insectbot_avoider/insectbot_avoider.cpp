@@ -64,7 +64,7 @@ void CInsectbotAvoider::Init(TConfigurationNode &t_node)
    GetNodeAttributeOrDefault<std::string>(t_node, "log_file",log_file_name,"experiment.log");
    GetNodeAttributeOrDefault<UInt32>(t_node, "log_robot_interval",log_robot_interval,5);
    GetNodeAttributeOrDefault<Real>(t_node, "drive_speed",m_driveSpeed,8.6f);
-   GetNodeAttributeOrDefault<Real>(t_node, "turn_speed",m_turnSpeed,1.85f);
+   GetNodeAttributeOrDefault<Real>(t_node, "turn_speed",m_turnSpeed,2.6f);
    GetNodeAttributeOrDefault<UInt32>(t_node, "stop_uniform_range",m_stopProb,450);
    GetNodeAttributeOrDefault<UInt32>(t_node, "re_move_uniform_range",m_moveProb,200);
    GetNodeAttributeOrDefault<Real>(t_node, "max_range",m_maxSensorRange,1.0f);

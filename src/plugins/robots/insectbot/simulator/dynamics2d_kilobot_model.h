@@ -1,9 +1,4 @@
-/**
- * @file <argos3/plugins/robots/kilobot/simulator/dynamics2d_kilobot_model.h>
- *
- * @author Carlo Pinciroli - <ilpincy@gmail.com>
- * @author Vito Trianni - <vito.trianni@istc.cnr.it>
- */
+
 
 #ifndef DYNAMICS2D_KILOBOT_MODEL_H
 #define DYNAMICS2D_KILOBOT_MODEL_H

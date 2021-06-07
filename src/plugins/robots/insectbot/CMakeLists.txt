@@ -6,7 +6,7 @@ if(ARGOS_BUILD_FOR_SIMULATOR)
   set(ARGOS3_HEADERS_PLUGINS_ROBOTS_KILOBOT_SIMULATOR
     simulator/dynamics2d_kilobot_model.h
     simulator/insectbot_entity.h
-    simulator/kilobot_measures.h)
+    simulator/insectbot_measures.h)
 endif(ARGOS_BUILD_FOR_SIMULATOR)
 
 

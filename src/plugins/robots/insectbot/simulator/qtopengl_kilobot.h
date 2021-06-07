@@ -1,9 +1,3 @@
-/**
- * @file <argos3/plugins/robots/kilobot/simulator/qtopengl_kilobot.h>
- *
- * @author Carlo Pinciroli - <ilpincy@gmail.com>
- * @author Vito Trianni - <vito.trianni@istc.cnr.it>
- */
 
 #ifndef QTOPENGL_KILOBOT_H
 #define QTOPENGL_KILOBOT_H

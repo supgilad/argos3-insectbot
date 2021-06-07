@@ -1,12 +1,6 @@
-/**
- * @file <argos3/plugins/robots/kilobot/simulator/qtopengl_kilobot.cpp>
- *
- * @author Carlo Pinciroli - <ilpincy@gmail.com>
- * @author Vito Trianni - <vito.trianni@istc.cnr.it>
- */
 
 #include "qtopengl_kilobot.h"
-#include "kilobot_measures.h"
+#include "insectbot_measures.h"
 #include "insectbot_entity.h"
 #include <argos3/core/simulator/entity/embodied_entity.h>
 #include <argos3/core/utility/math/vector2.h>

@@ -1,12 +1,7 @@
-/**
- * @file <argos3/plugins/robots/kilobot/simulator/dynamics2d_kilobot_model.cpp>
- *
- * @author Carlo Pinciroli - <ilpincy@gmail.com>
- * @author Vito Trianni - <vito.trianni@istc.cnr.it>
- */
+
 
 #include "dynamics2d_kilobot_model.h"
-#include "kilobot_measures.h"
+#include "insectbot_measures.h"
 #include <argos3/plugins/simulator/physics_engines/dynamics2d/dynamics2d_engine.h>
 
 namespace argos {

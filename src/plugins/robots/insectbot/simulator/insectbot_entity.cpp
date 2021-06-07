@@ -1,11 +1,7 @@
-/**
- * @file <argos3/plugins/robots/kilobot/simulator/insectbot_entity.cpp>
- *
- * @author Carlo Pinciroli - <ilpincy@gmail.com>
- */
+
 
 #include "insectbot_entity.h"
-#include "kilobot_measures.h"
+#include "insectbot_measures.h"
 
 #include <argos3/core/utility/math/matrix/rotationmatrix3.h>
 #include <argos3/core/simulator/space/space.h>
@@ -14,11 +10,7 @@
 
 namespace argos
 {
-   static const Real PROXIMITY_SENSOR_RING_ELEVATION = 0.0001f;
-   static const Real PROXIMITY_SENSOR_RING_RADIUS = 0.009f;
-   static const CRadians PROXIMITY_SENSOR_RING_START_ANGLE = CRadians((ARGOS_PI / 12.0f) * 0.5f);
-   static const Real PROXIMITY_SENSOR_RING_RANGE = 0.08f;
-   static const Real PROXIMITY_SENSOR_NUM_SENSORS = 24;
+
    /****************************************/
    /****************************************/
 
@@ -67,8 +59,8 @@ namespace argos
          /* Wheeled entity and wheel positions (left, right) */
          m_pcWheeledEntity = new CWheeledEntity(this, "wheels_0", 2);
          AddComponent(*m_pcWheeledEntity);
-         m_pcWheeledEntity->SetWheel(0, CVector3(0.3f, INSECTBOT_HALF_INTERPIN_DISTANCE, 0.0f), KILOBOT_PIN_WHEEL_RADIUS);
-         m_pcWheeledEntity->SetWheel(1, CVector3(0.3f, -INSECTBOT_HALF_INTERPIN_DISTANCE, 0.0f), KILOBOT_PIN_WHEEL_RADIUS);
+         m_pcWheeledEntity->SetWheel(0, CVector3(0.3f, INSECTBOT_INTERPIN_DISTANCE/2, 0.0f), INSECTBOT_WHEEL_RADIUS);
+         m_pcWheeledEntity->SetWheel(1, CVector3(0.3f, -INSECTBOT_INTERPIN_DISTANCE/2, 0.0f), INSECTBOT_WHEEL_RADIUS);
 
          m_pcProximitySensorEquippedEntity =
              new CProximitySensorEquippedEntity(this, "proximity_0");
