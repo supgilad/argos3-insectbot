@@ -103,10 +103,17 @@ void CInsectbotAvoider::log(const std::string& message)
    strftime (buffer,80,"%Y-%m-%d %H:%M:%S",timeinfo);
 
    const CVector3 &pos = m_positionGetter->GetReading().Position;
+    CRadians anglex;
+    CRadians angley;
+    CRadians anglez;
+   
+   m_positionGetter->GetReading().Orientation.ToEulerAngles(anglez,angley,anglex);
+   std::stringstream sstm;
+   sstm<<R"({"Date":")"<<buffer <<R"(","ID":")"<< GetId()<<R"(","x":")"<<pos[0]<<R"(","y":")"<<pos[1]<<R"(","Angle":")"<<anglez.GetValue()*anglez.RADIANS_TO_DEGREES<<R"(","Message":")"<<message<<R"("})"<<std::endl;
    //writes to the logfile
-   log_file<<R"({"Date":")"<<buffer <<R"(","ID":")"<< GetId()<<R"(","x":")"<<pos[0]<<R"(","y":")"<<pos[1]<<R"(","Message":")"<<message<<R"("})"<<std::endl;
+   log_file<<sstm.str();
    //write to the screen
-   LOG     <<R"({"Date":")"<<buffer <<R"(","ID":")"<< GetId()<<R"(","x":")"<<pos[0]<<R"(","y":")"<<pos[1]<<R"(","Message":")"<<message<<R"("})"<<std::endl;
+   LOG     <<sstm.str();
 }
 
 void CInsectbotAvoider::ControlStep()
