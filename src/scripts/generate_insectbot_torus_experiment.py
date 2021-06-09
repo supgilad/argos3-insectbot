@@ -40,7 +40,7 @@ def build_robots_xml(radius,num_robots,controller_id):
      min="'+str(-robot_distribute_area)+','+str(-robot_distribute_area)+',0"\
      max="'+str(robot_distribute_area)+','+str(robot_distribute_area)+',0" />\
       <orientation method="gaussian" mean="0,0,0" std_dev="360,0,0" />\
-      <entity quantity="'+str(num_robots)+'" max_trials="100"><insectbot id="kb-'+str(controller_id)+'-">\
+      <entity quantity="'+str(num_robots)+'" max_trials="100"><insectbot id="ib-'+str(controller_id)+'-">\
           <controller config="'+str(controller_id)+'" /></insectbot></entity>\
     </distribute>'
 def build_circle_xml(radius):
