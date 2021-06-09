@@ -9,6 +9,8 @@
 #include <algorithm>
 #include <fstream>
 #include <time.h>
+#include <chrono>
+
 
 /****************************************/
 /****************************************/
@@ -95,12 +97,9 @@ bool CInsectbotAvoider::isReadingInRange(double reading)
 }
 
 void CInsectbotAvoider::log(const std::string& message)
-{  time_t curr_time;
-   curr_time = time(NULL);
-   char buffer [80];
-   struct tm * timeinfo;
-   timeinfo = localtime (&curr_time);
-   strftime (buffer,80,"%Y-%m-%d %H:%M:%S",timeinfo);
+{  
+   std::time_t tt = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
+   std::tm tm = *std::localtime(&tt);
 
    const CVector3 &pos = m_positionGetter->GetReading().Position;
     CRadians anglex;
@@ -109,7 +108,7 @@ void CInsectbotAvoider::log(const std::string& message)
    
    m_positionGetter->GetReading().Orientation.ToEulerAngles(anglez,angley,anglex);
    std::stringstream sstm;
-   sstm<<R"({"Date":")"<<buffer <<R"(","ID":")"<< GetId()<<R"(","x":")"<<pos[0]<<R"(","y":")"<<pos[1]<<R"(","Angle":")"<<anglez.GetValue()*anglez.RADIANS_TO_DEGREES<<R"(","Message":")"<<message<<R"("})"<<std::endl;
+   sstm<<R"({"Date":")"<<std::put_time( &tm, "%Y-%m-%d %H:%M:%S") <<R"(","ID":")"<< GetId()<<R"(","x":")"<<pos[0]<<R"(","y":")"<<pos[1]<<R"(","Angle":")"<<anglez.GetValue()*anglez.RADIANS_TO_DEGREES<<R"(","Message":")"<<message<<R"("})"<<std::endl;
    //writes to the logfile
    log_file<<sstm.str();
    //write to the screen
