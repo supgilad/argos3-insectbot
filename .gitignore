@@ -54,7 +54,7 @@ lib/*
 bin/*
 test/test_runner
 build/CMakeFiles/CMakeOutput.log
-build/plugins/robots/insectbot/libargos3plugin_simulator_insectbot.so
-build/plugins/robots/insectbot/CMakeFiles/argos3plugin_simulator_insectbot.dir/simulator/qtopengl_insectbot.cpp.o
-src/examples/experiments/generated_insectbot_torus/*
+build/plugins/robots/insectbot/**/*.so
+build/plugins/robots/insectbot/**/*.o
+src/experiments/generated_insectbot_torus/*
 *.log
